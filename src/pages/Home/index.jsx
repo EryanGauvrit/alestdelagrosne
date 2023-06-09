@@ -3,7 +3,7 @@
 function Home() {
     return (
         <main>
-            Home
+            <h1>A l'Est de la Grosne</h1>
         </main>
     )
 };

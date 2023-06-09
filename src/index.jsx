@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import './style/normalize.css';
+import './style/main.scss';
 import Header from './components/Header';
 import Home from './pages/Home';
 

@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Vladimir Script';
+    src: url('../polices/VladimirScript.ttf');
+}
+@font-face {
+    font-family: 'Cormorant';
+    src: url('../polices/Cormorant.ttf');
+}
+
+// Font-Family
+
+$policesGlobal: 'Cormorant';
+$policesTitle: 'Vladimir Script';
+$policesDefault: 'sans-serif';
+
+
+// colors
+
+$color-one: black;
+$color-two: white;
+$color-three: #343434;
+
+// Screen Sizes
+
+$phoneScreenSize: 750px;
+// $tabletScreenSize:;
+$desktopScreenSize: 1240px;

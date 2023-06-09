@@ -1,0 +1,39 @@
+html {
+    scroll-behavior: smooth;
+    background-color: $color-one;
+    color: $color-two;
+    font-family: $policesGlobal, $policesDefault;
+}
+
+body {
+    // margin-left: 20px;
+    // margin-right: 20px;
+    // @media (min-width: $phoneScreenSize) {
+    //     margin-left: 50px;
+    //     margin-right: 50px;   
+    // }
+    @media (min-width: 1240px) {
+        max-width: 1240px;
+        margin: auto;
+    }
+}
+
+a {
+    color: $color-two;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4{
+    margin: 0;
+    font-weight: 500;
+}
+
+p{
+    margin: 0;
+}
+
+ul, li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
