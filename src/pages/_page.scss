@@ -12,8 +12,8 @@ body {
     //     margin-left: 50px;
     //     margin-right: 50px;   
     // }
-    @media (min-width: 1240px) {
-        max-width: 1240px;
+    @media (min-width: $desktopScreenSize) {
+        max-width: $desktopScreenSize;
         margin: auto;
     }
 }

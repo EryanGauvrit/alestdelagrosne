@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import logo from './../../assets/logowebsite300.png';
+import logo from './../../assets/logowebsite300.png'; // redimensionner en 200
 const chevron = <i className="fa-solid fa-chevron-up chevron-up"></i>;
 
 
@@ -30,7 +30,10 @@ function Header() {
             <nav>
                 <Link to='/'>Accueil</Link>
                 <div className={`${isActiveLocationList && "activeLocationList"}`}>
-                    <p onClick={locationListToggle}>Nos gîtes {chevron}</p>
+                    <div onClick={locationListToggle}>
+                        <p>Nos gîtes</p>
+                        {chevron}
+                    </div>
                     <ul>
                         <li><Link to='#'>La Chavoche</Link></li>
                         <li><Link to='#'>Le Poulot</Link></li>
@@ -41,6 +44,7 @@ function Header() {
                 <Link to='#'>Tarifs & disponibilités</Link>
                 <Link to='#'>Nous contacter</Link>
             </nav>
+            <div className="tablet-bar"></div>
         </header>
     )
 };
