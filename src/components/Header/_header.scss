@@ -133,7 +133,7 @@ header{
                     align-items: center;
                     gap: 10px;
                     & i {
-                        text-decoration: none !important;
+                        text-decoration: none;
                         font-size: 17px;
                         transition: .2s;
                     }
@@ -145,7 +145,7 @@ header{
                     display: none;
                 }
             }
-            & .activeLocationList{
+            & div:hover{
                 position: relative;
                 z-index: 1;
                 & div {
@@ -224,7 +224,7 @@ header{
                     display: none;
                 }
             }
-            & .activeLocationList{
+            & div:hover{
                 & div {
                     & i {
                         rotate: -180deg;
