@@ -1,0 +1,48 @@
+.main-home{
+    padding: 0 15px;
+    padding-top: 100px;
+    .title-home {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 25px;
+        & div {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            text-align: end;
+            & h1 {
+                font-family: $policesTitle;
+                font-size: 45px;
+            }
+            & h2 {
+                font-size: 20px;
+            }
+        }
+        & h3 {
+            font-style: italic;
+            font-size: 22px;
+        }
+    }
+}
+
+@media (min-width: $phoneScreenSize) {
+    .main-home{
+        padding: 0 15px;
+        .title-home {
+            gap: 35px;
+            & div {
+                & h1 {
+                    font-size: 65px;
+                }
+                & h2 {
+                    font-size: 30px;
+                }
+            }
+            & h3 {
+                font-size: 35px;
+            }
+        }
+    }
+}
