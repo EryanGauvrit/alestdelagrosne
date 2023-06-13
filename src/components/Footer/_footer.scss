@@ -1,0 +1,89 @@
+footer {
+    position: fixed;
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-three;
+    gap: 10px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    width: 100%;
+    & .title-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        & h2 {
+            font-family: $policesTitle;
+            font-size: 30px;
+            letter-spacing: 1px;
+        }
+        & h3 {
+            font-size: 15px;
+        }
+    }
+    & ul {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        & i {
+            font-size: 10px;
+        }
+    }
+    & .socialLink-list {
+        & .link-icon {
+            & i {
+                font-size: 22px;
+            }
+        }
+    }
+    & .link-list{
+        font-size: 15px;
+        & a {
+            text-decoration: underline;
+        }
+    }
+    & p {
+        font-size: 11px;
+        & a {
+            text-decoration: underline;
+        }
+    }
+}
+
+@media (min-width: $phoneScreenSize) {
+    footer {
+        gap: 15px;
+        padding-top: 30px;
+        padding-bottom: 10px;
+        & .title-footer {
+            & h2 {
+                font-size: 36px;
+                letter-spacing: 2px;
+            }
+            & h3 {
+                font-size: 20px;
+            }
+        }
+        & ul {
+            gap: 25px;
+            & i {
+                font-size: 15px;
+            }
+        }
+        & .socialLink-list {
+            & .link-icon {
+                & i {
+                    font-size: 27px;
+                }
+            }
+        }
+        & .link-list{
+            font-size: 20px;
+        }
+        & p {
+            font-size: 16px;
+        }
+    }
+}

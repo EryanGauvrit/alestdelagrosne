@@ -13,6 +13,7 @@
     bottom: 3%;
     right: 5%;
     transition: .5s;
+    z-index: 100000;
     @media (min-width: $phoneScreenSize) {
         display: none;
     }

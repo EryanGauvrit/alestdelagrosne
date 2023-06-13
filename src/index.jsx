@@ -8,6 +8,7 @@ import Error from './components/Error';
 import InProgress from './components/InProgress';
 import Home from './pages/Home';
 import BackTop from './components/BackTop';
+import Footer from './components/Footer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -36,10 +37,14 @@ root.render(
         <Route exact path='/contact'
           element={<InProgress />}
         />
+        <Route exact path='/mentions'
+          element={<InProgress />}
+        />
         <Route exact path='*'
           element={<Error />}
         />
       </Routes>
+      <Footer />
     </BrowserRouter>
 
   </React.StrictMode>
