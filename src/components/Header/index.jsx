@@ -35,14 +35,14 @@ function Header() {
                         {chevron}
                     </div>
                     <ul>
-                        <li><Link to='#'>La Chavoche</Link></li>
-                        <li><Link to='#'>Le Poulot</Link></li>
+                        <li><Link to='/location'>La Chavoche</Link></li>
+                        <li><Link to='/location'>Le Poulot</Link></li>
                     </ul>
                 </div>
-                <Link to='#'>Nos prestations</Link>
-                <Link to='#'>Loisirs</Link>
-                <Link to='#'>Tarifs & disponibilités</Link>
-                <Link to='#'>Nous contacter</Link>
+                <Link to='/services'>Nos prestations</Link>
+                <Link to='/hobbies'>Loisirs</Link>
+                <Link to='/prices'>Tarifs & disponibilités</Link>
+                <Link to='/contact'>Nous contacter</Link>
             </nav>
             <div className="tablet-bar"></div>
         </header>
