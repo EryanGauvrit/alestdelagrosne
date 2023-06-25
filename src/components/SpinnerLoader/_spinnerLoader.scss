@@ -6,8 +6,8 @@
     place-items: center;
     background-color: rgba($color: $color-two, $alpha: .7);
     & div{
-        width: 70px;
-        padding: 8px;
+        width: 40px;
+        padding: 6px;
         aspect-ratio: 1;
         border-radius: 50%;
         background: $color-one;
@@ -24,4 +24,13 @@
 
 .isLoad {
     display: grid;
+}
+
+@media (min-width: $phoneScreenSize) {
+    .spinnerLoader{
+        & div {
+            width: 70px;
+            padding: 10px;
+        }
+    }
 }
