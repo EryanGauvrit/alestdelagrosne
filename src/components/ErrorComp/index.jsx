@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 
-function Error() {
+function ErrorComp() {
     return (
         <main className="main-error">
             <h1>ERREUR : 404</h1>
@@ -11,4 +11,4 @@ function Error() {
     )
 };
 
-export default Error;
+export default ErrorComp;

@@ -4,11 +4,11 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './style/normalize.css';
 import './style/main.scss';
 import Header from './components/Header';
-import Error from './components/Error';
 import InProgress from './components/InProgress';
 import Home from './pages/Home';
 import BackTop from './components/BackTop';
 import Footer from './components/Footer';
+import ErrorComp from './components/ErrorComp';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -41,7 +41,7 @@ root.render(
           element={<InProgress />}
         />
         <Route exact path='*'
-          element={<Error />}
+          element={<ErrorComp />}
         />
       </Routes>
       <Footer />

@@ -9,3 +9,9 @@
         transform: scale(.8);
     }
 }
+
+@keyframes loading-spinner{
+    to{
+        transform: rotate(1turn);
+    }
+}

@@ -6,13 +6,21 @@ html {
     // position: relative;
 }
 
-body {
-    // margin-left: 20px;
-    // margin-right: 20px;
-    // @media (min-width: $phoneScreenSize) {
-    //     margin-left: 50px;
-    //     margin-right: 50px;   
-    // }
+// body {
+//     // margin-left: 20px;
+//     // margin-right: 20px;
+//     // @media (min-width: $phoneScreenSize) {
+//     //     margin-left: 50px;
+//     //     margin-right: 50px;   
+//     // }
+    
+// }
+
+main {
+    min-height: 75vh;
+    @media (min-width: $phoneScreenSize) {
+        min-height: 65vh;
+    }
     @media (min-width: $desktopScreenSize) {
         max-width: $desktopScreenSize;
         margin: auto;
