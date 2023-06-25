@@ -31,7 +31,7 @@ function SlideShow({ picture }) {
     /* Loading Spinner */
 
     const [isLoading, setIsLoading] = useState(true);
-    const spinnerDelay = 1500;
+    const spinnerDelay = 1100;
     const resetIsLoading = (state) => {
         setTimeout(() => {
             setIsLoading(state);
