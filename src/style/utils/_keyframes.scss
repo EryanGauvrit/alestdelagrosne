@@ -15,3 +15,22 @@
         transform: rotate(2turn);
     }
 }
+
+@keyframes translateToRight {
+    0% {
+        transform: translateX(-99999px);
+      }
+    
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes translateToLeft {
+    0% {
+        transform: translateX(99999px);
+      }
+    
+    100% {
+        transform: translateX(0);
+    }
+}

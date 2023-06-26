@@ -15,15 +15,18 @@
             & h1 {
                 font-family: $policesTitle;
                 font-size: 45px;
+                animation: translateToLeft 5s ease-in-out;
             }
             & h2 {
                 font-size: 20px;
+                animation: translateToLeft 5s ease-in-out;
             }
         }
         & h3 {
             font-style: italic;
             font-size: $h3SizesPhone;
             align-self: baseline;
+            animation: translateToRight 5s .4s ease-in-out;
         }
     }
     /******  Modif picture gallery ******/
@@ -66,10 +69,12 @@
             & h3 {
                 font-size: $h3SizesPhone;
                 margin-left: 50px;
+                animation: translateToLeft 3s ease-in-out;
             }
             & p {
                 font-size: $pSizesPhone;
                 text-align: center;
+                animation: translateToRight 3s ease-in-out;
             }
             & ul {
                 align-self: center;
@@ -80,6 +85,12 @@
                     display: flex;
                     align-items: center;
                     gap: 7px;
+                    animation: translateToRight 2s ease-in-out;
+                    @for $i from 1 through 7 {
+                        &:nth-child(#{$i}){
+                            animation-delay: 0.2s * $i;
+                        }
+                    }
                     & i {
                         color: $color-four;
                     }
@@ -102,6 +113,7 @@
         }
     }
     & aside {
+        animation: translateToLeft 3s ease-in-out;
         overflow: hidden;
         height: 200px;
         width: auto;
