@@ -33,18 +33,27 @@
     & .picture-gallery {
         & .current-picture-bloc {
             & .picture.active{
-                background-color: $color-three;
+                background-color: $color-one;
                 max-width: 930px;
                 & .currentPicture-box {
                     height: 200px;
                     @media (min-width: $phoneScreenSize) {
                         height: 350px;
                     }
+                    // & .activeChevron {
+                    //     color: $color-two;
+                    //     font-size: 70px;
+                    //     @media (min-width: $phoneScreenSize) {
+                    //         font-size: 130px;
+                    //     }
+                    // }
+                }
+                &:hover {
                     & .activeChevron {
                         color: $color-two;
                         font-size: 70px;
                         @media (min-width: $phoneScreenSize) {
-                            font-size: 130px;
+                            font-size: 90px;
                         }
                     }
                 }
@@ -57,59 +66,57 @@
     margin: 50px 0;
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    & div {
+    gap: 50px;
+    & article {
         display: flex;
         flex-direction: column;
-        gap: 50px;
-        & article {
+        gap: 20px;
+        & h3 {
+            font-size: $h3SizesPhone;
+            margin-left: 50px;
+            animation: translateToLeft 3s ease-in-out;
+        }
+        & p {
+            font-size: $pSizesPhone;
+            text-align: center;
+            animation: translateToRight 3s ease-in-out;
+        }
+        & ul {
+            align-self: center;
             display: flex;
             flex-direction: column;
-            gap: 20px;
-            & h3 {
-                font-size: $h3SizesPhone;
-                margin-left: 50px;
-                animation: translateToLeft 3s ease-in-out;
-            }
-            & p {
-                font-size: $pSizesPhone;
-                text-align: center;
-                animation: translateToRight 3s ease-in-out;
-            }
-            & ul {
-                align-self: center;
+            gap: 10px;
+            & li {
                 display: flex;
-                flex-direction: column;
-                gap: 10px;
-                & li {
-                    display: flex;
-                    align-items: center;
-                    gap: 7px;
-                    animation: translateToRight 2s ease-in-out;
-                    @for $i from 1 through 7 {
-                        &:nth-child(#{$i}){
-                            animation-delay: 0.2s * $i;
-                        }
-                    }
-                    & i {
-                        color: $color-four;
+                align-items: center;
+                gap: 7px;
+                animation: translateToRight 2s ease-in-out;
+                @for $i from 1 through 7 {
+                    &:nth-child(#{$i}){
+                        animation-delay: 0.2s * $i;
                     }
                 }
+                & p {
+                    text-align: start;
+                }
+                & i {
+                    color: $color-four;
+                }
             }
-            & a {
-                align-self: center;
-                padding: 10px 0;
-                border-radius: 20px;
-                color: $color-two;
-                background-color: $color-one;
-                font-family: $policesGlobalBold;
-                font-size: $h3SizesPhone;
-                border: 2px solid $color-four;
-                box-shadow: 1px 1px 10px $color-four;
-                text-shadow: 1px 1px 3px $color-four;
-                text-align: center;
-                width: 150px;
-            }
+        }
+        & a {
+            align-self: center;
+            padding: 10px 0;
+            border-radius: 20px;
+            color: $color-two;
+            background-color: $color-one;
+            font-family: $policesGlobalBold;
+            font-size: $h3SizesPhone;
+            border: 2px solid $color-four;
+            box-shadow: 1px 1px 10px $color-four;
+            text-shadow: 1px 1px 3px $color-four;
+            text-align: center;
+            width: 150px;
         }
     }
     & aside {
@@ -159,50 +166,59 @@
     .home-description{
         margin: 70px 0;
         flex-direction: row;
-        justify-content: space-between;
-        & div {
-            gap: 70px;
-            & article {
-                gap: 35px;
-                & h3 {
-                    font-size: $h3SizesDesktop;
-                    margin-left: 70px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 70px;
+        & article {
+            gap: 35px;
+            & h3 {
+                font-size: $h3SizesDesktop;
+                margin-left: 70px;
+            }
+            & p {
+                font-size: $pSizesDesktop;
+                // width: 80%;
+            }
+            & ul {
+                gap: 15px;
+                & li {
+                    // & p {
+                    //     width: auto;
+                    // }
+                    gap: 7px;
                 }
-                & p {
-                    font-size: $pSizesDesktop;
-                }
-                & ul {
-                    gap: 15px;
-                    & li {
-                        gap: 7px;
-                    }
-                }
-                & a {
-                    padding: 15px 0;
-                    border-radius: 20px;
-                    font-size: $h3SizesDesktop;
-                    width: 180px;
+            }
+            & a {
+                padding: 15px 0;
+                border-radius: 20px;
+                font-size: $h3SizesDesktop;
+                width: 180px;
+                transition: .2s;
+                &:hover {
+                    scale: 1.02;
                     transition: .2s;
-                    &:hover {
-                        scale: 1.02;
-                        transition: .2s;
-                        color: $color-two;
-                        border: 2px solid $color-two;
-                        box-shadow: 1px 1px 10px $color-two;
-                        text-shadow: 1px 1px 3px $color-two;
-                    }
+                    color: $color-two;
+                    border: 2px solid $color-two;
+                    box-shadow: 1px 1px 10px $color-two;
+                    text-shadow: 1px 1px 3px $color-two;
                 }
             }
         }
         & aside {
             height: 500px;
-            max-width: 700px;
+            max-width: 400px;
             & .spinnerLoader {
-                width: 700px;
+                width: 400px;
             }
             & img {
                 height: 100%;
                 width: auto;
+            }
+        }
+        &:nth-child(1){
+            align-self: center;
+            & h3 {
+                align-self: flex-start;
             }
         }
     }

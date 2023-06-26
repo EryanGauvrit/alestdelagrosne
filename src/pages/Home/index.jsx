@@ -60,54 +60,52 @@ function Home() {
             />
 
             <section className="home-description">
-                <div>
-                    <article>
-                        <h3>A quoi s'attendre ?</h3>
-                        <p>Venez séjourner dans nos gîtes situés en Saône et Loire au cœur des grands crus bourguignons,
-                            une sur la commune de La Chapelle de Bragny, la seconde sur la commune de Messey sur Grosne.</p>
-                    </article>
-                    <article>
-                        <h3>Notre région vous propose :</h3>
-                        <ul>
-                            <li>
-                                <i className="fa-solid fa-wine-bottle"></i>
-                                <p>Une gastronomie réputée</p>
+                <article>
+                    <h3>A quoi s'attendre ?</h3>
+                    <p>Venez séjourner dans nos gîtes situés en Saône et Loire au cœur des grands crus bourguignons,
+                        un sur la commune de La Chapelle de Bragny, le second sur la commune de Messey sur Grosne.</p>
+                </article>
+                <article>
+                    <h3>Notre région vous propose :</h3>
+                    <ul>
+                        <li>
+                            <i className="fa-solid fa-wine-bottle"></i>
+                            <p>Une gastronomie réputée</p>
 
-                            </li>
-                            <li>
-                                <i className="fa-solid fa-wine-bottle"></i>
-                                <p>Les meilleurs vins de monde !</p>
+                        </li>
+                        <li>
+                            <i className="fa-solid fa-wine-bottle"></i>
+                            <p>Les meilleurs vins de monde !</p>
 
-                            </li>
-                            <li>
-                                <i className="fa-solid fa-wine-bottle"></i>
-                                <p>Un patrimoine culturel et historique riche</p>
+                        </li>
+                        <li>
+                            <i className="fa-solid fa-wine-bottle"></i>
+                            <p>Un patrimoine culturel et historique riche</p>
 
-                            </li>
-                            <li>
-                                <i className="fa-solid fa-wine-bottle"></i>
-                                <p>Des randonnées à pied ou vélo sur nos voies vertes</p>
+                        </li>
+                        <li>
+                            <i className="fa-solid fa-wine-bottle"></i>
+                            <p>Des randonnées à pied ou vélo sur nos voies vertes</p>
 
-                            </li>
-                            <li>
-                                <i className="fa-solid fa-wine-bottle"></i>
-                                <p>Des rivières et canaux navigables</p>
+                        </li>
+                        <li>
+                            <i className="fa-solid fa-wine-bottle"></i>
+                            <p>Des rivières et canaux navigables</p>
 
-                            </li>
-                            <li>
-                                <i className="fa-solid fa-wine-bottle"></i>
-                                <p>Des sites d’escalade</p>
+                        </li>
+                        <li>
+                            <i className="fa-solid fa-wine-bottle"></i>
+                            <p>Des sites d’escalade</p>
 
-                            </li>
-                            <li>
-                                <i className="fa-solid fa-wine-bottle"></i>
-                                <p>Et bien d’autres encore !</p>
+                        </li>
+                        <li>
+                            <i className="fa-solid fa-wine-bottle"></i>
+                            <p>Et bien d’autres encore !</p>
 
-                            </li>
-                        </ul>
-                        <Link to='/hobbies'>Plus d'infos</Link>
-                    </article>
-                </div>
+                        </li>
+                    </ul>
+                    <Link to='/hobbies'>Plus d'infos</Link>
+                </article>
                 <aside>
                     <SpinnerLoader isLoad={isLoading} />
                     <img
