@@ -6,7 +6,7 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
-        gap: 25px;
+        gap: 45px;
         & div {
             display: flex;
             flex-direction: column;
@@ -22,7 +22,8 @@
         }
         & h3 {
             font-style: italic;
-            font-size: 22px;
+            font-size: $h3SizesPhone;
+            align-self: baseline;
         }
     }
     /******  Modif picture gallery ******/
@@ -49,11 +50,85 @@
     }
 }
 
+.home-description{
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    & div {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        & article {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            & h3 {
+                font-size: $h3SizesPhone;
+                margin-left: 50px;
+            }
+            & p {
+                font-size: $pSizesPhone;
+                text-align: center;
+            }
+            & ul {
+                align-self: center;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                & li {
+                    display: flex;
+                    align-items: center;
+                    gap: 7px;
+                    & i {
+                        color: $color-four;
+                    }
+                }
+            }
+            & a {
+                align-self: center;
+                padding: 10px 0;
+                border-radius: 20px;
+                color: $color-four;
+                background-color: $color-one;
+                font-family: $policesGlobalBold;
+                font-size: $h3SizesPhone;
+                border: 2px solid $color-four;
+                box-shadow: 1px 1px 10px $color-four;
+                text-shadow: 1px 1px 3px $color-four;
+                text-align: center;
+                width: 150px;
+            }
+        }
+    }
+    & aside {
+        overflow: hidden;
+        height: 200px;
+        width: auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        border: 2px solid $color-two;
+        border-radius: 10px;
+        & .spinnerLoader{
+            justify-content: center;            
+            &.false {
+                display: none;
+            }
+        }
+        & img {
+            height: auto;
+            width: 100%;
+        }
+    }
+}
+
 @media (min-width: $phoneScreenSize) {
     .main-home{
         padding: 0 15px;
         .title-home {
-            gap: 35px;
+            gap: 70px;
             & div {
                 & h1 {
                     font-size: 57px;
@@ -64,7 +139,58 @@
                 }
             }
             & h3 {
-                font-size: 25px;
+                font-size: $h3SizesDesktop;
+                margin-left: 50px;
+            }
+        }
+    }
+    .home-description{
+        margin: 70px 0;
+        flex-direction: row;
+        justify-content: space-between;
+        & div {
+            gap: 70px;
+            & article {
+                gap: 35px;
+                & h3 {
+                    font-size: $h3SizesDesktop;
+                    margin-left: 70px;
+                }
+                & p {
+                    font-size: $pSizesDesktop;
+                }
+                & ul {
+                    gap: 15px;
+                    & li {
+                        gap: 7px;
+                    }
+                }
+                & a {
+                    padding: 15px 0;
+                    border-radius: 20px;
+                    font-size: $h3SizesDesktop;
+                    width: 180px;
+                    transition: .2s;
+                    &:hover {
+                        scale: 1.02;
+                        transition: .2s;
+                        color: $color-two;
+                        border: 2px solid $color-two;
+                        box-shadow: 1px 1px 10px $color-two;
+                        text-shadow: 1px 1px 3px $color-two;
+                    }
+                }
+            }
+        }
+        & aside {
+            height: 500px;
+            max-width: 700px;
+            & .spinnerLoader {
+                width: 700px;
+            }
+            & img {
+                height: 100%;
+                width: auto;
             }
         }
     }

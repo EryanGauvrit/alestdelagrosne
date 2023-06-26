@@ -6,12 +6,17 @@
     font-family: 'Cormorant';
     src: url('../polices/Cormorant.ttf');
 }
+@font-face {
+    font-family: 'Cormorant-bold';
+    src: url('../polices/Cormorant-Bold.ttf');
+}
 
 // Font-Family
 
 $policesGlobal: 'Cormorant';
 $policesTitle: 'Vladimir Script';
 $policesDefault: 'sans-serif';
+$policesGlobalBold: 'Cormorant-bold';
 
 
 // colors
@@ -19,9 +24,18 @@ $policesDefault: 'sans-serif';
 $color-one: black;
 $color-two: white;
 $color-three: #343434;
+$color-four: #90000E;
 
 // Screen Sizes
 
 $phoneScreenSize: 750px;
 // $tabletScreenSize:;
 $desktopScreenSize: 1240px;
+
+// Text sizes
+
+$h3SizesPhone: 22px;
+$h3SizesDesktop: 25px;
+
+$pSizesPhone: 18px;
+$pSizesDesktop: 22px;
