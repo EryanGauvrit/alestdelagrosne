@@ -1,9 +1,7 @@
 .spinnerLoader {
     display: none;
-    flex: none;
-    width: 100%;
-    height: 100%;
     place-items: center;
+    position: fixed;
     // background-color: rgba($color: $color-one, $alpha: .7);
     & div{
         width: 40px;

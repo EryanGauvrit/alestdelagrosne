@@ -56,7 +56,7 @@ function Home() {
             </div>
 
             <SlideShow
-                picture={pictureArray}
+                pictures={pictureArray}
             />
 
             <section className="home-description">

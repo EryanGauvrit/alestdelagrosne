@@ -1,60 +1,69 @@
 .picture-gallery {
     width: 100%;
     margin-top: 50px; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    & .current-picture-bloc {
-        display: flex;
+    .current-picture-bloc {
+        overflow: hidden;
+        display: flex!important;
         align-items: center;
         justify-content: center;
-        overflow: hidden;
-        width: 95%;
-        & .picture.active{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+        height: 250px;
+        // border-radius: 15px;
+        @media (min-width: $phoneScreenSize) {
+            height: 325px;
+        }
+        & img {
+            // height: 300px;
             width: 100%;
-            padding: 10px;
-            background-color: $color-two;
-            border-radius: 15px;
-            max-width: 930px;
-            & .currentPicture-box {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                overflow: hidden;
-                height: 160px;
-                background-position: center;
-                object-fit: cover;  
-                background-size: cover;
-                background-repeat: no-repeat;
-                border-radius: 15px;
-                @media (min-width: $phoneScreenSize) {
-                    background-size: auto;
-                    height: 350px;
-                }
-                & .activeChevron {
-                    opacity: 0.7;
-                    margin: 20px;
-                    color: $color-one;
-                    font-size: 70px;
-                    cursor: pointer;
-                    @media (min-width: $phoneScreenSize) {
-                        font-size: 130px;
-                        transition: .2s;
-                        &:hover {
-                            scale: 1.05;
-                            opacity: 1;
-                            transition: .2s;
-                        }
-                    }
-                }
-                & .notActiveChevron {
-                    display: none;
-                }
+            max-width: 700px;
+            @media (min-width: $phoneScreenSize) {
+                max-width: none;
             }
         }
     }
+    &:hover {
+        .slick-prev {
+            opacity: 1;
+            transition: .2s;
+        }
+        .slick-next {
+            opacity: 1;
+            transition: .2s;
+        }
+    }
 }
+
+.slick-prev {
+    opacity: 0;
+    left: 10px;
+    z-index: 1000;
+    width: auto;
+    height: auto;
+    transition: .2s;
+}
+.slick-next {
+    opacity: 0;
+    right: 10px;
+    z-index: 1000;
+    width: auto;
+    height: auto;
+    transition: .2s;
+}
+
+.slick-next:before, .slick-prev:before {
+    font-size: 30px;
+    @media (min-width: $phoneScreenSize) {
+        font-size: 50px;
+    }
+}
+.slick-dots li.slick-active button:before {
+    color: $color-two;
+}
+
+.slick-dots li button:before {
+    font-size: 6px;
+    line-height: 20px;
+    width: 20px;
+    height: 20px;
+    color: $color-two;
+}
+

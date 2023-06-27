@@ -15,51 +15,20 @@
             & h1 {
                 font-family: $policesTitle;
                 font-size: 45px;
-                animation: translateToLeft 3.5s ease-in-out;
+                animation: translateToLeft 2.5s ease-in-out;
             }
             & h2 {
                 font-size: 20px;
-                animation: translateToLeft 3.5s ease-in-out;
+                animation: translateToLeft 2.5s ease-in-out;
             }
         }
         & h3 {
             font-style: italic;
             font-size: $h3SizesPhone;
             align-self: baseline;
-            animation: translateToRight 5s .4s ease-in-out;
+            animation: translateToRight 3s ease-in-out;
         }
-    }
-    /******  Modif picture gallery ******/
-    & .picture-gallery {
-        & .current-picture-bloc {
-            & .picture.active{
-                background-color: $color-one;
-                max-width: 930px;
-                & .currentPicture-box {
-                    height: 200px;
-                    @media (min-width: $phoneScreenSize) {
-                        height: 350px;
-                    }
-                    // & .activeChevron {
-                    //     color: $color-two;
-                    //     font-size: 70px;
-                    //     @media (min-width: $phoneScreenSize) {
-                    //         font-size: 130px;
-                    //     }
-                    // }
-                }
-                &:hover {
-                    & .activeChevron {
-                        color: $color-two;
-                        font-size: 70px;
-                        @media (min-width: $phoneScreenSize) {
-                            font-size: 90px;
-                        }
-                    }
-                }
-            }
-        }
-    }
+    }    
 }
 
 .home-description{
