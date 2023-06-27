@@ -25,7 +25,7 @@
             border: solid 1px $color-three;
         }
         & ul {
-            width: 40%;
+            width: 50%;
             display: flex;
             flex-direction: column;
             gap: 15px;
@@ -83,12 +83,12 @@
                     }
                 }
                 & .title-list{
+                    margin-left: -50px;
                     & h4 {
                         font-size: $h3SizesDesktop;
                     }
                     & i {
                     font-size: $h3SizesDesktop;
-                    color: #ff9900;
                     }
                 }
             }
