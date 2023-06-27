@@ -19,7 +19,7 @@
             }
             & h2 {
                 font-size: 20px;
-                animation: translateToLeft 2.5s ease-in-out;
+                animation: translateToLeft 2.5s ease-in-out;               
             }
         }
         & h3 {
@@ -27,6 +27,15 @@
             font-size: $h3SizesPhone;
             align-self: baseline;
             animation: translateToRight 3s ease-in-out;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            & img {
+                width: 20px;
+            } 
         }
     }    
 }
@@ -128,7 +137,7 @@
             }
             & h3 {
                 font-size: $h3SizesDesktop;
-                margin-left: 50px;
+                // margin-left: 50px;
             }
         }
     }
