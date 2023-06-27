@@ -9,10 +9,10 @@ function Home() {
 
     const [pictureArray, setPictureArray] = useState([]);
     const phoneScreenSize = 750;
-    const phonePictureSize = 350;
-    const desktopPictureSize = 550;
+    const phonePictureSize = "smartphone";
+    const desktopPictureSize = "desktop";
 
-    const getPicture = ((size) => {
+    const getPictures = ((size) => {
         picturesDatas.map((data) => {
             if (data.size === size) {
                 setPictureArray(data.pictures)
@@ -39,9 +39,9 @@ function Home() {
 
     useEffect(() => {
         if (window.screen.width >= phoneScreenSize) {
-            getPicture(desktopPictureSize);
+            getPictures(desktopPictureSize);
         } else {
-            getPicture(phonePictureSize);
+            getPictures(phonePictureSize);
         }
     });
 
