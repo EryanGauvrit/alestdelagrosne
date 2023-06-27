@@ -1,0 +1,28 @@
+.button-link{
+    padding: 8px 20px;
+    border-radius: 20px;
+    color: $color-two;
+    background-color: $color-one;
+    font-family: $policesGlobalBold;
+    font-size: $pSizesPhone;
+    border: 2px solid $color-four;
+    box-shadow: 1px 1px 10px $color-four;
+    text-shadow: 1px 1px 3px $color-four;
+    text-align: center;
+}
+
+@media (min-width: $phoneScreenSize) {
+    .button-link {
+        padding: 13px 25px;
+        font-size: $pSizesDesktop;
+        transition: .2s;
+        &:hover {
+            scale: 1.02;
+            transition: .2s;
+            color: $color-two;
+            border: 2px solid $color-two;
+            box-shadow: 1px 1px 10px $color-two;
+            text-shadow: 1px 1px 3px $color-two;
+        }
+    }
+}

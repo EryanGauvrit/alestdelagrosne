@@ -1,0 +1,104 @@
+.event {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 50px;
+    & h3 {
+        font-size: $h3SizesPhone;
+        margin-left: 50px;
+    }
+    & .event-bloc {
+        display: flex;
+        font-family: $policesGlobalBold, sans-serif;
+        justify-content: space-around;
+        align-self: center;
+        align-items: center;
+        background-color: rgba($color: $color-two, $alpha: .85);
+        color: $color-one;
+        height: 270px;
+        overflow: hidden;
+        border: solid 2px $color-three;
+        border-radius: 10px;
+        & img {
+            height: 220px;
+            border-radius: 10px;
+            border: solid 1px $color-three;
+        }
+        & ul {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            font-size: 16px;
+            & li {
+                display: flex;
+                align-items: baseline;
+                gap: 5px;
+                & i {
+                font-size: 13px;
+                color: $color-four;
+                }
+            }
+            & .title-list {
+                margin-bottom: 10px;
+                align-items: center;
+                & h4 {
+                    font-size: 19px;
+                }
+                i {
+                font-size: 17px;
+                color: #ff9900;
+                }
+            }
+        }
+    }
+    & a {
+        align-self: flex-end;
+    }
+}
+
+@media (min-width: $phoneScreenSize) {
+    .event {
+        gap: 50px;
+        margin-bottom: 70px;
+        & h3 {
+            font-size: $h3SizesDesktop;
+            margin-left: 70px;
+        }
+        & .event-bloc {
+            height: 350px;
+            width: 100%;
+            max-width: 900px;
+            transition: .2s;
+            & img {
+                height: 320px;
+            }
+            & ul {
+                gap: 20px;
+                font-size: $pSizesDesktop;
+                & li {
+                    gap: 10px;
+                    & i {
+                    font-size: 20px;
+                    }
+                }
+                & .title-list{
+                    & h4 {
+                        font-size: $h3SizesDesktop;
+                    }
+                    & i {
+                    font-size: $h3SizesDesktop;
+                    color: #ff9900;
+                    }
+                }
+            }
+            &:hover {                
+                scale: 1.02;
+                transition: .2s;
+            }
+        }
+        & a {
+            align-self: flex-end;
+        }
+    }
+}

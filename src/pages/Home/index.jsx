@@ -2,9 +2,10 @@ import SlideShow from "../../components/SlideShow";
 import { useEffect, useState } from "react";
 import picturesDatas from "../../datas/picturesGalleryHome.json";
 import homePicture from "../../assets/pictures/home_picture700.jpg";
-import { Link } from "react-router-dom";
 import SpinnerLoader from "../../components/SpinnerLoader";
 import bottle from "../../assets/bottle.png";
+import NextEvent from "../../components/NextEvent";
+import ButtonLink from "../../components/ButtonLink";
 
 function Home() {
 
@@ -105,7 +106,10 @@ function Home() {
 
                         </li>
                     </ul>
-                    <Link to='/hobbies'>Plus d'infos</Link>
+                    <ButtonLink
+                        link="/hobbies"
+                        content="Plus d'infos"
+                    />
                 </article>
                 <aside>
                     <SpinnerLoader isLoad={isLoading} />
@@ -118,6 +122,7 @@ function Home() {
                     />
                 </aside>
             </section>
+            <NextEvent />
         </main>
     )
 };
