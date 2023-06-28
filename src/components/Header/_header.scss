@@ -5,7 +5,7 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: $color-three;
+    background-color: rgba($color: $color-three, $alpha: 2.0);
     box-shadow: 0px 3px 5px rgba($color: $color-two, $alpha: .6);
     & .header-phone {
         width: 100%;
@@ -105,10 +105,11 @@ header{
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: $color-one;
+        // background-color:transparent;
         padding: 0;
         margin-bottom: 50px;
         box-shadow: none;
+        height: 135px;
         .header-phone{
             & img {
                 width: 170px;
@@ -192,7 +193,7 @@ header{
         display: flex;
         flex-direction: column;
         align-items: center;
-        background-color: $color-one;
+        // background-color: transparent;
         padding: 0;
         margin-bottom: 50px;
         box-shadow: none;

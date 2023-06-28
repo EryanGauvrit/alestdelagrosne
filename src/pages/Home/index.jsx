@@ -118,7 +118,7 @@ function Home() {
                             display: `${isLoading ? "none" : "flex"}`
                         }}
                         src={homePicture}
-                        alt="Arc-en-ciel qui commence dans un prés"
+                        alt="Arc-en-ciel qui commence dans un pré"
                     />
                 </aside>
             </section>

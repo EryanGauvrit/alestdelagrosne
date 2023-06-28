@@ -2,7 +2,7 @@
     padding: 8px 20px;
     border-radius: 20px;
     color: $color-two;
-    background-color: $color-one;
+    background-color: rgba($color: $color-one, $alpha: .3);
     font-family: $policesGlobalBold;
     font-size: $pSizesPhone;
     border: 2px solid $color-four;
