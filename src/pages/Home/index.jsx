@@ -1,8 +1,6 @@
 import SlideShow from "../../components/SlideShow";
 import React, { useEffect, useState } from "react";
 import picturesDatas from "../../datas/picturesGalleryHome.json";
-import homePicture from "../../assets/pictures/home_picture700.jpg";
-import SpinnerLoader from "../../components/SpinnerLoader";
 import NextEvent from "../../components/NextEvent";
 import ButtonLink from "../../components/ButtonLink";
 
