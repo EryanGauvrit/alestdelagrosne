@@ -22,7 +22,7 @@ root.render(
         <Route exact path='/'
           element={<Home />}
         />
-        <Route exact path='/location'
+        <Route exact path='/location/:id'
           element={<InProgress />}
         />
         <Route exact path='/services'

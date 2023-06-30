@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import logo from './../../assets/logowebsite300.png'; // redimensionner en 200
+import LocationsList from "../LocationsList";
 const chevron = <i className="fa-solid fa-chevron-up chevron-up"></i>;
 
 
@@ -34,10 +35,7 @@ function Header() {
                         <p>Nos gîtes</p>
                         {chevron}
                     </div>
-                    <ul>
-                        <li><Link to='/location'>La Chavoche</Link></li>
-                        <li><Link to='/location'>Le Poulot</Link></li>
-                    </ul>
+                    <LocationsList />
                 </div>
                 <Link to='/services'>Nos prestations</Link>
                 <Link to='/hobbies'>Loisirs</Link>
