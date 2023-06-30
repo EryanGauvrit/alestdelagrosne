@@ -1,0 +1,70 @@
+.location-template{
+    & h1 {
+        width: 100%;
+        text-align: center;
+        padding: 15px 0;
+        & img {
+            width: 150px;
+        }
+    }
+    & .picture-gallery {
+        width: 90%;
+        margin: auto;
+        margin-top: 0; 
+        position: relative;
+        z-index: 0;
+        & .current-picture-bloc {
+            height: 250px;
+            @media (min-width: $phoneScreenSize) {
+                height: 400px;
+            }
+            & img {
+                // height: 300px;
+                width: 100%;
+                max-width: 700px;
+                opacity: .7;
+                @media (min-width: $phoneScreenSize) {
+                    max-width: 1000px;
+                }
+            }
+        }
+        &:hover {
+            .slick-prev {
+                opacity: 1;
+                transition: .2s;
+            }
+            .slick-next {
+                opacity: 1;
+                transition: .2s;
+            }
+        }
+        .slick-prev {
+            display: initial;
+        }
+        .slick-next {
+            display: initial;
+        }
+        
+        .slick-next:before, .slick-prev:before {
+            display: block;
+        }
+        .slick-dots li.slick-active button:before {
+            display: block;
+        }
+        
+        .slick-dots li button:before {
+            display: initial;
+        }
+    }
+}
+
+@media (min-width: $phoneScreenSize) {
+    .location-template{
+        margin-top: -20px;
+        & h1 {
+            & img {
+                width: 300px;
+            }
+        }
+    }
+}

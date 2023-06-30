@@ -3,22 +3,14 @@ import React, { useEffect, useState } from "react";
 import picturesDatas from "../../datas/picturesGalleryHome.json";
 import NextEvent from "../../components/NextEvent";
 import ButtonLink from "../../components/ButtonLink";
+import { choosePicture } from "../../components/utils/ChoosePicture";
 
 function Home() {
 
-    const [pictureArray, setPictureArray] = useState([]);
-    const phoneScreenSize = 750;
-    const phonePictureSize = "smartphone";
-    const desktopPictureSize = "desktop";
+    const [picturesDesktop] = useState(picturesDatas[0].pictures);
+    const [picturesPhone] = useState(picturesDatas[1].pictures);
 
-    const getPictures = ((size) => {
-        picturesDatas.map((data) => {
-            if (data.size === size) {
-                setPictureArray(data.pictures)
-            }
-            return pictureArray;
-        })
-    });
+    const pictureArray = choosePicture(picturesDesktop, picturesPhone);
 
     /* Loading Spinner */
 
@@ -36,19 +28,13 @@ function Home() {
         }
     }, [isLoading]);
 
-    useEffect(() => {
-        if (window.screen.width >= phoneScreenSize) {
-            getPictures(desktopPictureSize);
-        } else {
-            getPictures(phonePictureSize);
-        }
-    });
 
     return (
         <React.Fragment>
 
             <SlideShow
                 pictures={pictureArray}
+                onClick={false}
             />
             <main className="main-home">
                 <div className="title-home">

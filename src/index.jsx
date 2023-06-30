@@ -6,6 +6,7 @@ import './style/main.scss';
 import Header from './components/Header';
 import InProgress from './components/InProgress';
 import Home from './pages/Home';
+import LocationTemplate from './pages/LocationTemplate';
 import BackTop from './components/BackTop';
 import Footer from './components/Footer';
 import ErrorComp from './components/ErrorComp';
@@ -23,7 +24,7 @@ root.render(
           element={<Home />}
         />
         <Route exact path='/location/:id'
-          element={<InProgress />}
+          element={<LocationTemplate />}
         />
         <Route exact path='/services'
           element={<InProgress />}

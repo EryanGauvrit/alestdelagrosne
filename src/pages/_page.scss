@@ -17,6 +17,7 @@ html {
 // }
 
 main {
+    margin-top: 80px;
     min-height: 75vh;
     @media (min-width: $phoneScreenSize) {
         min-height: 65vh;
