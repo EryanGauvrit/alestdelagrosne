@@ -1,0 +1,73 @@
+[
+    {
+        "id": "LC-loc-1",
+        "title": "La Chavoche",
+        "logoDesktop":"https://drive.google.com/uc?id=1S0-rhmoPTLUAOVUAbP0z3hxje2MkbL67",
+        "logoPhone":"https://drive.google.com/uc?id=1CxFw1GxfdDVz4PqD4RZ02n54EnWS-Hgt",
+        "picturesDesktop": [
+            "https://drive.google.com/uc?id=1Y90on0gCj2sapKiijIEf2jnvPbR9NNPk",
+            "https://drive.google.com/uc?id=1EAi-rAzl4dVHk6RQhGeqvu4e_sah4CHB",
+            "https://drive.google.com/uc?id=1_MBTZCP8S_D3MWptW0UQl3fHaxs-9qHL"
+        ],
+        "picturesPhone": [
+            "https://drive.google.com/uc?id=1Y90on0gCj2sapKiijIEf2jnvPbR9NNPk",
+            "https://drive.google.com/uc?id=1EAi-rAzl4dVHk6RQhGeqvu4e_sah4CHB",
+            "https://drive.google.com/uc?id=1_MBTZCP8S_D3MWptW0UQl3fHaxs-9qHL"
+        ],
+        "description":"Maison de campagne isolée de 160 m² en lisière de bois et à proximité de la rivière, dans un petit village au cœur de la bourgogne. Terrain arboré de 3000 m² avec vue panoramique sur la côte chalonnaise.",
+        "capacity":{
+               "floor": true,
+               "floorCapacity": [
+                "Chambre pour 2 personnes avec lits superposés pour 2 enfants",
+                "Chambre pour 1 ou 2 couples, ou 1 couple et 2 enfants",
+                "Lit bébé possibilité sur demande."
+               ], 
+               "rdcCapacity": [
+                "Chambre pour 2 personnes avec sa salle de bain privative et accès extérieur indépendant."
+               ]
+            },
+        "equipment":[
+            "Lave-linge",
+            "Lave-vaisselle",
+            "Micro-ondes",
+            "Télévision",
+            "Poêle à bois"
+        ],
+        "services":[
+            "Charges incluses",
+            "Draps et linge de maison fournis",
+            "Wifi"
+        ],
+        "requirements":[
+            "Heure d’arrivée : 17:00",
+            "Heure de départ : 11:00",
+            "Animaux acceptés",
+            "Non-fumeur"
+        ],
+        "address":"",
+        "inProgress": false
+    },
+    {
+        "id": "LP-loc-2",
+        "title": "Le Poulot",
+        "logoDesktop":"https://drive.google.com/uc?id=1oYs6qD_8uvjzAX4JNynDkdZKouOv-t5k",
+        "logoPhone":"https://drive.google.com/uc?id=1Q0YqYQ0YZhAaJMx9L2LBJMv-YYJt5cZz",
+        "picturesDesktop": [
+            "https://drive.google.com/uc?id=1iAqj43hWsrtS43TU6aoH9vxBNFsDuFpD",
+            "https://drive.google.com/uc?id=1gt8eZt9K_fQsGhtrzR1MBxofrhnzNxq5",
+            "https://drive.google.com/uc?id=14kDzJnBjQhUQwoe8ohBsXPfEMwsnFRGT"
+        ],
+        "picturesPhone": [
+            "https://drive.google.com/uc?id=1iAqj43hWsrtS43TU6aoH9vxBNFsDuFpD/view?usp=drive_link",
+            "https://drive.google.com/uc?id=1gt8eZt9K_fQsGhtrzR1MBxofrhnzNxq5/view?usp=drive_link",
+            "https://drive.google.com/uc?id=14kDzJnBjQhUQwoe8ohBsXPfEMwsnFRGT/view?usp=drive_link"
+        ],
+        "description":"EN COURS DE RENOVATION !",
+        "capacity":[],
+        "equipment":[],
+        "services":[],
+        "requirements":[],
+        "address":"",
+        "inProgress": true
+    }
+]

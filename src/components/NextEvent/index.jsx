@@ -1,4 +1,3 @@
-// import imgEvent from "../../assets/pictures/img_event.jpg";
 import ButtonLink from "../ButtonLink";
 
 function NextEvent() {
@@ -21,6 +20,8 @@ function NextEvent() {
             <ButtonLink
                 link="/hobbies"
                 content="voir toutes les activités du coin"
+                borderColor='$color-two'
+                color='$color-two'
             />
         </section>
     )

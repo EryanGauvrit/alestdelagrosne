@@ -5,9 +5,8 @@
     background-color: rgba($color: $color-one, $alpha: .3);
     font-family: $policesGlobalBold;
     font-size: $pSizesPhone;
-    border: 2px solid $color-four;
-    box-shadow: 1px 1px 10px $color-four;
-    text-shadow: 1px 1px 3px $color-four;
+    border: 2px solid;
+    box-shadow: 1px 1px 10px;
     text-align: center;
 }
 
@@ -22,7 +21,6 @@
             color: $color-two;
             border: 2px solid $color-two;
             box-shadow: 1px 1px 10px $color-two;
-            text-shadow: 1px 1px 3px $color-two;
         }
     }
 }

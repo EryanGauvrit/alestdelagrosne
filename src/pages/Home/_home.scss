@@ -1,12 +1,18 @@
 .main-home{
-    padding: 0 15px;
-    padding-top: 100px;
+    // padding: 0 15px;
+    margin-top: 340px;
+    padding-top: 15px;
+    background-color: $color-one;
+    padding-bottom: 70px;
     .title-home {
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
-        gap: 45px;
+        gap: 80px;
+        padding: 0 15px;
+        position: absolute;
+        top: 80px;
         & div {
             display: flex;
             flex-direction: column;
@@ -27,24 +33,29 @@
             font-size: $h3SizesPhone;
             align-self: baseline;
             // animation: translateToRight 3s ease-in-out;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            align-items: center;
-            gap: 10px;
-            width: 100%;
-            & img {
-                width: 20px;
-            } 
+            // display: flex;
+            // flex-direction: row;
+            // justify-content: space-around;
+            // align-items: center;
+            // gap: 10px;
+            // width: 100%;
+            // & img {
+            //     width: 20px;
+            // } 
         }
-    }    
+    } 
+    & .event {
+        margin-top: 20px;
+        margin-bottom: 0;
+        padding: 0 15px;
+    }   
 }
 
 .home-description{
-    margin: 50px 0;
     display: flex;
     flex-direction: column;
     gap: 50px;
+    padding: 0 15px;
     & article {
         display: flex;
         flex-direction: column;
@@ -78,7 +89,7 @@
                     text-align: start;
                 }
                 & i {
-                    color: $color-four;
+                    color: $color-two;
                 }
             }
         }
@@ -113,10 +124,17 @@
 
 @media (min-width: $phoneScreenSize) {
     .main-home{
-        padding: 0 15px;
+        // padding: 0 15px;
+        max-width: none;
+        margin-top: 500px;
         .title-home {
-            gap: 70px;
+            padding: 0;
+            gap: 240px;
+            top: 170px;
+            left: 0;
+            width: 100%;
             & div {
+                width: 85%;
                 & h1 {
                     font-size: 57px;
                     letter-spacing: 3px;
@@ -126,17 +144,21 @@
                 }
             }
             & h3 {
+                width: 65%;
                 font-size: $h3SizesDesktop;
                 // margin-left: 50px;
             }
         }
     }
+    section {
+        max-width: 1240px;
+        margin: auto;
+    }
     .home-description{
-        margin: 70px 0;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
-        gap: 70px;
+        gap: 70px;        
         & article {
             gap: 35px;
             & h3 {
@@ -155,7 +177,7 @@
         }
         & aside {
             height: 500px;
-            max-width: 400px;
+            width: 400px;
             & .spinnerLoader {
                 width: 400px;
             }

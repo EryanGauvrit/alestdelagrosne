@@ -1,9 +1,8 @@
 import SlideShow from "../../components/SlideShow";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import picturesDatas from "../../datas/picturesGalleryHome.json";
 import homePicture from "../../assets/pictures/home_picture700.jpg";
 import SpinnerLoader from "../../components/SpinnerLoader";
-import bottle from "../../assets/bottle.png";
 import NextEvent from "../../components/NextEvent";
 import ButtonLink from "../../components/ButtonLink";
 
@@ -48,70 +47,72 @@ function Home() {
     });
 
     return (
-        <main className="main-home">
-            <div className="title-home">
-                <div>
-                    <h1>À l'Est de la Grosne</h1>
-                    <h2>Gîtes de Bourgogne</h2>
-                </div>
-                <h3>Idéalement situés entre la côte chalonnaise et la côte mâconnaise ... <img src={bottle} alt="bouteille" /></h3>
-            </div>
+        <React.Fragment>
 
             <SlideShow
                 pictures={pictureArray}
             />
+            <main className="main-home">
+                <div className="title-home">
+                    <div>
+                        <h1>À l'Est de la Grosne</h1>
+                        <h2>Gîtes de Bourgogne</h2>
+                    </div>
+                    <h3>Idéalement situés entre la côte chalonnaise et la côte mâconnaise ...</h3>
+                </div>
+                <section className="home-description">
+                    <article>
+                        <h3>A quoi s'attendre ?</h3>
+                        <p>Venez séjourner dans nos gîtes situés en Saône et Loire au cœur des grands crus bourguignons,
+                            un sur la commune de La Chapelle de Bragny, le second sur la commune de Messey sur Grosne.</p>
+                    </article>
+                    <article>
+                        <h3>Notre région vous propose :</h3>
+                        <ul>
+                            <li>
+                                <i className="fa-solid fa-wine-bottle"></i>
+                                <p>Une gastronomie réputée</p>
 
-            <section className="home-description">
-                <article>
-                    <h3>A quoi s'attendre ?</h3>
-                    <p>Venez séjourner dans nos gîtes situés en Saône et Loire au cœur des grands crus bourguignons,
-                        un sur la commune de La Chapelle de Bragny, le second sur la commune de Messey sur Grosne.</p>
-                </article>
-                <article>
-                    <h3>Notre région vous propose :</h3>
-                    <ul>
-                        <li>
-                            <i className="fa-solid fa-wine-bottle"></i>
-                            <p>Une gastronomie réputée</p>
+                            </li>
+                            <li>
+                                <i className="fa-solid fa-wine-bottle"></i>
+                                <p>Les meilleurs vins de monde !</p>
 
-                        </li>
-                        <li>
-                            <i className="fa-solid fa-wine-bottle"></i>
-                            <p>Les meilleurs vins de monde !</p>
+                            </li>
+                            <li>
+                                <i className="fa-solid fa-wine-bottle"></i>
+                                <p>Un patrimoine culturel et historique riche</p>
 
-                        </li>
-                        <li>
-                            <i className="fa-solid fa-wine-bottle"></i>
-                            <p>Un patrimoine culturel et historique riche</p>
+                            </li>
+                            <li>
+                                <i className="fa-solid fa-wine-bottle"></i>
+                                <p>Des randonnées à pied ou vélo sur nos voies vertes</p>
 
-                        </li>
-                        <li>
-                            <i className="fa-solid fa-wine-bottle"></i>
-                            <p>Des randonnées à pied ou vélo sur nos voies vertes</p>
+                            </li>
+                            <li>
+                                <i className="fa-solid fa-wine-bottle"></i>
+                                <p>Des rivières et canaux navigables</p>
 
-                        </li>
-                        <li>
-                            <i className="fa-solid fa-wine-bottle"></i>
-                            <p>Des rivières et canaux navigables</p>
+                            </li>
+                            <li>
+                                <i className="fa-solid fa-wine-bottle"></i>
+                                <p>Des sites d’escalade</p>
 
-                        </li>
-                        <li>
-                            <i className="fa-solid fa-wine-bottle"></i>
-                            <p>Des sites d’escalade</p>
+                            </li>
+                            <li>
+                                <i className="fa-solid fa-wine-bottle"></i>
+                                <p>Et bien d’autres encore !</p>
 
-                        </li>
-                        <li>
-                            <i className="fa-solid fa-wine-bottle"></i>
-                            <p>Et bien d’autres encore !</p>
-
-                        </li>
-                    </ul>
-                    <ButtonLink
-                        link="/hobbies"
-                        content="Plus d'infos"
-                    />
-                </article>
-                <aside>
+                            </li>
+                        </ul>
+                        <ButtonLink
+                            link="/hobbies"
+                            content="Plus d'infos"
+                            borderColor='$color-two'
+                            color='$color-two'
+                        />
+                    </article>
+                    {/* <aside>
                     <SpinnerLoader isLoad={isLoading} />
                     <img
                         style={{
@@ -120,10 +121,11 @@ function Home() {
                         src={homePicture}
                         alt="Arc-en-ciel qui commence dans un pré"
                     />
-                </aside>
-            </section>
-            <NextEvent />
-        </main>
+                </aside> */}
+                </section>
+                <NextEvent />
+            </main>
+        </React.Fragment>
     )
 };
 
