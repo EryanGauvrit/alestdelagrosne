@@ -2,17 +2,17 @@
     {
         "id": "LC-loc-1",
         "title": "La Chavoche",
-        "logoDesktop":"https://drive.google.com/uc?id=1S0-rhmoPTLUAOVUAbP0z3hxje2MkbL67",
-        "logoPhone":"https://drive.google.com/uc?id=1CxFw1GxfdDVz4PqD4RZ02n54EnWS-Hgt",
+        "logoDesktop":"https://drive.google.com/uc?id=1187xRepcfuxlcnYGRz9Ob0E7Q73_EzM2",
+        "logoPhone":"https://drive.google.com/uc?id=1kiwVmnrZUJDABee_c59OaLQ7CyjoIn9h",
         "picturesDesktop": [
-            "https://drive.google.com/uc?id=1Y90on0gCj2sapKiijIEf2jnvPbR9NNPk",
-            "https://drive.google.com/uc?id=1EAi-rAzl4dVHk6RQhGeqvu4e_sah4CHB",
-            "https://drive.google.com/uc?id=1_MBTZCP8S_D3MWptW0UQl3fHaxs-9qHL"
+            "https://drive.google.com/uc?id=1_hJ_Q-Mhh19TbdJQlgh37v2MipvX5yMW",
+            "https://drive.google.com/uc?id=1mQmWp-oKMTmxA9hcRLZtq7BzUtwowtCN",
+            "https://drive.google.com/uc?id=1bNqIBdKBzQnA3NU18G4HXEVqL187MHtw"
         ],
         "picturesPhone": [
-            "https://drive.google.com/uc?id=1Y90on0gCj2sapKiijIEf2jnvPbR9NNPk",
-            "https://drive.google.com/uc?id=1EAi-rAzl4dVHk6RQhGeqvu4e_sah4CHB",
-            "https://drive.google.com/uc?id=1_MBTZCP8S_D3MWptW0UQl3fHaxs-9qHL"
+            "https://drive.google.com/uc?id=1HSJy6WYTdpRICKwhjn8AJDQNr5kVRstv",
+            "https://drive.google.com/uc?id=19wzCasp96bxCIZfXaONxkOW-bUp1eAsA",
+            "https://drive.google.com/uc?id=1rytK2lJZV7psvYoMznGTdQNwYYqd2Yd_"
         ],
         "description":"Maison de campagne isolée de 160 m² en lisière de bois et à proximité de la rivière, dans un petit village au cœur de la bourgogne. Terrain arboré de 3000 m² avec vue panoramique sur la côte chalonnaise.",
         "capacity":{
@@ -50,17 +50,17 @@
     {
         "id": "LP-loc-2",
         "title": "Le Poulot",
-        "logoDesktop":"https://drive.google.com/uc?id=1oYs6qD_8uvjzAX4JNynDkdZKouOv-t5k",
-        "logoPhone":"https://drive.google.com/uc?id=1Q0YqYQ0YZhAaJMx9L2LBJMv-YYJt5cZz",
+        "logoDesktop":"https://drive.google.com/uc?id=1fPMs2R9IAbMDW75X1zMoDBIew676Lyth",
+        "logoPhone":"https://drive.google.com/uc?id=1cxVP0VRlf48V8g4dMsy-cQFpi5DocVIX",
         "picturesDesktop": [
-            "https://drive.google.com/uc?id=1iAqj43hWsrtS43TU6aoH9vxBNFsDuFpD",
-            "https://drive.google.com/uc?id=1gt8eZt9K_fQsGhtrzR1MBxofrhnzNxq5",
-            "https://drive.google.com/uc?id=14kDzJnBjQhUQwoe8ohBsXPfEMwsnFRGT"
+            "https://drive.google.com/uc?id=1xZISwuvmGaHV7Mrz1ungQrM5CNxPYdFa",
+            "https://drive.google.com/uc?id=1k31dl7d5U8XSG5W7Dx864RzHzAOb1oh3",
+            "https://drive.google.com/uc?id=1n5wTuymWROm1CKcgnMrKtRDCFhUn0_nn"
         ],
         "picturesPhone": [
-            "https://drive.google.com/uc?id=1iAqj43hWsrtS43TU6aoH9vxBNFsDuFpD/view?usp=drive_link",
-            "https://drive.google.com/uc?id=1gt8eZt9K_fQsGhtrzR1MBxofrhnzNxq5/view?usp=drive_link",
-            "https://drive.google.com/uc?id=14kDzJnBjQhUQwoe8ohBsXPfEMwsnFRGT/view?usp=drive_link"
+            "https://drive.google.com/uc?id=1106hdb2pkSxAQOX2b8WD8FrX87NI3fqY",
+            "https://drive.google.com/uc?id=1j2TOml-C3zFAPIbAsA0N1qnE_OkkLvlq",
+            "https://drive.google.com/uc?id=1BRBAYb6XNQrUDU05smYsGQxiPOCllon5"
         ],
         "description":"EN COURS DE RENOVATION !",
         "capacity":[],
