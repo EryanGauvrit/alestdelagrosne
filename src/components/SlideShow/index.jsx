@@ -40,20 +40,14 @@ function SlideShow({ pictures, onClick }) {
         } : {
             cursor: 'default'
         };
+
     const [isActiveOnClick, setIsActiveOnclick] = useState(false);
     const [currentPicture, setCurrentPicture] = useState('');
-    const ActivationOnclick = (e) => {
-        if (isActiveOnClick) {
-            setIsActiveOnclick(false);
-            console.log(isActiveOnClick)
-        } else {
-            setIsActiveOnclick(true);
-            setCurrentPicture(e.target.src);
-            console.log(isActiveOnClick)
-            console.log(currentPicture)
-
-        }
+    const activationOnclick = (e) => {
+        setIsActiveOnclick((prevState) => !isActiveOnClick);
+        setCurrentPicture((prevPicture) => e.target.src);
     };
+
 
     return (
         <React.Fragment>
@@ -65,7 +59,7 @@ function SlideShow({ pictures, onClick }) {
                             <img
                                 src={picture}
                                 alt="carousel"
-                                onClick={ActivationOnclick}
+                                onClick={activationOnclick}
                                 style={activeCursor}
                             />
                         </div>
@@ -74,7 +68,7 @@ function SlideShow({ pictures, onClick }) {
             </Slider>
             <ZoomPicture
                 picture={currentPicture}
-                ActivationOnclick={ActivationOnclick}
+                activationOnclick={activationOnclick}
             />
         </React.Fragment>
     )
