@@ -50,6 +50,11 @@ function LocationTemplate() {
                 picturesDesktop={location.picturesDesktop}
                 picturesPhone={location.picturesPhone}
             />
+
+            <section className="description">
+                <h2>Description :</h2>
+                <p>{location.description}</p>
+            </section>
         </main>
     )
 };

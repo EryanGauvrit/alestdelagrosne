@@ -1,6 +1,8 @@
 .location-template{
-    display: flex;
     flex-direction: column;
+    @media (min-width: $phoneScreenSize) {
+              display: flex;      
+    }
     & h1 {
         width: 100%;
         text-align: center;
@@ -58,6 +60,26 @@
         .slick-dots li button:before {
             display: initial;
         }
+        .slick-dots{
+            bottom: 10px;
+            @media (min-width: $phoneScreenSize) {
+                    bottom: -20px;
+            }
+        }
+    }
+    & .description {
+        width: 80%;
+        margin: auto;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        & h2 {
+            font-size: $h3SizesPhone;
+        }
+        & p {
+            font-size: $pSizesPhone;
+        }
     }
 }
 
@@ -69,5 +91,18 @@
                 height: 170px;
             }
         }
+        & .description {
+        width: 75%;
+        margin: 50px auto;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        & h2 {
+            font-size: $h3SizesDesktop;
+        }
+        & p {
+            font-size: $pSizesDesktop;
+        }
+    }
     }
 }
