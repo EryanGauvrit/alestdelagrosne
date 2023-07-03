@@ -7,6 +7,8 @@ import { choosePicture } from "../../components/utils/ChoosePicture";
 
 function Home() {
 
+    const iconList = <i className="fa-solid fa-wine-bottle"></i>;
+
     const [picturesDesktop] = useState(picturesDatas[0].pictures);
     const [picturesPhone] = useState(picturesDatas[1].pictures);
 
@@ -54,37 +56,37 @@ function Home() {
                         <h3>Notre région vous propose :</h3>
                         <ul>
                             <li>
-                                <i className="fa-solid fa-wine-bottle"></i>
+                                {iconList}
                                 <p>Une gastronomie réputée</p>
 
                             </li>
                             <li>
-                                <i className="fa-solid fa-wine-bottle"></i>
+                                {iconList}
                                 <p>Les meilleurs vins de monde !</p>
 
                             </li>
                             <li>
-                                <i className="fa-solid fa-wine-bottle"></i>
+                                {iconList}
                                 <p>Un patrimoine culturel et historique riche</p>
 
                             </li>
                             <li>
-                                <i className="fa-solid fa-wine-bottle"></i>
+                                {iconList}
                                 <p>Des randonnées à pied ou vélo sur nos voies vertes</p>
 
                             </li>
                             <li>
-                                <i className="fa-solid fa-wine-bottle"></i>
+                                {iconList}
                                 <p>Des rivières et canaux navigables</p>
 
                             </li>
                             <li>
-                                <i className="fa-solid fa-wine-bottle"></i>
+                                {iconList}
                                 <p>Des sites d’escalade</p>
 
                             </li>
                             <li>
-                                <i className="fa-solid fa-wine-bottle"></i>
+                                {iconList}
                                 <p>Et bien d’autres encore !</p>
 
                             </li>

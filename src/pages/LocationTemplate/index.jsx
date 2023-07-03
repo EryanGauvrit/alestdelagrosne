@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import locationsDatas from "../../datas/LocationsDatas.json";
 import Logo from "../../components/LocationComp/Logo";
 import Gallery from "../../components/LocationComp/Gallery";
+import SpecificityBloc from "../../components/LocationComp/SpecificityBloc";
 
 function LocationTemplate() {
 
@@ -55,6 +56,13 @@ function LocationTemplate() {
                 <h2>Description :</h2>
                 <p>{location.description}</p>
             </section>
+
+            <SpecificityBloc
+                capacity={location.capacity}
+                equipment={location.equipment}
+                services={location.services}
+            />
+
         </main>
     )
 };

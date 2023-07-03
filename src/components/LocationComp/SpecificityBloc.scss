@@ -1,0 +1,110 @@
+$color-bloc1 : #D6DA52;
+$color-bloc2 : #57A4C8;
+$color-bloc3 : #C89D1B;
+
+.specificityBloc {
+    width: 75%;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    & article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        color: $color-one;
+        padding: 20px 10px;
+        border-radius: 10px;
+        background-position: center;
+        & h3 {
+            font-size: $h3SizesPhone;
+        }
+        & ul {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+            & h4 {
+                font-size: 20px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 5px;
+                margin: 5px 0;
+            }
+            & li {
+                font-size: $pSizesPhone;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 5px;
+            }
+        }
+        & i {
+            font-size: 15px;
+        }
+    }
+
+    & .capacity{
+        background-color: rgba($color: $color-bloc1, $alpha: .85);
+        & li {
+            width: 80%;
+            margin: auto;
+        }
+    }
+    & .equipment{
+        background-color: rgba($color: $color-bloc2, $alpha: .85);
+    }
+    & .services{
+        background-color: rgba($color: $color-bloc3, $alpha: .85);
+    }
+}
+
+@media (min-width: $phoneScreenSize) {
+    .specificityBloc {
+        width: 95%;
+        margin: 50px auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 10px;
+        & article {
+            justify-content: start;
+            gap: 10px;
+            width: 350px;
+            height: 600px;
+            padding: 0;
+            filter: brightness(0.85);
+            & h3 {
+                font-size: $h3SizesDesktop;
+                margin-top: 40px;
+            }
+            & ul {
+                    gap: 10px;
+                & h4 {
+                    font-size: 24px;
+                }
+                & li {
+                    font-size: $pSizesDesktop;
+                }
+            }
+            & i {
+                font-size: 18px;
+            }
+        }
+    
+        & .capacity{
+            border-radius: 15px 0 0 15px;
+            & div {
+                width: 90%;
+            }
+        }
+        & .equipment{
+            border-radius: 0;
+        }
+        & .services{
+            border-radius: 0 15px 15px 0;
+        }
+    }
+}
