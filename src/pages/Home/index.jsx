@@ -4,6 +4,7 @@ import picturesDatas from "../../datas/picturesGalleryHome.json";
 import NextEvent from "../../components/NextEvent";
 import ButtonLink from "../../components/ButtonLink";
 import { choosePicture } from "../../components/utils/ChoosePicture";
+import ChangeTitlePage from "../../components/ChangeTitlePage";
 
 function Home() {
 
@@ -33,7 +34,7 @@ function Home() {
 
     return (
         <React.Fragment>
-
+            <ChangeTitlePage titlePage="A l'Est de la Grosne" />
             <SlideShow
                 pictures={pictureArray}
                 onClick={false}

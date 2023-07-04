@@ -2,6 +2,7 @@ import { isDesktopScreenSize } from '../utils/IsDesktopScreenSize';
 import bgImage1 from '../../assets/bg-img/bg-bloc-1.jpg';
 import bgImage2 from '../../assets/bg-img/bg-bloc-2.jpg';
 import bgImage3 from '../../assets/bg-img/bg-bloc-3.jpg';
+import React from 'react';
 
 function SpecificityBloc({ capacity, equipment, services }) {
 
@@ -29,12 +30,13 @@ function SpecificityBloc({ capacity, equipment, services }) {
                     </ul>
                     <ul>
                         {
-                            capacity.floor && <h4>{iconList} Etage :</h4>
-                        }
-                        {
-                            capacity.floor && capacity.floorCapacity.map((floorCapacity) =>
-                                <li key={floorCapacity}>- {floorCapacity}</li>
-                            )
+                            capacity.floor &&
+                            <React.Fragment>
+                                <h4>{iconList} Etage :</h4>
+                                {capacity.floorCapacity.map((floorCapacity) =>
+                                    <li key={floorCapacity}>- {floorCapacity}</li>
+                                )}
+                            </React.Fragment>
                         }
                     </ul>
                 </div>

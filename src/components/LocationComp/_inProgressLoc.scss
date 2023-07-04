@@ -1,0 +1,38 @@
+.inProgressLoc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    font-size: $pSizesPhone;
+    & ul {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        align-self: flex-end;
+        gap: 5px;
+        & a {
+            text-decoration: underline;
+            list-style:disc;
+            transition: .2s;
+            &:hover {
+                scale: 1.02;
+                transition: .2s;
+            }
+        }
+        & li {
+            list-style:disc;
+        }
+    }
+    & .button-link {
+        display: block;
+        width: 75%;
+        margin: auto;
+        @media (min-width: $phoneScreenSize) {
+            width: 255px;     
+        }
+    }
+    @media (min-width: $phoneScreenSize) {
+        font-size: $pSizesDesktop;     
+        gap: 60px;
+    }
+}
