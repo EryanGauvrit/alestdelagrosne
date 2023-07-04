@@ -10,7 +10,7 @@ function ButtonLink({ link, content, borderColor, color }) {
     };
 
     return (
-        <Link to={link} className="button-link" style={style}>
+        <Link to={link} className="button-link" style={style} onClick={"#backTop-anchor"}>
             {content}
         </Link>
     )

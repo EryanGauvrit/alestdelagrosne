@@ -6,7 +6,7 @@ function ErrorComp() {
         <main className="main-error">
             <h1>ERREUR : 404</h1>
             <h2>Dommage ! Cette page est introuvable ...</h2>
-            <Link to={'/'}>Retour sur la page d'accueil</Link>
+            <Link to={'/'} onClick={"#backTop-anchor"}>Retour sur la page d'accueil</Link>
         </main>
     )
 };

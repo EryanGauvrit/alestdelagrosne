@@ -1,11 +1,12 @@
 import ButtonLink from "../ButtonLink";
+import imgEvt from "../../assets/pictures/img_event.jpg";
 
 function NextEvent() {
     return (
         <section className="event">
             <h3>Prochaine manifestation : </h3>
             <a href="https://www.chalondanslarue.com/fr/le-festival/edition-2023" target="_blank" rel='noreferrer' className="event-bloc">
-                <img src={"https://www.chalondanslarue.com/uploads/images/illustrations/affiche2023_festival_CDLR.jpg"} alt="évenement" />
+                <img src={imgEvt} alt="évenement" />
                 <ul className="event-details">
                     <li className="title-list">
                         <i className="fa-solid fa-circle-info"></i>

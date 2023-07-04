@@ -20,7 +20,7 @@ function Header() {
     return (
         <header className={`${isActive && "active"}`}>
             <div className="header-phone">
-                <Link to='/'><img src={logo} alt="A l'Est de la Grosne" /></Link>
+                <Link to='/' onClick={"#backTop-anchor"}><img src={logo} alt="A l'Est de la Grosne" /></Link>
                 <span className="burger-toggle" onClick={burgerToggle}>
                     <span></span>
                     <span></span>
@@ -29,7 +29,7 @@ function Header() {
 
             </div>
             <nav>
-                <Link to='/'>Accueil</Link>
+                <Link to='/' onClick={"#backTop-anchor"}>Accueil</Link>
                 <div className={`${isActiveLocationList && "activeLocationList"}`}>
                     <div onClick={locationListToggle}>
                         <p>Nos gîtes</p>
@@ -37,10 +37,10 @@ function Header() {
                     </div>
                     <LocationsList />
                 </div>
-                <Link to='/services'>Nos prestations</Link>
-                <Link to='/hobbies'>Loisirs</Link>
-                <Link to='/prices'>Tarifs & disponibilités</Link>
-                <Link to='/contact'>Nous contacter</Link>
+                <Link to='/services' onClick={"#backTop-anchor"}>Nos prestations</Link>
+                <Link to='/hobbies' onClick={"#backTop-anchor"}>Loisirs</Link>
+                <Link to='/prices' onClick={"#backTop-anchor"}>Tarifs & disponibilités</Link>
+                <Link to='/contact' onClick={"#backTop-anchor"}>Nous contacter</Link>
             </nav>
             <div className="tablet-bar"></div>
         </header>

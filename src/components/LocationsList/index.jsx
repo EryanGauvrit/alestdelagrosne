@@ -7,7 +7,7 @@ function LocationsList() {
         <ul>
             {
                 locationsDatas.map((location) =>
-                    <li key={location.id}><Link to={'/location/' + location.id}>{location.title}</Link></li>
+                    <li key={location.id}><Link to={'/location/' + location.id} onClick={"#backTop-anchor"}>{location.title}</Link></li>
                 )
             }
         </ul>

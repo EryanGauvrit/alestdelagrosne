@@ -9,7 +9,7 @@ function InProgressLoc({ locationsDatas }) {
             <ul>
                 {
                     locationsDatas.map((location) =>
-                        !location.inProgress && <li key={location.id}><Link to={`/location/${location.id}`}>{location.title}</Link></li>
+                        !location.inProgress && <li key={location.id}><Link to={`/location/${location.id}`} onClick={"#backTop-anchor"}>{location.title}</Link></li>
                     )
                 }
             </ul>

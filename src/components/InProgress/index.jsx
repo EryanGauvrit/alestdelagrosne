@@ -22,7 +22,7 @@ function InProgress() {
                     <i className="fa-solid fa-laptop-code"></i>
                 </aside>
                 <h2>Revenez plus tard</h2>
-                <p><Link to={'/'}>Retour à l'accueil</Link></p>
+                <p><Link to={'/'} onClick={"#backTop-anchor"}>Retour à l'accueil</Link></p>
             </section>
 
         </main>
