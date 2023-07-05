@@ -10,6 +10,7 @@ import LocationTemplate from './pages/LocationTemplate';
 import BackTop from './components/BackTop';
 import Footer from './components/Footer';
 import ErrorComp from './components/ErrorComp';
+import Contact from './pages/Contact';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -36,7 +37,7 @@ root.render(
           element={<InProgress />}
         />
         <Route exact path='/contact'
-          element={<InProgress />}
+          element={<Contact />}
         />
         <Route exact path='/mentions'
           element={<InProgress />}

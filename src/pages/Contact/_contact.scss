@@ -1,0 +1,129 @@
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    font-size: $pSizesPhone;
+    margin-bottom: 30px;
+    & h1 {
+        font-size: 35px;
+    }
+    & h2 {
+        font-size: $h3SizesPhone;
+    }
+    section {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        & ul {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            & li {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                & i {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+    .contact-profil {
+        width: 100%;
+        & article {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 15px;
+            width: 100%;
+            padding: 10px 0;
+            background-color: rgba($color: $color-two, $alpha: .3);
+            border-radius: 15px;
+            & div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            & figcaption {
+                width: 70px;
+                height: 70px;
+                background-color: $color-two;
+                border-radius: 50%;
+                border: solid $color-one 2px;
+            }
+        }
+    }
+    .social-link {
+        & div {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            & a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                padding: 5px;
+                background-color: $color-two;
+                border-radius: 50%;
+                width: 70px;
+                height: 70px;
+            }
+        }
+    }
+}
+
+@media (min-width: $phoneScreenSize) {
+    .contact {
+        gap: 30px;
+        font-size: $pSizesDesktop;
+        margin-bottom: 50px;
+        & h1 {
+            font-size: 45px;
+        }
+        & h2 {
+            font-size: $h3SizesDesktop;
+        }
+        section {
+            & ul {
+                gap: 10px;
+                & li {
+                    & i {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+        .contact-profil {
+            flex-direction: row;
+            justify-content: space-around;
+            & article {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                gap: 15px;
+                width: 370px;
+                height: 130px;
+                padding: 0;
+                & figcaption {
+                    width: 90px;
+                    height: 90px;
+                }
+            }
+        }
+        .social-link {
+            gap: 50px;
+            & div {
+                gap: 50px;
+                & a {
+                    width: 100px;
+                    height: 100px;
+                    & img {
+                        width: 90%;
+                    }
+                }
+            }
+        }
+    }
+}
