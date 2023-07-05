@@ -11,6 +11,13 @@
             height: 70px;
         }
     }
+    & h2 {
+        text-decoration: underline;
+        font-size: $h3SizesPhone;
+    }
+    & p {
+        font-size: $pSizesPhone;
+    }
     & .picture-gallery {
         width: 90%;
         margin: auto;
@@ -71,11 +78,27 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
+    }
+    & .requirement{
+        width: 80%;
+        margin: 20px auto;
         & h2 {
-            font-size: $h3SizesPhone;
+            margin-bottom: 20px;
         }
-        & p {
-            font-size: $pSizesPhone;
+        & ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 10px;
+            & li {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                width: 40%;
+                & i {
+                    font-size: 15px;
+                }
+            }
         }
     }
 }
@@ -88,18 +111,40 @@
                 height: 130px;
             }
         }
-        & .description {
-        width: 75%;
-        margin: 50px auto;
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
         & h2 {
             font-size: $h3SizesDesktop;
         }
         & p {
             font-size: $pSizesDesktop;
         }
-    }
+        & .description {
+        width: 75%;
+        margin: 50px auto;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        }
+        & .requirement{
+            width: 80%;
+            margin: 20px auto;
+            & h2 {
+                margin-bottom: 20px;
+            }
+            & ul {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                gap: 10px;
+                & li {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                    width: 40%;
+                    & i {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
     }
 }

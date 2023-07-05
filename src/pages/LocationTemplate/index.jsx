@@ -10,6 +10,7 @@ import ChangeTitlePage from "../../components/ChangeTitlePage";
 
 function LocationTemplate() {
 
+    const iconList = <i className="fa-solid fa-arrow-right"></i>;
     const { id } = useParams();
 
     const [isGoodId, setIsGoodId] = useState(false);
@@ -83,6 +84,19 @@ function LocationTemplate() {
                                 equipment={location.equipment}
                                 services={location.services}
                             />
+                            <section className="requirement">
+                                <h2>Conditions : </h2>
+                                <ul>
+                                    {
+                                        location.requirements.map((requirement) =>
+                                            <li key={requirement}>
+                                                {iconList}
+                                                <p>{requirement}</p>
+                                            </li>
+                                        )
+                                    }
+                                </ul>
+                            </section>
                         </React.Fragment>
                     )
                 }
