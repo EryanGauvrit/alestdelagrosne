@@ -1,7 +1,7 @@
-import facebook64 from '../../assets/social/facebook64.png'
-import linkedin64 from '../../assets/social/linkedin64.png'
-import facebook100 from '../../assets/social/facebook100.png'
-import linkedin100 from '../../assets/social/linkedin100.png'
+import facebook64 from '../../assets/social/facebook64.png';
+import linkedin64 from '../../assets/social/linkedin64.png';
+import facebook100 from '../../assets/social/facebook100.png';
+import linkedin100 from '../../assets/social/linkedin100.png';
 import { isDesktopScreenSize } from '../../components/utils/IsDesktopScreenSize';
 
 function Contact() {
@@ -10,11 +10,11 @@ function Contact() {
 
     const chooseLogo = (logoPhone, logoDesktop) => {
         if (isDesktopScreenSize()) {
-            return logoDesktop
+            return logoDesktop;
         } else {
             return logoPhone;
         }
-    }
+    };
 
     return (
         <main className="contact">
@@ -39,8 +39,8 @@ function Contact() {
             <section className='social-link'>
                 <h2>Retrouvez-nous sur nos réseaux : </h2>
                 <div>
-                    <a href='#'><img src={chooseLogo(facebook64, facebook100)} alt='lien vers facebook' /></a>
-                    <a href='#'><img src={chooseLogo(linkedin64, linkedin100)} alt='lien vers linkedin' /></a>
+                    <a href='https://www.facebook.com/profile.php?id=100092562339758' target="_blank" rel='noreferrer'><img src={chooseLogo(facebook64, facebook100)} alt='lien vers facebook' /></a>
+                    <a href='#' target="_blank" rel='noreferrer'><img src={chooseLogo(linkedin64, linkedin100)} alt='lien vers linkedin' /></a>
                 </div>
 
             </section>
