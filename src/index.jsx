@@ -11,6 +11,7 @@ import BackTop from './components/BackTop';
 import Footer from './components/Footer';
 import ErrorComp from './components/ErrorComp';
 import Contact from './pages/Contact';
+import Mentions from './pages/mentions';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -40,7 +41,7 @@ root.render(
           element={<Contact />}
         />
         <Route exact path='/mentions'
-          element={<InProgress />}
+          element={<Mentions />}
         />
         <Route exact path='*'
           element={<ErrorComp />}

@@ -1,0 +1,40 @@
+.mentions {
+    display: flex;
+    flex-direction: column;
+    font-size: $pSizesPhone;
+    margin: auto;
+    margin-top: 90px;
+    margin-bottom: 50px;
+    width: 95%;
+    & h1 {
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+    & h2 {
+        font-size: $h3SizesPhone;
+    }
+    & section {
+        margin: 15px 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    & a {
+        text-decoration: underline;
+    }
+}
+
+@media (min-width: $phoneScreenSize) {
+    .mentions {
+        font-size: $pSizesDesktop;
+        width: 100%;
+        margin-top: auto;
+        & h1 {
+            font-size: 35px;
+        }
+        & h2 {
+            font-size: $h3SizesDesktop;
+        }
+    }
+}
