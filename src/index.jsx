@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { getLocationDatas } from './components/utils/GetDatas';
 import './style/normalize.css';
 import './style/main.scss';
 import Header from './components/Header';
@@ -19,14 +20,14 @@ root.render(
 
     <BrowserRouter>
       <div id="backTop-anchor"></div>
-      <Header />
+      <Header locationsDatas={getLocationDatas()} />
       <BackTop />
       <Routes>
         <Route exact path='/'
-          element={<Home />}
+          element={<Home locationsDatas={getLocationDatas()} />}
         />
         <Route exact path='/location/:id'
-          element={<LocationTemplate />}
+          element={<LocationTemplate locationsDatas={getLocationDatas()} />}
         />
         <Route exact path='/services'
           element={<InProgress />}
@@ -35,7 +36,7 @@ root.render(
           element={<InProgress />}
         />
         <Route exact path='/prices'
-          element={<InProgress />}
+          element={<InProgress locationsDatas={getLocationDatas()} />}
         />
         <Route exact path='/contact'
           element={<Contact />}

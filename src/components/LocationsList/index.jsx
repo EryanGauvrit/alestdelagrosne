@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
-import locationsDatas from "../../datas/LocationsDatas.json";
 
-function LocationsList() {
+function LocationsList({ locationsDatas }) {
 
     return (
         <ul>

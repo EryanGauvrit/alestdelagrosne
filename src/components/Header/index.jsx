@@ -5,7 +5,7 @@ import LocationsList from "../LocationsList";
 const chevron = <i className="fa-solid fa-chevron-up chevron-up"></i>;
 
 
-function Header() {
+function Header({ locationsDatas }) {
     const [isActive, setActive] = useState(false);
     const [isActiveLocationList, setActiveLocationList] = useState(false);
 
@@ -35,7 +35,7 @@ function Header() {
                         <p>Nos gîtes</p>
                         {chevron}
                     </div>
-                    <LocationsList />
+                    <LocationsList locationsDatas={locationsDatas} />
                 </div>
                 <Link to='/services' onClick={"#backTop-anchor"}>Nos prestations</Link>
                 <Link to='/hobbies' onClick={"#backTop-anchor"}>Loisirs</Link>

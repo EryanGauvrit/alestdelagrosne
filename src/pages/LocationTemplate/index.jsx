@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import locationsDatas from "../../datas/LocationsDatas.json";
 import Logo from "../../components/LocationComp/Logo";
 import Gallery from "../../components/LocationComp/Gallery";
 import SpecificityBloc from "../../components/LocationComp/SpecificityBloc";
@@ -8,7 +7,7 @@ import InProgressLoc from "../../components/LocationComp/InProgressLoc";
 import ErrorComp from "../../components/ErrorComp";
 import ChangeTitlePage from "../../components/ChangeTitlePage";
 
-function LocationTemplate() {
+function LocationTemplate({ locationsDatas }) {
 
     const iconList = <i className="fa-solid fa-arrow-right"></i>;
     const { id } = useParams();
