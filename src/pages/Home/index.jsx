@@ -1,6 +1,6 @@
 import SlideShow from "../../components/SlideShow";
 import React, { useEffect, useState } from "react";
-import picturesDatas from "../../datas/picturesGalleryHome.json";
+import { getPicturesHome } from "../../components/utils/GetDatas";
 import NextEvent from "../../components/NextEvent";
 import ButtonLink from "../../components/ButtonLink";
 import { choosePicture } from "../../components/utils/ChoosePicture";
@@ -12,6 +12,8 @@ import imgHomePhone from "../../assets/pictures/img_home_5_750-min.jpg";
 function Home({ locationsDatas }) {
 
     const iconList = <i className="fa-solid fa-wine-bottle"></i>;
+
+    const picturesDatas = getPicturesHome();
 
     const [picturesDesktop] = useState(picturesDatas[0].pictures);
     const [picturesPhone] = useState(picturesDatas[1].pictures);
