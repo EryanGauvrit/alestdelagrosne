@@ -5,8 +5,11 @@ import NextEvent from "../../components/NextEvent";
 import ButtonLink from "../../components/ButtonLink";
 import { choosePicture } from "../../components/utils/ChoosePicture";
 import ChangeTitlePage from "../../components/ChangeTitlePage";
+import LocationsList from "../../components/LocationsList";
+import imgHomeDesktop from "../../assets/pictures/img_home_5_440-min.jpg";
+import imgHomePhone from "../../assets/pictures/img_home_5_750-min.jpg";
 
-function Home() {
+function Home({ locationsDatas }) {
 
     const iconList = <i className="fa-solid fa-wine-bottle"></i>;
 
@@ -99,16 +102,13 @@ function Home() {
                             color='$color-two'
                         />
                     </article>
-                    {/* <aside>
-                    <SpinnerLoader isLoad={isLoading} />
-                    <img
-                        style={{
-                            display: `${isLoading ? "none" : "flex"}`
-                        }}
-                        src={homePicture}
-                        alt="Arc-en-ciel qui commence dans un pré"
-                    />
-                </aside> */}
+                    <article
+                        className="location-list-home"
+                        style={{ background: `linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(${choosePicture(imgHomeDesktop, imgHomePhone)})` }}
+                    >
+                        <h3>Nous vous attendons dans nos gîtes :</h3>
+                        <LocationsList locationsDatas={locationsDatas} homePage={true} />
+                    </article>
                 </section>
                 <NextEvent />
             </main>

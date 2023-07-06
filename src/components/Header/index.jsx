@@ -35,7 +35,7 @@ function Header({ locationsDatas }) {
                         <p>Nos gîtes</p>
                         {chevron}
                     </div>
-                    <LocationsList locationsDatas={locationsDatas} />
+                    <LocationsList locationsDatas={locationsDatas} homePage={false} />
                 </div>
                 <Link to='/services' onClick={"#backTop-anchor"}>Nos prestations</Link>
                 <Link to='/hobbies' onClick={"#backTop-anchor"}>Loisirs</Link>

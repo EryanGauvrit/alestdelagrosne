@@ -1,5 +1,4 @@
 .main-home{
-    // padding: 0 15px;
     margin-top: 340px;
     padding-top: 15px;
     background-color: $color-one;
@@ -21,27 +20,15 @@
             & h1 {
                 font-family: $policesTitle;
                 font-size: 45px;
-                // animation: translateToLeft 2.5s ease-in-out;
             }
             & h2 {
-                font-size: 20px;
-                // animation: translateToLeft 2.5s ease-in-out;               
+                font-size: 20px;               
             }
         }
         & h3 {
             font-style: italic;
             font-size: $h3SizesPhone;
             align-self: baseline;
-            // animation: translateToRight 3s ease-in-out;
-            // display: flex;
-            // flex-direction: row;
-            // justify-content: space-around;
-            // align-items: center;
-            // gap: 10px;
-            // width: 100%;
-            // & img {
-            //     width: 20px;
-            // } 
         }
     } 
     & .event {
@@ -63,12 +50,10 @@
         & h3 {
             font-size: $h3SizesPhone;
             margin-left: 50px;
-            // animation: translateToLeft 3s ease-in-out;
         }
         & p {
             font-size: $pSizesPhone;
             text-align: center;
-            // animation: translateToRight 3s ease-in-out;
         }
         & ul {
             align-self: center;
@@ -79,12 +64,6 @@
                 display: flex;
                 align-items: center;
                 gap: 7px;
-                // animation: translateToRight 2s ease-in-out;
-                // @for $i from 1 through 7 {
-                //     &:nth-child(#{$i}){
-                //         animation-delay: 0.2s * $i;
-                //     }
-                // }
                 & p {
                     text-align: start;
                 }
@@ -97,34 +76,23 @@
             align-self: center;
         }
     }
-    & aside {
-        // animation: translateToLeft 3s ease-in-out;
-        overflow: hidden;
-        height: 200px;
-        width: auto;
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
+    & .location-list-home {
+        height: 150px;
+        border: solid 2px $color-two;
+        border-radius: 5px;
         align-items: center;
-        border: 2px solid $color-two;
-        border-radius: 10px;
-        & .spinnerLoader{
-            justify-content: center;            
-            &.false {
-                display: none;
-            }
+        justify-content: center;
+        & h3 {
+            margin: 0;
         }
-        & img {
-            height: auto;
-            width: 100%;
-            opacity: .75;
+        & a {
+            text-decoration: underline;
         }
     }
 }
 
 @media (min-width: $phoneScreenSize) {
     .main-home{
-        // padding: 0 15px;
         max-width: none;
         margin-top: 500px;
         .title-home {
@@ -146,7 +114,6 @@
             & h3 {
                 width: 65%;
                 font-size: $h3SizesDesktop;
-                // margin-left: 50px;
             }
         }
     }
@@ -175,16 +142,10 @@
                 }
             }
         }
-        & aside {
-            height: 500px;
-            width: 400px;
-            & .spinnerLoader {
-                width: 400px;
-            }
-            & img {
-                height: 100%;
-                width: auto;
-            }
+        &  .location-list-home {
+            width: 440px;
+            height: 330px;            
+            font-size: $pSizesDesktop;
         }
         &:nth-child(1){
             align-self: center;
