@@ -3,6 +3,7 @@ import linkedin64 from '../../assets/social/linkedin64.png';
 import facebook100 from '../../assets/social/facebook100.png';
 import linkedin100 from '../../assets/social/linkedin100.png';
 import { isDesktopScreenSize } from '../../components/utils/IsDesktopScreenSize';
+import GoogleMap from '../../components/GoogleMaps.jsx';
 
 function Contact() {
 
@@ -40,7 +41,7 @@ function Contact() {
                 <h2>Retrouvez-nous sur nos réseaux : </h2>
                 <div>
                     <a href='https://www.facebook.com/profile.php?id=100092562339758' target="_blank" rel='noreferrer'><img src={chooseLogo(facebook64, facebook100)} alt='lien vers facebook' /></a>
-                    <a href='#' target="_blank" rel='noreferrer'><img src={chooseLogo(linkedin64, linkedin100)} alt='lien vers linkedin' /></a>
+                    <a href='#'><img src={chooseLogo(linkedin64, linkedin100)} alt='lien vers linkedin' /></a>
                 </div>
 
             </section>
@@ -51,6 +52,11 @@ function Contact() {
                     <li>{iconList}1h de Dijon</li>
                     <li>{iconList}Idéalement situé entre Cluny, Tournus, Chalon sur Saône</li>
                 </ul>
+            </section>
+            <section>
+                <GoogleMap
+                    address="L'Abergement, 71390 Messey-sur-Grosne"
+                />
             </section>
         </main>
     )

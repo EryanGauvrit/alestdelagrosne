@@ -11,9 +11,9 @@ function Footer() {
             <ul className="socialLink-list">
                 <li className="link-icon"><a href="https://www.facebook.com/profile.php?id=100092562339758" target="_blank" rel='noreferrer'><i className="fa-brands fa-square-facebook"></i></a></li>
                 <li><i className="fa-solid fa-tree"></i></li>
-                <li className="link-icon"><a href="#" target="_blank" rel='noreferrer'><i className="fa-brands fa-linkedin"></i></a></li>
+                <li className="link-icon"><a href="#"><i className="fa-brands fa-linkedin"></i></a></li>
                 <li><i className="fa-solid fa-tree"></i></li>
-                <li className="link-icon"><a href="mailto:alestdelagrosne@gmail.com" target="_blank" rel='noreferrer'><i className="fa-solid fa-paper-plane"></i></a></li>
+                <li className="link-icon"><a href="mailto:alestdelagrosne@gmail.com"><i className="fa-solid fa-paper-plane"></i></a></li>
             </ul>
             <ul className="link-list">
                 <li><Link to={'/'} onClick={"#backTop-anchor"}>Accueil</Link></li>
