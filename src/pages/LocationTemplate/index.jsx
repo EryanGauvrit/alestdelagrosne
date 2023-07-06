@@ -6,6 +6,7 @@ import SpecificityBloc from "../../components/LocationComp/SpecificityBloc";
 import InProgressLoc from "../../components/LocationComp/InProgressLoc";
 import ErrorComp from "../../components/ErrorComp";
 import ChangeTitlePage from "../../components/ChangeTitlePage";
+import GoogleMap from "../../components/GoogleMaps.jsx";
 
 function LocationTemplate({ locationsDatas }) {
 
@@ -95,6 +96,9 @@ function LocationTemplate({ locationsDatas }) {
                                         )
                                     }
                                 </ul>
+                            </section>
+                            <section className="google-maps">
+                                <GoogleMap address="L'Abergement, 71390 Messey-sur-Grosne" />
                             </section>
                         </React.Fragment>
                     )

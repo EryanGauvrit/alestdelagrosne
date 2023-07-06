@@ -75,7 +75,7 @@ $color-bloc3 : #C89D1B;
             width: 350px;
             height: 600px;
             padding: 0;
-            filter: brightness(0.85);
+            color: $color-two;
             & h3 {
                 font-size: $h3SizesDesktop;
                 margin-top: 40px;

@@ -10,14 +10,14 @@ function SpecificityBloc({ capacity, equipment, services }) {
 
     const activeBgImg = (img) => {
         if (isDesktopScreenSize()) {
-            return `url(${isDesktopScreenSize() && img})`;
+            return `linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .6),rgba(0, 0, 0, .4), rgba(0, 0, 0, .2)),url(${isDesktopScreenSize() && img})`;
         }
     }
 
     return (
         <section className="specificityBloc">
 
-            <article className="capacity" style={{ backgroundImage: activeBgImg(bgImage1) }}>
+            <article className="capacity" style={{ background: activeBgImg(bgImage1) }}>
                 <h3>Capacité d'accueil :</h3>
                 <div>
                     <ul>

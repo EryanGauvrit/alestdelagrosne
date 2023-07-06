@@ -18,6 +18,12 @@
     & p {
         font-size: $pSizesPhone;
     }
+    & section {
+        margin: 30px auto;
+        @media (min-width: $phoneScreenSize) {
+            margin: 60px auto;
+        }
+    }
     & .picture-gallery {
         width: 90%;
         margin: auto;
@@ -100,6 +106,9 @@
                 }
             }
         }
+    }
+    & .google-maps {
+        text-align: center;
     }
 }
 
