@@ -87,6 +87,12 @@
         }
         & a {
             text-decoration: underline;
+            transition: .2s;
+            &:hover {
+                scale: 1.05;
+                opacity: .8;
+                transition: .2s;
+            }
         }
     }
 }
