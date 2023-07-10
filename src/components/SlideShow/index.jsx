@@ -11,7 +11,7 @@ function SlideShow({ pictures, onClick }) {
         autoplaySpeed: 5000,
         dots: true,
         infinite: true,
-        speed: 0,
+        speed: !onClick ? 0 : 500,
         slidesToShow: 1,
         slidesToScroll: 1,
     };
@@ -51,7 +51,7 @@ function SlideShow({ pictures, onClick }) {
 
     return (
         <React.Fragment>
-            <Slider className="picture-gallery" {...settings}>
+            <Slider className={`picture-gallery ${!onClick ? 'activeAnimation' : ''}`} {...settings}>
                 {
                     pictures.map((picture) =>
                         <div className="current-picture-bloc" key={picture}>

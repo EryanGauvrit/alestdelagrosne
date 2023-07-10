@@ -8,11 +8,6 @@
     @media (min-width: $phoneScreenSize) {
         margin-top: 0;
     }
-    .slick-active {
-        & img {
-            animation: scaling-image-animation 5100ms linear;
-        }
-    }
     .current-picture-bloc {
         overflow: hidden;
         display: flex!important;
@@ -43,6 +38,14 @@
     //         transition: .2s;
     //     }
     // }
+}
+
+.activeAnimation {
+    .slick-active {
+        & img {
+            animation: scaling-image-animation 5100ms linear;
+        }
+    }
 }
 
 .slick-prev {
