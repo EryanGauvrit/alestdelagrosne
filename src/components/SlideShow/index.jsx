@@ -11,7 +11,7 @@ function SlideShow({ pictures, onClick }) {
         autoplaySpeed: 5000,
         dots: true,
         infinite: true,
-        speed: 500,
+        speed: 0,
         slidesToShow: 1,
         slidesToScroll: 1,
     };
