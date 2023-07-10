@@ -119,8 +119,14 @@
                 & a {
                     width: 100px;
                     height: 100px;
+                    transition: .2s;
                     & img {
                         width: 90%;
+                    }
+                    &:hover {
+                        scale: 1.04;
+                        opacity: .9;
+                        transition: .2s;
                     }
                 }
             }

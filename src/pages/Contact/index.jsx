@@ -24,14 +24,14 @@ function Contact() {
                 <article>
                     <div>
                         <h2>Pascal</h2>
-                        <a href="0615109225">06.15.10.92.25</a>
+                        <a href="tel:0615109225">06.15.10.92.25</a>
                     </div>
                     <figcaption className='pp'></figcaption>
                 </article>
                 <article>
                     <div>
                         <h2>Leslie</h2>
-                        <a href="0629515288">06.29.51.52.88</a>
+                        <a href="tel:0629515288">06.29.51.52.88</a>
                     </div>
                     <figcaption className='pp'></figcaption>
                 </article>
