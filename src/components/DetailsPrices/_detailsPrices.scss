@@ -1,0 +1,73 @@
+.prices-bloc {
+    table {
+        border: 1px solid $color-two;
+        border-radius: 4px;
+        margin-bottom: 20px;
+        border-collapse : collapse;
+    }
+    th, td {
+        padding: 3px;
+        text-align: center;
+        border: 1px solid $color-two;
+    }
+    th {
+        background-color: rgba($color: $color-two, $alpha: .15);
+    }
+    .high {
+        background-color: rgba($color: $color-high, $alpha: .8);
+    }
+    .average {
+        background-color: rgba($color: $color-average, $alpha: .8);
+    }
+    .low {
+        background-color: rgba($color: $color-low, $alpha: .5);
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        & :nth-child(1) {
+            i {
+                color: rgba($color: $color-high, $alpha: .8);
+            }
+        }
+        & :nth-child(2) {
+            i {
+                color: rgba($color: $color-average, $alpha: .8);
+            }
+        }
+        & :nth-child(3) {
+            i {
+                color: rgba($color: $color-low, $alpha: .5);
+            }
+        }
+        & li {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            & i {
+                border: 1px solid $color-two;
+                border-radius: 5px;
+            }
+        }
+    }
+}
+
+@media (min-width: $phoneScreenSize) {
+    .prices-bloc {
+        table {
+            border: 2px solid $color-two;
+        }
+        th, td {
+            padding: 7px;
+            border: 2px solid $color-two;
+        }
+        ul {
+            gap: 15px;
+            & li {
+                gap: 10px;
+            }
+        }
+    }
+}

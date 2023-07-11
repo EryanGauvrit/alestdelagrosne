@@ -13,6 +13,7 @@ import Footer from './components/Footer';
 import ErrorComp from './components/ErrorComp';
 import Contact from './pages/Contact';
 import Mentions from './pages/mentions';
+import Prices from './pages/Prices';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -36,7 +37,7 @@ root.render(
           element={<InProgress />}
         />
         <Route exact path='/prices'
-          element={<InProgress locationsDatas={getLocationDatas()} />}
+          element={<Prices locationsDatas={getLocationDatas()} />}
         />
         <Route exact path='/contact'
           element={<Contact />}

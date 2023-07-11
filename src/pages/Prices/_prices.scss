@@ -1,0 +1,66 @@
+.prices-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    font-size: $pSizesPhone;
+    & h1 {
+        font-size: 35px;
+    }
+    & h3 {
+        font-size: $h3SizesPhone;
+        margin: 50px 0;
+        letter-spacing: 1px;
+    }
+    & .location-select {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    & section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        width: 95%;
+        p a {
+            text-decoration: underline;
+        }
+    }
+}
+
+@media (min-width: $phoneScreenSize) {
+    .prices-main {
+        gap: 40px;
+        margin: auto;
+        margin-bottom: 50px;
+        font-size: $pSizesDesktop;
+        & h1 {
+            font-size: 45px;
+        }
+        & h3 {
+            font-size: $h3SizesDesktop;
+            margin: 70px 0;
+        }
+        & .location-select {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        }
+        & section {
+            gap: 25px;
+            width: 90%;
+            p a {
+                display: inline-block;
+                transition: .2s;
+                &:hover {
+                    scale: 1.05;
+                    opacity: .8;
+                    transition: .2s;
+                }
+            }
+        }
+    }
+}

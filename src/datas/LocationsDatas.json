@@ -44,7 +44,33 @@
             "Animaux acceptés",
             "Non-fumeur"
         ],
-        "address":"",
+        "address":"52 route d'hauterive, 71240 la Chapelle de Bragny",
+        "prices":{
+            "high": [
+                300,
+                440,
+                570,
+                695,
+                810,
+                920
+            ],
+            "average": [
+                270,
+                390,
+                505,
+                615,
+                715,
+                815
+            ],
+            "low": [
+                235,
+                340,
+                440,
+                535,
+                625,
+                710
+            ]
+        },
         "inProgress": false
     },
     {
@@ -68,6 +94,11 @@
         "services":[],
         "requirements":[],
         "address":"",
+        "prices":{
+            "high": [],
+            "average": [],
+            "low": []
+        },
         "inProgress": true
     }
 ]

@@ -53,7 +53,7 @@ function Contact() {
                     <li>{iconList}Idéalement situé entre Cluny, Tournus, Chalon sur Saône</li>
                 </ul>
             </section>
-            <section>
+            <section className='localisation'>
                 <GoogleMap
                     address="L'Abergement, 71390 Messey-sur-Grosne"
                 />
