@@ -30,6 +30,12 @@ function LocationTemplate({ locationsDatas }) {
         services: [],
         requirements: [],
         address: '',
+        mapUrl: '',
+        prices: {
+            high: [],
+            average: [],
+            low: []
+        },
         inProgress: undefined,
     });
 
@@ -98,7 +104,14 @@ function LocationTemplate({ locationsDatas }) {
                                 </ul>
                             </section>
                             <section className="google-maps">
-                                <GoogleMap address="L'Abergement, 71390 Messey-sur-Grosne" />
+                                <div className="address-bloc">
+                                    <h2>Adresse :</h2>
+                                    <address> 52 Rte d'Hauterive, 71240 La Chapelle-de-Bragny</address>
+
+                                </div>
+                                <GoogleMap
+                                    mapUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1646.630919322744!2d4.743820571354376!3d46.622372162147215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f3069a5aac69c5%3A0xe4bde27895314eaf!2s52%20Rte%20d&#39;Hauterive%2C%2071240%20La%20Chapelle-de-Bragny!5e1!3m2!1sfr!2sfr!4v1689093429253!5m2!1sfr!2sfr"
+                                />
                             </section>
                         </React.Fragment>
                     )
