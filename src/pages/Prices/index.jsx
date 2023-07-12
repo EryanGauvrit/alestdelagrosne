@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import DetailsPrices from "../../components/DetailsPrices";
 import React, { useState } from "react";
+import ButtonLink from "../../components/ButtonLink";
 
 function Prices({ locationsDatas }) {
 
@@ -35,6 +36,10 @@ function Prices({ locationsDatas }) {
                 Object.keys(locationSpecificity).length !== 0 ?
                     <React.Fragment>
                         <DetailsPrices prices={locationSpecificity.prices} />
+                        <ButtonLink
+                            link={`/location/${locationSpecificity.id}`}
+                            content="Détails du gîte"
+                        />
                         <section>
                             <p>Pour toutes réservations ou demande d'informations supplémentaire, n'hésitez pas à nous <Link to='/contact'>contacter</Link>.</p>
                             <p>Les heures précises d’arrivée et de départ seront définies avec vous directement pour une meilleure flexibilité.</p>

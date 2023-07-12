@@ -29,6 +29,9 @@
             text-decoration: underline;
         }
     }
+    & .button-link {
+        margin: 20px 0;
+    }
 }
 
 @media (min-width: $phoneScreenSize) {
@@ -61,6 +64,9 @@
                     transition: .2s;
                 }
             }
+        }
+        & .button-link {
+            margin: 35px 0;
         }
     }
 }

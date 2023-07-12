@@ -7,6 +7,7 @@ import InProgressLoc from "../../components/LocationComp/InProgressLoc";
 import ErrorComp from "../../components/ErrorComp";
 import ChangeTitlePage from "../../components/ChangeTitlePage";
 import GoogleMap from "../../components/GoogleMaps.jsx";
+import ButtonLink from "../../components/ButtonLink";
 
 function LocationTemplate({ locationsDatas }) {
 
@@ -105,6 +106,7 @@ function LocationTemplate({ locationsDatas }) {
                             </section>
                             <section className="google-maps">
                                 <div className="address-bloc">
+                                    <ButtonLink link='/prices' content='Tarifs' />
                                     <h2>Adresse :</h2>
                                     <address> 52 Rte d'Hauterive, 71240 La Chapelle-de-Bragny</address>
 
