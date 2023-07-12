@@ -41,7 +41,7 @@ function Prices({ locationsDatas }) {
                             content="Détails du gîte"
                         />
                         <section>
-                            <p>Pour toutes réservations ou demande d'informations supplémentaire, n'hésitez pas à nous <Link to='/contact'>contacter</Link>.</p>
+                            <p>Pour toute réservation ou demande d'information supplémentaire, n'hésitez pas à nous <Link to='/contact'>contacter</Link>.</p>
                             <p>Les heures précises d’arrivée et de départ seront définies avec vous directement pour une meilleure flexibilité.</p>
                         </section>
                     </React.Fragment>

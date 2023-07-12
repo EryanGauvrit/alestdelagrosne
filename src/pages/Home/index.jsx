@@ -50,7 +50,7 @@ function Home({ locationsDatas }) {
                         <h1>À l'Est de la Grosne</h1>
                         <h2>Gîtes de Bourgogne</h2>
                     </div>
-                    <h3>Idéalement situés entre la côte <strong>chalonnaise</strong> et la côte <strong>mâconnaise</strong> ...</h3>
+                    <h3>Idéalement situé entre la côte <strong>chalonnaise</strong> et la côte <strong>mâconnaise</strong> ...</h3>
                 </div>
                 <section className="home-description">
                     <article>
@@ -68,7 +68,7 @@ function Home({ locationsDatas }) {
                             </li>
                             <li>
                                 {iconList}
-                                <p>Les meilleurs vins de monde !</p>
+                                <p>Les meilleurs vins du monde !</p>
 
                             </li>
                             <li>
@@ -78,7 +78,7 @@ function Home({ locationsDatas }) {
                             </li>
                             <li>
                                 {iconList}
-                                <p>Des randonnées à pied ou vélo sur nos voies vertes</p>
+                                <p>Des randonnées à pied ou à vélo sur nos voies vertes</p>
 
                             </li>
                             <li>
