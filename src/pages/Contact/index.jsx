@@ -50,7 +50,7 @@ function Contact() {
                 <ul>
                     <li>{iconList}1h de Montchanin</li>
                     <li>{iconList}1h de Dijon</li>
-                    <li>{iconList}Idéalement situé entre Cluny, Tournus, Chalon sur Saône</li>
+                    <li>{iconList}Idéalement situé entre <strong>Cluny,</strong> <strong>Tournus,</strong> <strong>Chalon-sur-Saône</strong></li>
                 </ul>
             </section>
             <section className='localisation'>

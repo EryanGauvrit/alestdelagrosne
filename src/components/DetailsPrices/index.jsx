@@ -40,7 +40,7 @@ function DetailsPrices({ prices }) {
                     </tr>
                 </tbody>
             </table>
-
+            <p className="table-quote">* Les tarifs sont calculés pour le logement en lui-même, et non par personne.</p>
             <ul>
                 <li>{icon} Haute saison : de juillet à aout</li>
                 <li>{icon} Moyenne saison : de septembre à octobre et d'avril à juin</li>

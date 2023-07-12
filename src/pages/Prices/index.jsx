@@ -37,7 +37,7 @@ function Prices({ locationsDatas }) {
                         <DetailsPrices prices={locationSpecificity.prices} />
                         <section>
                             <p>Pour toutes réservations ou demande d'informations supplémentaire, n'hésitez pas à nous <Link to='/contact'>contacter</Link>.</p>
-                            <p>Pour les heures précisent d’arrivés et de départ seront définies avec vous directement pour une meilleure flexibilité.</p>
+                            <p>Les heures précises d’arrivée et de départ seront définies avec vous directement pour une meilleure flexibilité.</p>
                         </section>
                     </React.Fragment>
                     :

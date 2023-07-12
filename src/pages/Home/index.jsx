@@ -50,13 +50,13 @@ function Home({ locationsDatas }) {
                         <h1>À l'Est de la Grosne</h1>
                         <h2>Gîtes de Bourgogne</h2>
                     </div>
-                    <h3>Idéalement situés entre la côte chalonnaise et la côte mâconnaise ...</h3>
+                    <h3>Idéalement situés entre la côte <strong>chalonnaise</strong> et la côte <strong>mâconnaise</strong> ...</h3>
                 </div>
                 <section className="home-description">
                     <article>
                         <h3>A quoi s'attendre ?</h3>
-                        <p>Venez séjourner dans nos gîtes situés en Saône et Loire au cœur des grands crus bourguignons,
-                            un sur la commune de La Chapelle de Bragny, le second sur la commune de Messey sur Grosne.</p>
+                        <p>Venez séjourner dans nos <strong>gîtes situés en Saône et Loire</strong> au cœur des grands crus bourguignons,
+                            un sur la commune de <strong>La Chapelle-de-Bragny</strong>, le second sur la commune de <strong>Messey-sur-Grosne</strong>.</p>
                     </article>
                     <article>
                         <h3>Notre région vous propose :</h3>
