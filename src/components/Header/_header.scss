@@ -78,6 +78,9 @@ header{
             }
         }
         & .activeLocationList{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             & div {
                 & i {
                     rotate: -180deg;
@@ -85,12 +88,27 @@ header{
                 }
             }
             & ul {
-                margin: 5px 0;
+                margin: 15px 0;
                 display: flex;
                 flex-direction: column;
-                align-items: baseline;
-                gap: 2px;
-                font-size: 16px;
+                align-items: flex-end;
+                justify-content: center;
+                gap: 15px;
+                font-size: 18px;
+                height: 100px;
+                li {
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    opacity: .8;
+                    i {
+                        font-size: 13px;
+                    }
+                }
+                & .list-bar {
+                    width: 150px;
+                    border-top: solid 1px $color-two;
+                }
             }
         }
     }
@@ -106,7 +124,6 @@ header{
         display: flex;
         flex-direction: column;
         align-items: center;
-        // background-color:transparent;
         padding: 0;
         margin-bottom: 50px;
         box-shadow: none;
@@ -131,8 +148,12 @@ header{
             font-size: 19px;
             & div {
                 cursor: pointer;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
                 & div {
                     display: flex;
+                    flex-direction: row;
                     align-items: center;
                     gap: 10px;
                     & i {
@@ -148,8 +169,7 @@ header{
                     display: none;
                 }
             }
-            & div:hover{
-                position: relative;
+            div:hover{
                 z-index: 1;
                 & div {
                     & i {
@@ -158,28 +178,36 @@ header{
                     }
                 }
                 & ul {
-                    position: absolute;
+                    position: fixed;
                     z-index: -100;
-                    top: 0;
-                    left: -5px;
+                    top: 120px;
                     display: flex;
                     flex-direction: column;
-                    justify-content: flex-end;
-                    gap: 2px;
+                    justify-content: center;
+                    align-items: flex-end;
+                    gap: 10px;
                     font-size: 16px;
-                    background-color: rgba($color: $color-three, $alpha: .7);
-                    width: 100%;
-                    height: 70px;
+                    background-color: rgba($color: $color-three, $alpha: .6);
+                    width: 150px;
+                    height: 110px;
                     padding: 5px;
                     border-radius: 5px;
+                    li {
+                        display: flex;
+                        align-items: center;
+                        gap: 15px;
+                        opacity: 1;
+                        i {
+                            font-size: 13px;
+                        }
+                    }
+                    & .list-bar {
+                        align-self: center;
+                        width: 120px;
+                        border-top: solid 1px $color-two;
+                    }
                 }
             }
-        }
-        & .tablet-bar {
-            background-color: $color-three;
-            width: 80%;
-            margin-top: 20px;
-            height: 1px;
         }
         & a:hover {
             text-decoration: underline;
@@ -241,9 +269,6 @@ header{
                     padding-bottom: 15px;
                 }
             }
-        }
-        & .tablet-bar {
-            display: none;
         }
     }
 }

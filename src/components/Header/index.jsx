@@ -42,7 +42,6 @@ function Header({ locationsDatas }) {
                 <Link to='/prices' onClick={"#backTop-anchor"}>Tarifs & disponibilités</Link>
                 <Link to='/contact' onClick={"#backTop-anchor"}>Nous contacter</Link>
             </nav>
-            <div className="tablet-bar"></div>
         </header>
     )
 };
