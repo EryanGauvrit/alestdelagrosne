@@ -4,7 +4,7 @@ import { getPicturesHome } from "../../components/utils/GetDatas";
 import NextEvent from "../../components/NextEvent";
 import ButtonLink from "../../components/ButtonLink";
 import { choosePicture } from "../../components/utils/ChoosePicture";
-import ChangeTitlePage from "../../components/ChangeTitlePage";
+import ModifHead from "../../components/ModifHead";
 import LocationsList from "../../components/LocationsList";
 import imgHomeDesktop from "../../assets/pictures/img_home_5_440-min.jpg";
 import imgHomePhone from "../../assets/pictures/img_home_5_750-min.jpg";
@@ -39,7 +39,11 @@ function Home({ locationsDatas }) {
 
     return (
         <React.Fragment>
-            <ChangeTitlePage titlePage="A l'Est de la Grosne" />
+            <ModifHead
+                titlePage="A l'Est de la Grosne"
+                description="A l'Est de la Grosne vous propose des séjours dans nos de gîtes, situés en Saône et Loire sur les communes de La Chapelle-de-Bragny et de Messey-sur-Grosne, Venez séjourner dans nos gîtes situés en Saône et Loire au cœur des grands crus bourguignons"
+                robots="index, follow"
+            />
             <SlideShow
                 pictures={pictureArray}
                 onClick={false}

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import DetailsPrices from "../../components/DetailsPrices";
 import React, { useState } from "react";
 import ButtonLink from "../../components/ButtonLink";
+import ModifHead from "../../components/ModifHead";
 
 function Prices({ locationsDatas }) {
 
@@ -20,6 +21,11 @@ function Prices({ locationsDatas }) {
     return (
         <main className="prices-main">
             <h1>Tarifs et disponibilités :</h1>
+            <ModifHead
+                titlePage='Tarifs et disponibilités'
+                description='Vous pouvez visualiser les tarifs et disponibilités en fonction du gîte qui vous plaît.'
+                robots='index, follow'
+            />
             <div className="location-select" >
                 <label>Veuillez choisir un gîte :</label>
                 <select name="locations" onChange={handleChange}>

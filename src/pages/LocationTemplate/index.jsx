@@ -5,7 +5,7 @@ import Gallery from "../../components/LocationComp/Gallery";
 import SpecificityBloc from "../../components/LocationComp/SpecificityBloc";
 import InProgressLoc from "../../components/LocationComp/InProgressLoc";
 import ErrorComp from "../../components/ErrorComp";
-import ChangeTitlePage from "../../components/ChangeTitlePage";
+import ModifHead from "../../components/ModifHead";
 import GoogleMap from "../../components/GoogleMaps.jsx";
 import ButtonLink from "../../components/ButtonLink";
 
@@ -54,7 +54,11 @@ function LocationTemplate({ locationsDatas }) {
 
         return (
             <main className="location-template">
-                <ChangeTitlePage titlePage={location.title} />
+                <ModifHead
+                    titlePage={location.title}
+                    description={location.description}
+                    robots={location.inProgress && `index,follow`}
+                />
                 <h1>
                     <Logo
                         logoDesktop={location.logoDesktop}

@@ -1,9 +1,15 @@
 import { Link } from "react-router-dom";
+import ModifHead from "../ModifHead";
 
 
 function InProgress() {
     return (
         <main className="inProgress">
+            <ModifHead
+                titlePage='Page en cours de développement'
+                description=''
+                robots='noindex, nofollow'
+            />
             <section>
                 <article>
                     <i className="fa-solid fa-triangle-exclamation"></i>

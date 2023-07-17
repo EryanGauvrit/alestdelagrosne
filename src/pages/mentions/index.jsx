@@ -1,3 +1,4 @@
+import ModifHead from "../../components/ModifHead";
 
 
 function Mentions() {
@@ -8,6 +9,11 @@ function Mentions() {
 
     return (
         <main className="mentions">
+            <ModifHead
+                titlePage='Mentions légales'
+                description=''
+                robots='noindex, nofollow'
+            />
             <h1>Mentions Légales</h1>
             <p>
                 Merci de lire avec attention les différentes modalités d’utilisation du présent site avant d’y parcourir ses pages. En vous connectant sur ce site, vous acceptez, sans réserves, les présentes modalités.

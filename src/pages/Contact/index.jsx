@@ -4,6 +4,7 @@ import facebook100 from '../../assets/social/facebook100.png';
 import linkedin100 from '../../assets/social/linkedin100.png';
 import { isDesktopScreenSize } from '../../components/utils/IsDesktopScreenSize';
 import GoogleMap from '../../components/GoogleMaps.jsx';
+import ModifHead from '../../components/ModifHead';
 
 function Contact() {
 
@@ -20,6 +21,11 @@ function Contact() {
     return (
         <main className="contact">
             <h1>Nous contacter : </h1>
+            <ModifHead
+                titlePage='Contact'
+                description='Contactez nous directement par téléphone ou par mail pour toute demande de réservation ou information.'
+                robots='index, follow'
+            />
             <section className='contact-profil'>
                 <article>
                     <div>
