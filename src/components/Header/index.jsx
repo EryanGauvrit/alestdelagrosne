@@ -2,10 +2,9 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import logo from './../../assets/logowebsite300.png'; // redimensionner en 200
 import LocationsList from "../LocationsList";
-const chevron = <i className="fa-solid fa-chevron-up chevron-up"></i>;
 
 
-function Header({ locationsDatas }) {
+function Header({ locationsDatas, currentPage }) {
     const [isActive, setActive] = useState(false);
     const [isActiveLocationList, setActiveLocationList] = useState(false);
 
@@ -16,9 +15,12 @@ function Header({ locationsDatas }) {
         setActiveLocationList(!isActiveLocationList);
     };
 
+    const chevron = <i className="fa-solid fa-chevron-up chevron-up" onClick={locationListToggle}></i>;
+    console.log(currentPage)
+
 
     return (
-        <header className={`${isActive && "active"}`}>
+        <header className={`${isActive && "active"} ${currentPage === '/location' ? "header-location" : ""}`}>
             <div className="header-phone">
                 <Link to='/' onClick={"#backTop-anchor"}><img src={logo} alt="A l'Est de la Grosne" /></Link>
                 <span className="burger-toggle" onClick={burgerToggle}>
@@ -31,8 +33,8 @@ function Header({ locationsDatas }) {
             <nav>
                 <Link to='/' onClick={"#backTop-anchor"}>Accueil</Link>
                 <div className={`${isActiveLocationList && "activeLocationList"}`}>
-                    <div onClick={locationListToggle}>
-                        <p>Nos gîtes</p>
+                    <div>
+                        <Link to='/location'>Nos gîtes</Link>
                         {chevron}
                     </div>
                     <LocationsList locationsDatas={locationsDatas} homePage={false} />

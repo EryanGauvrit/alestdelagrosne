@@ -1,7 +1,7 @@
 .main-home{
-    margin-top: 340px;
+    margin-top: 300px;
     padding-top: 15px;
-    background-color: $color-one;
+    // background-color: $color-one;
     padding-bottom: 70px;
     .title-home {
         display: flex;
@@ -11,7 +11,7 @@
         gap: 80px;
         padding: 0 15px;
         position: absolute;
-        top: 80px;
+        top: 90px;
         & div {
             display: flex;
             flex-direction: column;
@@ -96,7 +96,7 @@
 @media (min-width: $phoneScreenSize) {
     .main-home{
         max-width: none;
-        margin-top: 500px;
+        margin-top: 450px;
         .title-home {
             padding: 0;
             gap: 240px;

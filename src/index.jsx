@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { getLocationDatas } from './components/utils/GetDatas';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { getLocationDatas, getPicturesHome } from './components/utils/GetDatas';
 import './style/normalize.css';
 import './style/main.scss';
 import Header from './components/Header';
@@ -14,18 +14,29 @@ import ErrorComp from './components/ErrorComp';
 import Contact from './pages/Contact';
 import Mentions from './pages/mentions';
 import Prices from './pages/Prices';
+import LocationHome from './pages/LocationHome';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
+function App() {
 
-    <BrowserRouter>
+  const location = useLocation();
+  const [currentPage, setCurrentPage] = useState('home');
+
+  useEffect(() => {
+    setCurrentPage(location.pathname);
+  }, [location]);
+
+  return (
+
+    <React.Fragment>
       <div id="backTop-anchor"></div>
-      <Header locationsDatas={getLocationDatas()} />
+      <Header locationsDatas={getLocationDatas()} currentPage={currentPage} />
       <BackTop />
       <Routes>
         <Route exact path='/'
-          element={<Home locationsDatas={getLocationDatas()} />}
+          element={<Home locationsDatas={getLocationDatas()} picturesDatas={getPicturesHome()} />}
+        />
+        <Route exact path='/location'
+          element={<LocationHome locationsDatas={getLocationDatas()} picturesDatas={getPicturesHome()} />}
         />
         <Route exact path='/location/:id'
           element={<LocationTemplate locationsDatas={getLocationDatas()} />}
@@ -50,9 +61,18 @@ root.render(
         />
       </Routes>
       <Footer />
-    </BrowserRouter>
+    </React.Fragment>
+  );
+};
 
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>
+
 );
 
 
