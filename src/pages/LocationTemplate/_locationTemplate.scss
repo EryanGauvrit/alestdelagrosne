@@ -26,6 +26,7 @@
     }
     & .picture-gallery {
         width: 90%;
+        max-width: $desktopScreenSize;
         margin: auto;
         margin-top: 0; 
         position: relative;
