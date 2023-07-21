@@ -275,34 +275,6 @@ header{
     }
 }
 
-.header-location {
-    width: 100%;
-    position: fixed;
-    background-color: transparent;
-    box-shadow: none;
-    & .header-phone{
-        justify-content: center;
-        @media (min-width: $phoneScreenSize) {
-            display: none;
-        }
-        & .burger-toggle{
-            margin: 0;
-        }
-        img {
-            display: none;
-        }
-    }
-    & nav {
-        & div:hover {
-            ul {
-                @media (min-width: $phoneScreenSize) {
-                    background-color: transparent;
-                    top: 80px;
-                }
-            }
-        }
-    }
-}
 .header-home {
     width: 100%;
     position: fixed;
@@ -322,6 +294,7 @@ header{
     & nav {
         align-items: flex-end;
         margin-right: 20px;
+        margin-left: 20px;
         & div:hover {
             ul {
                 @media (min-width: $phoneScreenSize) {
@@ -338,7 +311,7 @@ header{
 
 .active-header-home {
     display: flex;
-    width: 70%;
+    width: auto;
     right: 0;
     background-color: rgba($color: $color-two, $alpha: .7);
     color: $color-one;
@@ -362,7 +335,7 @@ header{
 @media (min-width: $phoneScreenSize) {
     .header-home {
         width: 100%;
-        position: inherit;
+        position: relative;
         align-items: center;
         justify-content: center;
         height: 50px;

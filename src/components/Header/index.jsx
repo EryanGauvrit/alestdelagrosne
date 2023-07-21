@@ -18,15 +18,17 @@ function Header({ locationsDatas, currentPage }) {
     const chevron = <i className="fa-solid fa-chevron-up chevron-up" onClick={locationListToggle}></i>;
 
     function setHeader(currentPage) {
-        if (currentPage === '/location') {
-            return "header-location";
-        } else if (currentPage === '/') {
+        if (currentPage === '/location' || currentPage === '/') {
             return "header-home";
+        } else {
+            return "";
         }
     };
 
     function isActiveHeader(isActive, currentPage) {
         if (currentPage === '/' && isActive) {
+            return "active active-header-home";
+        } else if (currentPage === '/location' && isActive) {
             return "active active-header-home";
         } else if (isActive) {
             return "active";

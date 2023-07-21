@@ -9,6 +9,8 @@ import logoNb from "../../assets/logowebsiteNB300.png";
 
 function LocationHome({ locationsDatas, picturesDatas }) {
 
+    const icon = <i className="fa-solid fa-house"></i>
+
     const [picturesDesktop] = useState(picturesDatas[0].pictures);
     const [picturesPhone] = useState(picturesDatas[1].pictures);
 
@@ -34,10 +36,8 @@ function LocationHome({ locationsDatas, picturesDatas }) {
                     <h3>BOURGOGNE - FRANCE</h3>
                 </article>
                 <article className="locationHome-list">
-                    <h3>Nos gîtes</h3>
-                    <ul>
-                        <LocationsList locationsDatas={locationsDatas} homePage={true} />
-                    </ul>
+                    <div><h3>Nos gîtes </h3>{icon}</div>
+                    <LocationsList locationsDatas={locationsDatas} homePage={true} />
                 </article>
             </section>
 

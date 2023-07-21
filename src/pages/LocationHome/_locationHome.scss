@@ -1,9 +1,9 @@
 .locationHome {
-    // min-height: 100vh;
+    height: 100vh;
     padding: 0;
     font-size: $pSizesPhone;
     .picture-gallery {
-        position: fixed;
+        position:unset;
         top: 0;
         left: 0;
         z-index: 10;
@@ -17,8 +17,8 @@
         }
     }
     section {
-        position: fixed;
-        top: 0;
+        position: relative;
+        top: -110vh;
         left: 0;
         z-index: 10;
         height: 100vh;
@@ -29,5 +29,118 @@
         justify-content: center;
         gap: 100px;
         max-width: none;
+        & article {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img {
+                width: 130px;
+            }
+            h1{
+                font-family: $policesTitle;
+                font-size: 40px;
+                text-align: center;
+                margin: 20px 0;
+                letter-spacing: 2px;
+            }
+            h2{
+                font-family: $policesGlobalBold;
+                font-size: 30px;
+                text-align: center;
+            }
+            h3{
+                font-family: $policesGlobalBold;
+                font-size: $h3SizesPhone;
+                text-align: center;
+            }
+        }
+        & .locationHome-list {
+            gap: 50px;
+            div {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                h3 {
+                    text-decoration: underline;
+                    font-size: 25px;
+                    letter-spacing: 2px;
+                }
+                i {
+                    font-size: 20px;
+                    text-decoration: none;
+                }
+            }
+            ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 40px;
+                li {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    font-size: $pSizesPhone;
+                }
+            }
+            img {
+                height: 70px;
+                width: auto;
+            }
+        }
+    }
+}
+
+@media (min-width: $phoneScreenSize) {
+    .locationHome {
+        margin-top: -50px;
+        font-size: $pSizesDesktop;
+        section {
+            top: -100vh;
+            gap: 100px;
+            & article {
+                img {
+                    width: 200px;
+                }
+                h1{
+                    font-size: 70px;
+                    margin: 50px 0;
+                }
+                h2{
+                    font-size: 40px;
+                }
+                h3{
+                    font-size: $h3SizesDesktop;
+                }
+            }
+            & .locationHome-list {
+                gap: 80px;
+                div {
+                    gap: 30px;
+                    h3 {
+                        font-size: 35px;
+                    }
+                    i {
+                        font-size: 30px;
+                    }
+                }
+                ul {
+                    flex-direction: row;
+                    gap: 150px;
+                    li {
+                        font-size: $pSizesDesktop;
+                        a {
+                            transition: .2s;
+                            &:hover {
+                                scale: 1.05;
+                                transition: .2s;
+                            }
+                        }
+                    }
+                }
+                img {
+                    height: 130px;
+                }
+            }
+        }
     }
 }
