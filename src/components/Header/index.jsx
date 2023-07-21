@@ -16,11 +16,26 @@ function Header({ locationsDatas, currentPage }) {
     };
 
     const chevron = <i className="fa-solid fa-chevron-up chevron-up" onClick={locationListToggle}></i>;
-    console.log(currentPage)
+
+    function setHeader(currentPage) {
+        if (currentPage === '/location') {
+            return "header-location";
+        } else if (currentPage === '/') {
+            return "header-home";
+        }
+    };
+
+    function isActiveHeader(isActive, currentPage) {
+        if (currentPage === '/' && isActive) {
+            return "active active-header-home";
+        } else if (isActive) {
+            return "active";
+        } return '';
+    };
 
 
     return (
-        <header className={`${isActive && "active"} ${currentPage === '/location' ? "header-location" : ""}`}>
+        <header className={`${isActiveHeader(isActive, currentPage)} ${setHeader(currentPage)}`}>
             <div className="header-phone">
                 <Link to='/' onClick={"#backTop-anchor"}><img src={logo} alt="A l'Est de la Grosne" /></Link>
                 <span className="burger-toggle" onClick={burgerToggle}>

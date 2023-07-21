@@ -1,4 +1,7 @@
 .locationHome {
+    // min-height: 100vh;
+    padding: 0;
+    font-size: $pSizesPhone;
     .picture-gallery {
         position: fixed;
         top: 0;
@@ -9,8 +12,22 @@
         .current-picture-bloc {
             height: 100vh;
             & img {       
-                opacity: .6;
+                opacity: .45;
             }
         }
+    }
+    section {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 100px;
+        max-width: none;
     }
 }

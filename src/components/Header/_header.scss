@@ -184,7 +184,7 @@ header{
                 & ul {
                     position: fixed;
                     z-index: -100;
-                    top: 120px;
+                    top: 140px;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -195,7 +195,7 @@ header{
                     width: 150px;
                     height: 110px;
                     padding: 5px;
-                    border-radius: 5px;
+                    border-radius: 0 0 5px 5px;
                     li {
                         display: flex;
                         align-items: center;
@@ -299,6 +299,86 @@ header{
                     background-color: transparent;
                     top: 80px;
                 }
+            }
+        }
+    }
+}
+.header-home {
+    width: 100%;
+    position: fixed;
+    background-color: transparent;
+    box-shadow: none;
+    height: auto;
+    align-items: flex-end;
+    & .header-phone{
+        height: 50px;
+        @media (min-width: $phoneScreenSize) {
+            display: none;
+        }
+        img {
+            display: none;
+        }
+    }
+    & nav {
+        align-items: flex-end;
+        margin-right: 20px;
+        & div:hover {
+            ul {
+                @media (min-width: $phoneScreenSize) {
+                    background-color: transparent;
+                    top: 80px;
+                }
+            }
+        }
+        a {
+            color: $color-one;
+        }
+    }
+}
+
+.active-header-home {
+    display: flex;
+    width: 70%;
+    right: 0;
+    background-color: rgba($color: $color-two, $alpha: .7);
+    color: $color-one;
+    .header-phone .burger-toggle {
+        span {
+            background-color: $color-one;
+        }
+    }
+    & nav .activeLocationList {
+        div {
+            align-self: flex-end;
+        }
+        ul {
+            .list-bar{
+            border-top: solid 1px $color-one;
+            }
+        }
+    }
+}
+
+@media (min-width: $phoneScreenSize) {
+    .header-home {
+        width: 100%;
+        position: inherit;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        & nav {
+            align-items: center;
+            margin-right: 0;
+            & div:hover {
+                ul {
+                    @media (min-width: $phoneScreenSize) {
+                        // background-color: rgba($color: $color-two, $alpha: .7);
+                        top: 30px;
+                    }
+                }
+            }
+            a {
+                color: $color-two;
             }
         }
     }

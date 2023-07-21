@@ -7,6 +7,7 @@ import ModifHead from "../../components/ModifHead";
 import LocationsList from "../../components/LocationsList";
 import imgHomeDesktop from "../../assets/pictures/img_home_5_440-min.jpg";
 import imgHomePhone from "../../assets/pictures/img_home_5_750-min.jpg";
+import logoNb from "../../assets/logowebsiteNB300.png";
 
 function Home({ locationsDatas, picturesDatas }) {
 
@@ -31,6 +32,7 @@ function Home({ locationsDatas, picturesDatas }) {
             <main className="main-home">
                 <div className="title-home">
                     <div>
+                        <img src={logoNb} alt="À l'Est de la Grosne" />
                         <h1>À l'Est de la Grosne</h1>
                         <h2>Gîtes de Bourgogne</h2>
                     </div>

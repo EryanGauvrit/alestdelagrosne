@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { choosePicture } from "../utils/ChoosePicture";
 
 function LocationsList({ locationsDatas, homePage }) {
 
-    const iconList = <i className="fa-solid fa-arrow-right"></i>;
     const iconListHeader = <i className="fa-solid fa-house"></i>;
     const isInProgress = (inProgress) => {
         if (inProgress) {
@@ -36,9 +36,8 @@ function LocationsList({ locationsDatas, homePage }) {
                     (
                         locationsDatas.map((location) =>
                             <li key={location.id}>
-                                {iconList}
                                 <Link to={'/location/' + location.id} onClick={"#backTop-anchor"}>
-                                    {location.title}
+                                    <img src={choosePicture(location.logoDesktop, location.logoPhone)} alt={location.title} />
                                 </Link>
                                 {isInProgress(location.inProgress)}
                             </li>
