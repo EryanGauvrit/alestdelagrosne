@@ -20,7 +20,7 @@ function NextEvent() {
             </a>
             <ButtonLink
                 link="/hobbies"
-                content="voir toutes les activités du coin"
+                content="Loisirs"
                 borderColor='$color-two'
                 color='$color-two'
             />

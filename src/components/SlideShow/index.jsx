@@ -19,7 +19,7 @@ function SlideShow({ pictures, onClick }) {
     /* Loading Spinner */
 
     const [isLoading, setIsLoading] = useState(true);
-    const spinnerDelay = 1100;
+    const spinnerDelay = 2000;
     const resetIsLoading = (state) => {
         setTimeout(() => {
             setIsLoading(state);

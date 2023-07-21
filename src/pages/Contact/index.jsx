@@ -38,6 +38,7 @@ function Contact() {
                     <div>
                         <h2>Leslie</h2>
                         <a href="tel:0629515288">06.29.51.52.88</a>
+                        <p>Langues parlées : Anglais et allemand</p>
                     </div>
                     <figcaption className='pp'></figcaption>
                 </article>
@@ -54,14 +55,16 @@ function Contact() {
             <section>
                 <h2>Localisation :</h2>
                 <ul>
-                    <li>{iconList}1h de Montchanin</li>
-                    <li>{iconList}1h de Dijon</li>
+                    <li>{iconList}35 min de la gare TGV de Montchanin – Le Creusot</li>
+                    <li>{iconList}40 min de la gare TGV de Macon – Loché</li>
+                    <li>{iconList}20 min de la gare TGV de Chalon sur Saône</li>
+                    <li>{iconList}20 min de l’autoroute A6</li>
                     <li>{iconList}Idéalement situé entre <strong>Cluny,</strong> <strong>Tournus,</strong> <strong>Chalon-sur-Saône</strong></li>
                 </ul>
             </section>
             <section className='localisation'>
                 <GoogleMap
-                    mapUrl="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1645.900808585101!2d4.738708931176042!3d46.64637271692672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f306b5bfdd02cf%3A0x7971ed8ea3c0764e!2sL&#39;Abergement%2C%2071390%20Messey-sur-Grosne!5e1!3m2!1sfr!2sfr!4v1689092259995!5m2!1sfr!2sfr"
+                    mapUrl="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d416666.3660693397!2d4.5456125453467955!3d46.68025649265147!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f306b5bfdd02cf%3A0x7971ed8ea3c0764e!2sL%27Abergement%2C%2071390%20Messey-sur-Grosne!5e0!3m2!1sfr!2sfr!4v1689948566591!5m2!1sfr!2sfr"
                 />
             </section>
         </main>

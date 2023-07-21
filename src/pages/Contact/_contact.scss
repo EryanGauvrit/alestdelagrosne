@@ -42,7 +42,8 @@
             justify-content: space-around;
             align-items: center;
             gap: 15px;
-            width: 100%;
+            width: 95%;
+            margin: auto;
             padding: 10px 0;
             background-color: rgba($color: $color-two, $alpha: .3);
             border-radius: 15px;
@@ -50,6 +51,7 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                gap: 10px;                
             }
             & figcaption {
                 width: 70px;
@@ -104,14 +106,19 @@
         .contact-profil {
             flex-direction: row;
             justify-content: space-around;
+            flex-wrap: wrap;
             & article {
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
                 gap: 15px;
-                width: 370px;
+                width: 480px;
                 height: 130px;
                 padding: 0;
+                p {
+                    padding: 0 10px;
+                    text-align: center;
+                }
                 & figcaption {
                     width: 90px;
                     height: 90px;

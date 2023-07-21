@@ -30,7 +30,7 @@ function App() {
     <React.Fragment>
       <div id="backTop-anchor"></div>
       <Header locationsDatas={getLocationDatas()} currentPage={currentPage} />
-      <BackTop />
+      <BackTop currentPage={currentPage} />
       <Routes>
         <Route exact path='/'
           element={<Home locationsDatas={getLocationDatas()} picturesDatas={getPicturesHome()} />}

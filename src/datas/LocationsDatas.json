@@ -24,13 +24,15 @@
                ], 
                "rdcCapacity": [
                 "Chambre pour 2 personnes avec sa salle de bain privative et accès extérieur indépendant."
-               ]
+               ],
+               "maxCapacity": 12
             },
         "equipment":[
             "Lave-linge",
             "Lave-vaisselle",
             "Micro-ondes",
             "Télévision",
+            "Lit bébé et chaise bébé",
             "Poêle à bois"
         ],
         "services":[

@@ -1,0 +1,16 @@
+.locationHome {
+    .picture-gallery {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        height: 100vh;
+        background-color: $color-one;
+        .current-picture-bloc {
+            height: 100vh;
+            & img {       
+                opacity: .6;
+            }
+        }
+    }
+}

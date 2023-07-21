@@ -16,27 +16,11 @@
         @media (min-width: $phoneScreenSize) {
             height: 600px;
         }
-        & img {
-            // height: 300px;            
+        & img {       
             height: 100%;
             opacity: .7;
-            @media (min-width: $phoneScreenSize) {
-                // max-width: 1920px;
-                // position: relative;
-                // top: -80px;
-            }
         }
     }
-    // &:hover {
-    //     .slick-prev {
-    //         opacity: 1;
-    //         transition: .2s;
-    //     }
-    //     .slick-next {
-    //         opacity: 1;
-    //         transition: .2s;
-    //     }
-    // }
 }
 
 .activeAnimation {

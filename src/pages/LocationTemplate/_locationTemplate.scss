@@ -131,7 +131,7 @@
 
 @media (min-width: $phoneScreenSize) {
     .location-template{
-        margin-top: -20px;
+        padding: 0;
         & h1 {
             & img {
                 height: 130px;

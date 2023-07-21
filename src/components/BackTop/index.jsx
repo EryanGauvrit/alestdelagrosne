@@ -1,10 +1,10 @@
 import React from "react";
 
-function BackTop() {
+function BackTop({ currentPage }) {
 
     return (
         <React.Fragment>
-            <a href="#backTop-anchor" className='backTop'>
+            <a href="#backTop-anchor" className='backTop' style={currentPage === '/location' ? { display: 'none' } : {}}>
                 <i className="fa-solid fa-chevron-up"></i>
             </a>
         </React.Fragment>

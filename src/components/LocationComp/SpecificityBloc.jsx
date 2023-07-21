@@ -21,6 +21,10 @@ function SpecificityBloc({ capacity, equipment, services }) {
                 <h3>Capacité d'accueil :</h3>
                 <div>
                     <ul>
+                        <h4>{iconList} Capacité maximale :</h4>
+                        <p style={{ textAlign: 'end' }}>{capacity.maxCapacity} personnes</p>
+                    </ul>
+                    <ul>
                         <h4>{iconList} RDC :</h4>
                         {
                             capacity.rdcCapacity.map((item) =>

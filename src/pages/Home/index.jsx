@@ -1,5 +1,5 @@
 import SlideShow from "../../components/SlideShow";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import NextEvent from "../../components/NextEvent";
 import ButtonLink from "../../components/ButtonLink";
 import { choosePicture } from "../../components/utils/ChoosePicture";
@@ -16,23 +16,6 @@ function Home({ locationsDatas, picturesDatas }) {
     const [picturesPhone] = useState(picturesDatas[1].pictures);
 
     const pictureArray = choosePicture(picturesDesktop, picturesPhone);
-
-    /* Loading Spinner */
-
-    const [isLoading, setIsLoading] = useState(true);
-    const spinnerDelay = 1100;
-    const resetIsLoading = (state) => {
-        setTimeout(() => {
-            setIsLoading(state);
-        }, spinnerDelay);
-    }
-
-    useEffect(() => {
-        if (isLoading) {
-            resetIsLoading(false);
-        }
-    }, [isLoading]);
-
 
     return (
         <React.Fragment>
@@ -51,13 +34,13 @@ function Home({ locationsDatas, picturesDatas }) {
                         <h1>À l'Est de la Grosne</h1>
                         <h2>Gîtes de Bourgogne</h2>
                     </div>
-                    <h3>Idéalement situé entre la côte <strong>chalonnaise</strong> et la côte <strong>mâconnaise</strong> ...</h3>
+                    <h3>Idéalement situés entre la côte <strong>chalonnaise</strong> et la côte <strong>mâconnaise</strong> ...</h3>
                 </div>
                 <section className="home-description">
                     <article>
                         <h3>A quoi s'attendre ?</h3>
-                        <p>Venez séjourner dans nos <strong>gîtes situés en Saône et Loire</strong> au cœur des grands crus bourguignons,
-                            un sur la commune de <strong>La Chapelle-de-Bragny</strong>, le second sur la commune de <strong>Messey-sur-Grosne</strong>.</p>
+                        <p>Venez séjourner dans nos <strong>gîtes en Saône et Loire</strong> au cœur des grands crus bourguignons,
+                            sur les commune de <strong>La Chapelle-de-Bragny</strong> et de <strong>Messey-sur-Grosne</strong>.</p>
                     </article>
                     <article>
                         <h3>Notre région vous propose :</h3>

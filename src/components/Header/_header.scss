@@ -226,9 +226,7 @@ header{
         display: flex;
         flex-direction: column;
         align-items: center;
-        // background-color: transparent;
         padding: 0;
-        // margin-bottom: 50px;
         box-shadow: none;
         & .header-phone{
             width: auto;
@@ -278,6 +276,8 @@ header{
 }
 
 .header-location {
+    width: 100%;
+    position: fixed;
     background-color: transparent;
     box-shadow: none;
     & .header-phone{
@@ -296,6 +296,7 @@ header{
         & div:hover {
             ul {
                 @media (min-width: $phoneScreenSize) {
+                    background-color: transparent;
                     top: 80px;
                 }
             }
