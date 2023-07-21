@@ -112,7 +112,10 @@ function LocationTemplate({ locationsDatas }) {
                                 <div className="address-bloc">
                                     <ButtonLink link='/prices' content='Tarifs' />
                                     <h2>Adresse :</h2>
-                                    <address> 52 Rte d'Hauterive, 71240 La Chapelle-de-Bragny</address>
+                                    <address>
+                                        <p>{location.address.split(',')[0]},</p>
+                                        <p>{location.address.split(',')[1]}</p>
+                                    </address>
 
                                 </div>
                                 <GoogleMap
