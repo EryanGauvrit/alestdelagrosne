@@ -40,7 +40,7 @@ function Home({ locationsDatas, picturesDatas }) {
                 </div>
                 <section className="home-description">
                     <article>
-                        <h3>A quoi s'attendre ?</h3>
+                        <h3>À quoi s'attendre ?</h3>
                         <p>Venez séjourner dans nos <strong>gîtes en Saône et Loire</strong> au cœur des grands crus bourguignons,
                             sur les commune de <strong>La Chapelle-de-Bragny</strong> et de <strong>Messey-sur-Grosne</strong>.</p>
                     </article>
