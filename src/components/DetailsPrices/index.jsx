@@ -5,7 +5,7 @@ function DetailsPrices({ prices }) {
     const icon = <i className="fa-solid fa-square"></i>;
 
     return (
-        <section className="prices-bloc">
+        <div className="prices-bloc">
 
             <table>
                 <thead>
@@ -46,7 +46,7 @@ function DetailsPrices({ prices }) {
                 <li>{icon} Moyenne saison : de septembre à octobre et d'avril à juin</li>
                 <li>{icon} Basse saison : de novembre à mars</li>
             </ul>
-        </section>
+        </div>
     )
 };
 

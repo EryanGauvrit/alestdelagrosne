@@ -2,29 +2,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    justify-content: space-around;
+    gap: 50px;
     margin-bottom: 30px;
     font-size: $pSizesPhone;
     & h1 {
         font-size: 35px;
-    }
-    & h3 {
-        font-size: $h3SizesPhone;
-        margin: 50px 0;
-        letter-spacing: 1px;
-    }
-    & .location-select {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
     }
     & section {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 15px;
-        width: 95%;
+        width: 90%;
         p a {
             text-decoration: underline;
         }
@@ -32,41 +22,92 @@
     & .button-link {
         margin: 20px 0;
     }
+
+    .locations{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+            & .titleClickable {
+                display: flex;
+                align-items: flex-end;
+                gap : 30px;
+                & img {
+                    height: 70px;
+                }
+                & i {
+                    margin-bottom: 10px;
+                    font-size: 30px;
+                    transition: .2s;
+                }
+            }
+            & .locationDetails{
+                display: none;
+            }
+        }
+        & .activeLocationDetails {
+            & .titleClickable {
+                & i {
+                    rotate: -180deg;
+                    transition: .2s;
+                }
+            }
+            & .locationDetails{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+                & .prices-bloc {
+                    & ul {
+                        align-items: flex-start;
+                        gap: 10px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media (min-width: $phoneScreenSize) {
     .prices-main {
-        gap: 40px;
-        margin: auto;
-        margin-bottom: 50px;
+        gap: 70px;
+        margin-bottom: 0;
         font-size: $pSizesDesktop;
         & h1 {
-            font-size: 45px;
-        }
-        & h3 {
-            font-size: $h3SizesDesktop;
-            margin: 70px 0;
-        }
-        & .location-select {
-            display: flex;
+            font-size: 35px;
+        }    
+        .locations{
             flex-direction: row;
-            gap: 20px;
-        }
-        & section {
-            gap: 25px;
-            width: 90%;
-            p a {
-                display: inline-block;
-                transition: .2s;
-                &:hover {
-                    scale: 1.05;
-                    opacity: .8;
-                    transition: .2s;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 70px;
+            & ul {
+                gap: 50px;
+                & .titleClickable {
+                    gap : 40px;
+                    & img {
+                        height: 120px;
+                    }
+                    & i {
+                        font-size: 55px;
+                    }
                 }
             }
-        }
-        & .button-link {
-            margin: 35px 0;
+            & .activeLocationDetails {
+                & .locationDetails{
+                    gap: 30px;
+                    & .prices-bloc {
+                        & ul {
+                            gap: 15px;
+                        }
+                    }
+                }
+            }
         }
     }
 }
