@@ -1,12 +1,11 @@
 .locationHome {
+    position: fixed;
+    z-index: -10;
+    width: 100%;
     height: 100vh;
     padding: 0;
     font-size: $pSizesPhone;
     .picture-gallery {
-        position:unset;
-        top: 0;
-        left: 0;
-        z-index: 10;
         height: 100vh;
         background-color: $color-one;
         .current-picture-bloc {
@@ -17,17 +16,15 @@
         }
     }
     section {
-        position: relative;
-        top: -110vh;
-        left: 0;
+        position: sticky;
         z-index: 10;
-        height: 100vh;
+        height: 80vh;
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 100px;
+        gap: 70px;
         max-width: none;
         & article {
             display: flex;
@@ -95,25 +92,28 @@
         margin-top: -50px;
         font-size: $pSizesDesktop;
         section {
-            top: -100vh;
-            gap: 100px;
+            // top: -100vh;
+            gap: 90px;
             & article {
                 img {
                     width: 200px;
                 }
                 h1{
                     font-size: 70px;
-                    margin: 50px 0;
+                    margin-top: 30px;
+                    margin-bottom: 0;
                 }
                 h2{
-                    font-size: 40px;
+                    font-size: 35px;
+                    align-self: flex-end;
                 }
                 h3{
                     font-size: $h3SizesDesktop;
+                    align-self: flex-end;
                 }
             }
             & .locationHome-list {
-                gap: 80px;
+                gap: 50px;
                 div {
                     gap: 30px;
                     h3 {

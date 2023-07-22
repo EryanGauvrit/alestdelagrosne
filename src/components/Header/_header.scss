@@ -351,7 +351,13 @@ header{
                 }
             }
             a {
+                display: inline-block;
                 color: $color-two;
+                transition: .2s;
+                &:hover {
+                    scale: 1.05;
+                    transition: .2s;
+                }
             }
         }
     }

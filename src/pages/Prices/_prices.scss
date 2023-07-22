@@ -90,11 +90,17 @@
                 gap: 50px;
                 & .titleClickable {
                     gap : 40px;
+                    transition: .2s;
                     & img {
                         height: 120px;
                     }
                     & i {
                         font-size: 55px;
+                    }
+                    &:hover {
+                        cursor: pointer;
+                        scale: 1.02;
+                        transition: .2s;
                     }
                 }
             }

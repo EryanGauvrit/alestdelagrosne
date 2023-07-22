@@ -75,13 +75,48 @@ footer {
                 & i {
                     font-size: 27px;
                 }
+                & a {
+                    display: inline-block;
+                    transition: .2s;
+                    &:hover {
+                        scale: 1.05;
+                        transition: .2s;
+                    }
+                }
             }
         }
         & .link-list{
             font-size: 20px;
+            & a {
+                display: inline-block;
+                transition: .2s;
+                &:hover {
+                    scale: 1.05;
+                    transition: .2s;
+                }
+            }
         }
         & p {
             font-size: 16px;
+            & a {
+                display: inline-block;
+                transition: .2s;
+                &:hover {
+                    scale: 1.05;
+                    transition: .2s;
+                }
+            }
         }
+    }
+}
+
+.footer-location{
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    background-color: transparent;
+    padding: 0;
+    & .title-footer{
+        display: none;
     }
 }

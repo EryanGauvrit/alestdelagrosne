@@ -60,7 +60,7 @@ function App() {
           element={<ErrorComp />}
         />
       </Routes>
-      <Footer />
+      <Footer currentPage={currentPage} />
     </React.Fragment>
   );
 };
