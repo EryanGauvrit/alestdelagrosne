@@ -59,6 +59,14 @@
                 background-color: $color-two;
                 border-radius: 50%;
                 border: solid $color-one 2px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                img {
+                    width: 70px;
+                    height: 70px;
+                }
             }
         }
     }
@@ -122,6 +130,10 @@
                 & figcaption {
                     width: 90px;
                     height: 90px;
+                    img {
+                        width: 90px;
+                        height: 90px;
+                    }
                 }
             }
         }
