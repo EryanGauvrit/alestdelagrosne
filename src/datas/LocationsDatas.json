@@ -18,12 +18,34 @@
         "capacity":{
                "floor": true,
                "floorCapacity": [
-                "Chambre pour 2 personnes avec lits superposés pour 2 enfants",
-                "Chambre pour 1 ou 2 couples, ou 1 couple et 2 enfants",
-                "Lit bébé possibilité sur demande."
+                {
+                    "titleRoom":"1 Chambre pour 5 personnes avec :",
+                    "detailsRoom":[
+                        "1 lit double",
+                        "1 lit simple",
+                        "1 lit superposé pour 2 enfants"
+                    ]
+                },
+                {
+                    "titleRoom":"1 Chambre pour 5 personnes avec :",
+                    "detailsRoom":[
+                        "1 lit double",
+                        "3 lit simple"
+                    ]
+                },
+                {
+                    "titleRoom":"1 salle de bain",
+                    "detailsRoom":[]
+                }
                ], 
                "rdcCapacity": [
-                "Chambre pour 2 personnes avec sa salle de bain privative et accès extérieur indépendant."
+                {
+                    "titleRoom":"1 Chambre pour 2 personnes avec :",
+                    "detailsRoom":[
+                        "salle de bain privative",
+                        "accès extérieur indépendant"
+                    ]
+                }
                ],
                "maxCapacity": 12
             },

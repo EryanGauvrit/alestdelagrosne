@@ -1,12 +1,13 @@
 import { isDesktopScreenSize } from '../utils/IsDesktopScreenSize';
-import bgImage1 from '../../assets/bg-img/bg-bloc-1.jpg';
-import bgImage2 from '../../assets/bg-img/bg-bloc-2.jpg';
-import bgImage3 from '../../assets/bg-img/bg-bloc-3.jpg';
+import bgImage1 from '../../assets/bg-img/bg-bloc-1-min.jpg';
+import bgImage2 from '../../assets/bg-img/bg-bloc-2-min.jpg';
+import bgImage3 from '../../assets/bg-img/bg-bloc-3-min.jpg';
 import React from 'react';
 
 function SpecificityBloc({ capacity, equipment, services }) {
 
     const iconList = <i className="fa-solid fa-check"></i>;
+    const iconListPoint = <i className="fa-solid fa-circle"></i>;
 
     const activeBgImg = (img) => {
         if (isDesktopScreenSize()) {
@@ -28,7 +29,18 @@ function SpecificityBloc({ capacity, equipment, services }) {
                         <h4>{iconList} RDC :</h4>
                         {
                             capacity.rdcCapacity.map((item) =>
-                                <li key={item}>- {item}</li>
+                                <li key={item.titleRoom} className='floorCapacity-bloc'>
+                                    {
+                                        <React.Fragment>
+                                            <p>{item.titleRoom}</p>
+                                            <ul>
+                                                {item.detailsRoom.map((detail) =>
+                                                    <li key={detail}>{iconListPoint}{detail}</li>
+                                                )}
+                                            </ul>
+                                        </React.Fragment>
+                                    }
+                                </li>
                             )
                         }
                     </ul>
@@ -38,7 +50,19 @@ function SpecificityBloc({ capacity, equipment, services }) {
                             <React.Fragment>
                                 <h4>{iconList} Etage :</h4>
                                 {capacity.floorCapacity.map((floorCapacity) =>
-                                    <li key={floorCapacity}>- {floorCapacity}</li>
+                                    <li key={floorCapacity.titleRoom} className='floorCapacity-bloc'>
+                                        {
+                                            <React.Fragment>
+                                                <p>{floorCapacity.titleRoom}</p>
+                                                <ul>
+                                                    {floorCapacity.detailsRoom.map((detail) =>
+                                                        <li key={detail}>{iconListPoint}{detail}</li>
+                                                    )}
+                                                </ul>
+                                            </React.Fragment>
+
+                                        }
+                                    </li>
                                 )}
                             </React.Fragment>
                         }

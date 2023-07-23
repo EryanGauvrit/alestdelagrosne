@@ -8,6 +8,7 @@ $color-bloc3 : #C89D1B;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    font-family: $policesGlobalBold;
     & article {
         display: flex;
         flex-direction: column;
@@ -39,7 +40,7 @@ $color-bloc3 : #C89D1B;
                 flex-direction: row;
                 align-items: center;
                 gap: 5px;
-            }
+            }            
         }
         & i {
             font-size: 15px;
@@ -48,9 +49,26 @@ $color-bloc3 : #C89D1B;
 
     & .capacity{
         background-color: rgba($color: $color-bloc1, $alpha: .85);
-        & li {
-            width: 80%;
-            margin: auto;
+        .floorCapacity-bloc {
+            width: 95%;
+            flex-direction: column;
+            align-items: flex-start;
+            ul {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                width: 85%;
+                margin: auto;
+                li {
+                    margin: 0;
+                    display: flex;
+                    flex-direction: row;
+                    gap: 5px;
+                    i {
+                        font-size: 5px;
+                    }
+                }
+            }
         }
     }
     & .equipment{
@@ -72,16 +90,16 @@ $color-bloc3 : #C89D1B;
         & article {
             justify-content: start;
             gap: 10px;
-            width: 350px;
-            height: 600px;
+            width: 380px;
+            height: 650px;
             padding: 0;
             color: $color-two;
             & h3 {
                 font-size: $h3SizesDesktop;
-                margin-top: 40px;
+                margin-top: 20px;
             }
             & ul {
-                    gap: 10px;
+                gap: 10px;
                 & h4 {
                     font-size: 24px;
                 }
@@ -93,11 +111,15 @@ $color-bloc3 : #C89D1B;
                 font-size: 18px;
             }
         }
-    
+        
         & .capacity{
             border-radius: 15px 0 0 15px;
-            & div {
-                width: 90%;
+            div{
+                width: 100%;
+                ul {
+                    width: 90%;
+                    margin: auto;
+                }
             }
         }
         & .equipment{
