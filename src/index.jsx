@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-import { getLocationDatas, getPicturesHome } from './components/utils/GetDatas';
+import { getLocationDatas, getPicturesHome, getPicturesLocationHome } from './components/utils/GetDatas';
 import './style/normalize.css';
 import './style/main.scss';
 import Header from './components/Header';
@@ -36,7 +36,7 @@ function App() {
           element={<Home locationsDatas={getLocationDatas()} picturesDatas={getPicturesHome()} />}
         />
         <Route exact path='/location'
-          element={<LocationHome locationsDatas={getLocationDatas()} picturesDatas={getPicturesHome()} />}
+          element={<LocationHome locationsDatas={getLocationDatas()} picturesDatas={getPicturesLocationHome()} />}
         />
         <Route exact path='/location/:id'
           element={<LocationTemplate locationsDatas={getLocationDatas()} />}

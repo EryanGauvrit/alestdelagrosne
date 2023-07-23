@@ -91,6 +91,14 @@
     .locationHome {
         margin-top: -50px;
         font-size: $pSizesDesktop;
+        .picture-gallery {
+            .current-picture-bloc {
+                & img {       
+                    max-width: 1920px;
+                    height: auto;
+                }
+            }
+        }
         section {
             // top: -100vh;
             gap: 90px;
