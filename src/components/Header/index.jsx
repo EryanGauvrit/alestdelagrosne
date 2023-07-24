@@ -51,7 +51,7 @@ function Header({ locationsDatas, currentPage }) {
                 <Link to='/' onClick={"#backTop-anchor"}>Accueil</Link>
                 <div className={`${isActiveLocationList && "activeLocationList"}`}>
                     <div>
-                        <Link to='/location'>Nos gîtes</Link>
+                        <Link to='/location' onClick={"#backTop-anchor"}>Nos gîtes</Link>
                         {chevron}
                     </div>
                     <LocationsList locationsDatas={locationsDatas} homePage={false} />
