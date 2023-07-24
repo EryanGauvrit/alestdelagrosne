@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SlideShow from "../../components/SlideShow";
 import { choosePicture } from "../../components/utils/ChoosePicture";
 import LocationsList from "../../components/LocationsList";
@@ -14,6 +14,29 @@ function FullScreenGallery({ locationsDatas, picturesDatas }) {
     const [picturesPhone] = useState(picturesDatas[1].pictures);
 
     const pictureArray = choosePicture(picturesDesktop, picturesPhone);
+
+    useEffect(() => {
+        const handleScroll = (event) => {
+            const delta = event.deltaY;
+            const windowHeight = window.innerHeight;
+            const scrollStep = windowHeight * 1.2;
+
+            if (delta > 0 && window.innerHeight + window.scrollY >= document.body.offsetHeight - scrollStep) {
+                // Faire défiler vers le bas de 100vh
+                window.scrollTo({ top: windowHeight, behavior: 'smooth' });
+                event.preventDefault(); // Empêche le défilement par défaut de la page
+            } else if (delta < 0 && window.scrollY <= scrollStep) {
+                window.scrollTo({ top: -windowHeight, behavior: 'smooth' });
+                event.preventDefault();
+            }
+        };
+
+        window.addEventListener('wheel', handleScroll, { passive: false });
+
+        return () => {
+            window.removeEventListener('wheel', handleScroll);
+        };
+    }, []);
 
     return (
         <section className="fullScreenGallery">

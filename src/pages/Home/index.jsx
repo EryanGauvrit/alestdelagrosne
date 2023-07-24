@@ -1,11 +1,6 @@
 import React from "react";
 import NextEvent from "../../components/NextEvent";
-import ButtonLink from "../../components/ButtonLink";
-import { choosePicture } from "../../components/utils/ChoosePicture";
 import ModifHead from "../../components/ModifHead";
-import LocationsList from "../../components/LocationsList";
-import imgHomeDesktop from "../../assets/pictures/img_home_5_440-min.jpg";
-import imgHomePhone from "../../assets/pictures/img_home_5_750-min.jpg";
 import FullScreenGallery from "../../components/FullScreenGallery";
 
 function Home({ locationsDatas, picturesDatas }) {
@@ -70,13 +65,6 @@ function Home({ locationsDatas, picturesDatas }) {
                             </li>
                         </ul>
                     </article>
-                    {/* <article
-                        className="location-list-home"
-                        style={{ background: `linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(${choosePicture(imgHomeDesktop, imgHomePhone)})` }}
-                    >
-                        <h3>Nous vous attendons dans nos gîtes :</h3>
-                        <LocationsList locationsDatas={locationsDatas} homePage={true} />
-                    </article> */}
                     <NextEvent />
                 </section>
             </main>
