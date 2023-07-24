@@ -33,7 +33,7 @@ function App() {
       <BackTop currentPage={currentPage} />
       <Routes>
         <Route exact path='/'
-          element={<Home locationsDatas={getLocationDatas()} picturesDatas={getPicturesHome()} />}
+          element={<Home locationsDatas={getLocationDatas()} picturesDatas={getPicturesLocationHome()} />}
         />
         <Route exact path='/location'
           element={<LocationHome locationsDatas={getLocationDatas()} picturesDatas={getPicturesLocationHome()} />}

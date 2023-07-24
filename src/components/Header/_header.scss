@@ -335,7 +335,7 @@ header{
 @media (min-width: $phoneScreenSize) {
     .header-home {
         width: 100%;
-        position: relative;
+        position: absolute;
         align-items: center;
         justify-content: center;
         height: 50px;

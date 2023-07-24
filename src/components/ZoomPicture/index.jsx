@@ -2,7 +2,7 @@
 function ZoomPicture({ picture, activationOnclick }) {
 
     return (
-        <div className={`picture-zoom ${activationOnclick && picture ? 'zoom-active' : undefined}`}>
+        <div className={`picture-zoom ${activationOnclick && picture ? 'zoom-active' : ''}`}>
             <div className="close-zoom" onClick={activationOnclick}>
                 <i className="fa-solid fa-xmark"></i>
                 <p>Fermer</p>

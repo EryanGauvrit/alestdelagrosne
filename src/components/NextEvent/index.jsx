@@ -3,7 +3,7 @@ import imgEvt from "../../assets/pictures/img_event.jpg";
 
 function NextEvent() {
     return (
-        <section className="event">
+        <article className="event">
             <h3>Prochaine manifestation : </h3>
             <a href="https://www.chalondanslarue.com/fr/le-festival/edition-2023" target="_blank" rel='noreferrer' className="event-bloc">
                 <img src={imgEvt} alt="évenement" />
@@ -20,11 +20,11 @@ function NextEvent() {
             </a>
             <ButtonLink
                 link="/hobbies"
-                content="Loisirs"
+                content="Et bien plus encore !"
                 borderColor='$color-two'
                 color='$color-two'
             />
-        </section>
+        </article>
     )
 };
 

@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
-import logo from './../../assets/logowebsite300.png'; // redimensionner en 200
+import { choosePicture } from "../../components/utils/ChoosePicture";
+import logoDesktop from './../../assets/logos/logoCouleur170-min.png';
+import logoPhone from './../../assets/logos/logoCouleur130-min.png';
 import LocationsList from "../LocationsList";
 
 
@@ -56,7 +58,7 @@ function Header({ locationsDatas, currentPage }) {
     return (
         <header className={`${isActiveHeader(isActive, currentPage)} ${setHeader(currentPage)}`} ref={headerRef}>
             <div className="header-phone">
-                <Link to='/' onClick={"#backTop-anchor"}><img src={logo} alt="A l'Est de la Grosne" /></Link>
+                <Link to='/' onClick={"#backTop-anchor"}><img src={choosePicture(logoDesktop, logoPhone)} alt="A l'Est de la Grosne" /></Link>
                 <span className="burger-toggle" onClick={burgerToggle}>
                     <span></span>
                     <span></span>

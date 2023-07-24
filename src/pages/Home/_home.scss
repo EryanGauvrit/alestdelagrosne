@@ -1,42 +1,20 @@
 .main-home{
-    margin-top: 300px;
-    padding-top: 15px;
-    // background-color: $color-one;
-    padding-bottom: 70px;
+    padding: 0;
+    padding-bottom: 50px;
     .title-home {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 80px;
-        padding: 0 15px;
-        position: absolute;
-        top: 10px;
-        & div {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            text-align: end;
-            & img {
-                width: 130px;
-                align-self: center;
-            }
-            & h1 {
-                font-family: $policesTitle;
-                font-size: 45px;
-            }
-            & h2 {
-                font-size: 20px;               
-            }
-        }
+        position: relative;
+        width: 80%;
+        margin: auto;
+        margin-top: -100px;
+        margin-bottom: 100px;
         & h3 {
             font-style: italic;
             font-size: $h3SizesPhone;
-            align-self: baseline;
+            // text-align: center;
         }
     } 
     & .event {
-        margin-top: 20px;
+        margin-top: 50px;
         margin-bottom: 0;
         padding: 0 15px;
     }   
@@ -80,67 +58,26 @@
             align-self: center;
         }
     }
-    & .location-list-home {
-        height: 250px;
-        border: solid 2px $color-two;
-        border-radius: 5px;
-        align-items: center;
-        justify-content: center;
-        & h3 {
-            margin: 0;
-        }
-        & ul {
-            gap: 17px;
-            li {
-                flex-direction: column;
-                align-items:center;
-                gap: 3px;
-                & a {
-                    text-decoration: underline;
-                    transition: .2s;
-                    & img {
-                        height: 50px;
-                        @media (min-width: $phoneScreenSize) {
-                            height: 70px;
-                        }
-                    }
-                }
-            }
-        }
-    }
 }
 
 @media (min-width: $phoneScreenSize) {
     .main-home{
-        max-width: none;
-        margin-top: 550px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
         .title-home {
-            padding: 0;
-            gap: 200px;
-            top: 95px;
-            left: 0;
-            width: 100%;
-            & div {
-                width: 70%;
-                & img {
-                    width: 200px;
-                    align-self: flex-end;
-                    margin-right: 120px;
-                    margin-bottom: 30px;
-                }
-                & h1 {
-                    font-size: 57px;
-                    letter-spacing: 3px;
-                }
-                & h2 {
-                    font-size: 23px;
-                }
-            }
+            margin: auto;
+            bottom: 100px;
+            max-width: $desktopScreenSize;
             & h3 {
-                width: 65%;
                 font-size: $h3SizesDesktop;
             }
-        }
+        } 
+        & .event {
+            margin-top: 0;
+            margin-bottom: 0;
+            padding: 0 15px;
+        } 
     }
     section {
         max-width: 1240px;
@@ -150,7 +87,8 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
-        gap: 70px;        
+        align-items: flex-start;
+        gap: 70px;
         & article {
             gap: 35px;
             & h3 {
@@ -165,16 +103,6 @@
                 & li {
                     gap: 7px;
                 }
-            }
-        }
-        &  .location-list-home {
-            width: 440px;
-            height: 330px;            
-            font-size: $pSizesDesktop;
-            a:hover {
-                scale: 1.05;
-                opacity: .8;
-                transition: .2s;
             }
         }
         &:nth-child(1){
