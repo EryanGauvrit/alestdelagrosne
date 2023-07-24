@@ -20,8 +20,9 @@ function FullScreenGallery({ locationsDatas, picturesDatas }) {
             const delta = event.deltaY;
             const windowHeight = window.innerHeight;
             const scrollStep = windowHeight * 1.2;
+            const documentHeight = document.documentElement.scrollHeight;
 
-            if (delta > 0 && window.innerHeight + window.scrollY >= document.body.offsetHeight - scrollStep) {
+            if (delta > 0 && window.innerHeight + window.scrollY >= documentHeight - scrollStep) {
                 // Faire défiler vers le bas de 100vh
                 window.scrollTo({ top: windowHeight, behavior: 'smooth' });
                 event.preventDefault(); // Empêche le défilement par défaut de la page

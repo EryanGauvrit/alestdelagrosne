@@ -6,7 +6,7 @@
         width: 80%;
         margin: auto;
         margin-top: -100px;
-        margin-bottom: 100px;
+        margin-bottom: 70px;
         & h3 {
             font-style: italic;
             font-size: $h3SizesPhone;
@@ -14,7 +14,6 @@
         }
     } 
     & .event {
-        margin-top: 50px;
         margin-bottom: 0;
         padding: 0 15px;
     }   
@@ -23,7 +22,7 @@
 .home-description{
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 15px;
     padding: 0 15px;
     & article {
         display: flex;
@@ -64,7 +63,7 @@
     .main-home{
         display: flex;
         flex-wrap: wrap;
-        gap: 20px;
+        gap: 10px;
         .title-home {
             margin: auto;
             bottom: 100px;
@@ -88,7 +87,7 @@
         flex-wrap: wrap;
         justify-content: space-around;
         align-items: flex-start;
-        gap: 70px;
+        gap: 50px;
         & article {
             gap: 35px;
             & h3 {

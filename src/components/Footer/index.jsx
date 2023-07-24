@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Footer({ currentPage }) {
     return (
         <footer className={currentPage === '/location' ? "footer-location" : ""}>
-            <div className="title-footer">
+            <div className="title-footer" style={currentPage === '/' ? { display: 'none' } : {}}>
                 <h2>À l'Est de la Grosne</h2>
                 <h3>Gîtes de Bourgogne</h3>
             </div>

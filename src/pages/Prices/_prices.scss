@@ -85,47 +85,51 @@
 
 @media (min-width: $phoneScreenSize) {
     .prices-main {
-        gap: 70px;
+        gap: 50px;
         margin-bottom: 0;
         font-size: $pSizesDesktop;
         & h1 {
             font-size: 35px;
         }    
-        .locations{
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: flex-start;
-            gap: 70px;
-            & ul {
-                gap: 50px;
-                & li {
-                    & h2 {
-                        font-size: $h3SizesDesktop;
+        .location-select{
+            max-width: none;
+            .locations{
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 70px;
+                & ul {
+                    gap: 50px;
+                    & li {
+                        & h2 {
+                            font-size: $h3SizesDesktop;
+                        }
+                        & img {
+                            height: 120px;
+                        }
                     }
-                    & img {
-                        height: 120px;
-                    }
-                }
-                & .titleClickable {
-                    gap : 40px;
-                    transition: .2s;
-                    & i {
-                        font-size: 55px;
-                    }
-                    &:hover {
-                        cursor: pointer;
-                        scale: 1.02;
+                    & .titleClickable {
+                        gap : 40px;
                         transition: .2s;
+                        & i {
+                            font-size: 55px;
+                        }
+                        &:hover {
+                            cursor: pointer;
+                            scale: 1.02;
+                            transition: .2s;
+                        }
                     }
                 }
-            }
-            & .activeLocationDetails {
-                & .locationDetails{
-                    gap: 30px;
-                    & .prices-bloc {
-                        & ul {
-                            gap: 15px;
+                & .activeLocationDetails {
+                    width: auto;
+                    & .locationDetails{
+                        gap: 30px;
+                        & .prices-bloc {
+                            & ul {
+                                gap: 15px;
+                            }
                         }
                     }
                 }
