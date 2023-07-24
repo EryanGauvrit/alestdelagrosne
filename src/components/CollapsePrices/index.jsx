@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import DetailsPrices from "../DetailsPrices";
 import ButtonLink from "../ButtonLink";
 import { choosePicture } from "../utils/ChoosePicture";
@@ -16,17 +16,27 @@ function CollapsePrices({ location }) {
 
     return (
         <ul key={location.id} className={activeLocationDetails && locationId === location.id ? 'activeLocationDetails' : ''}>
-            <li onClick={() => handleClick(location.id)} className="titleClickable">
-                <img src={choosePicture(location.logoDesktop, location.logoPhone)} alt={location.title} />
-                {chevron}
-            </li>
-            <li className="locationDetails">
-                <DetailsPrices prices={location.prices} />
-                <ButtonLink
-                    link={`/location/${location.id}`}
-                    content="Détails du gîte"
-                />
-            </li>
+            {
+                !location.inProgress ?
+                    <React.Fragment>
+                        <li onClick={() => handleClick(location.id)} className="titleClickable">
+                            <img src={choosePicture(location.logoDesktop, location.logoPhone)} alt={location.title} />
+                            {chevron}
+                        </li>
+                        <li className="locationDetails">
+                            <DetailsPrices prices={location.prices} />
+                            <ButtonLink
+                                link={`/location/${location.id}`}
+                                content="Détails du gîte"
+                            />
+                        </li>
+                    </React.Fragment>
+                    :
+                    <li>
+                        <img src={choosePicture(location.logoDesktop, location.logoPhone)} alt={location.title} />
+                        <h2>Bientôt disponible !</h2>
+                    </li>
+            }
 
         </ul>
     )

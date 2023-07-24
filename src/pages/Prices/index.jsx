@@ -17,7 +17,6 @@ function Prices({ locationsDatas }) {
                 <div className="locations">
                     {
                         locationsDatas.map((location) =>
-                            !location.inProgress &&
                             <CollapsePrices location={location} />
                         )
                     }

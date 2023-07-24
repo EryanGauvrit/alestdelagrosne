@@ -27,18 +27,27 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 100%;
+        gap: 30px;
         & ul {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 25px;
+            & li {
+                & img {
+                    height: 70px;
+                }
+                & h2 {
+                    font-size: $h3SizesPhone;
+                    text-align: end;
+                }
+            }
             & .titleClickable {
                 display: flex;
                 align-items: flex-end;
                 gap : 30px;
-                & img {
-                    height: 70px;
-                }
+                
                 & i {
                     margin-bottom: 10px;
                     font-size: 30px;
@@ -50,6 +59,7 @@
             }
         }
         & .activeLocationDetails {
+            width: 100%;
             & .titleClickable {
                 & i {
                     rotate: -180deg;
@@ -61,6 +71,7 @@
                 flex-direction: column;
                 align-items: center;
                 gap: 15px;
+                width: 100%;
                 & .prices-bloc {
                     & ul {
                         align-items: flex-start;
@@ -88,12 +99,17 @@
             gap: 70px;
             & ul {
                 gap: 50px;
-                & .titleClickable {
-                    gap : 40px;
-                    transition: .2s;
+                & li {
+                    & h2 {
+                        font-size: $h3SizesDesktop;
+                    }
                     & img {
                         height: 120px;
                     }
+                }
+                & .titleClickable {
+                    gap : 40px;
+                    transition: .2s;
                     & i {
                         font-size: 55px;
                     }
