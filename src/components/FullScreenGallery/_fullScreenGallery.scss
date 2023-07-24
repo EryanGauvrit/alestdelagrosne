@@ -29,6 +29,13 @@
         justify-content: center;
         gap: 70px;
         max-width: none;
+        & .locationHome-title {
+            flex-direction: column-reverse;
+            gap: 40px;
+            & a {
+                width: 100px;
+            }
+        }
         & article {
             display: flex;
             flex-direction: column;
@@ -80,6 +87,13 @@
                     flex-direction: column;
                     align-items: center;
                     font-size: $pSizesPhone;
+                    width: 190px;
+                    text-align: center;
+                    a {                        
+                        display: flex;
+                        justify-content: center;
+                        width: 100%;
+                    }
                 }
             }
             img {
@@ -111,18 +125,19 @@
         }
         font-size: $pSizesDesktop;
         .content-bloc {
-            height: 80vh;
-            gap: 130px;
+            height: 90vh;
+            gap: 0px;
             & .locationHome-title{
-                flex-direction: row;
-                flex-wrap: wrap;
-                align-items: flex-start;
-                gap: 0 100px;
-                justify-content: space-around;
+                align-self: flex-end;
+                margin-right: 10%;
                 & .title-bloc {
                     display: flex;
                     flex-direction: column;
                     align-items: flex-end;
+                }
+                & a {
+                    align-self: flex-end;
+                    width: auto;
                 }
             }
             & article {
@@ -147,7 +162,7 @@
                 }
             }
             & .locationHome-list {
-                gap: 80px;
+                gap: 60px;
                 div {
                     gap: 15px;
                     h3 {
@@ -166,6 +181,7 @@
                     gap: 100px;
                     li {
                         font-size: $pSizesDesktop;
+                        width: 350px;
                         a {
                             transition: .2s;
                             &:hover {

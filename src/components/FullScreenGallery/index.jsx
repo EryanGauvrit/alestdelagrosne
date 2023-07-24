@@ -8,8 +8,6 @@ import logoPhone from "../../assets/logos/logoBlanc130-min.png";
 
 function FullScreenGallery({ locationsDatas, picturesDatas }) {
 
-    const icon = <i className="fa-solid fa-house"></i>
-
     const [picturesDesktop] = useState(picturesDatas[0].pictures);
     const [picturesPhone] = useState(picturesDatas[1].pictures);
 
@@ -55,7 +53,7 @@ function FullScreenGallery({ locationsDatas, picturesDatas }) {
                     </div>
                 </article>
                 <article className="locationHome-list">
-                    <div><h3>Nos gîtes </h3>{icon}</div>
+                    <div><h3>Nos gîtes :</h3></div>
                     <LocationsList locationsDatas={locationsDatas} homePage={true} />
                 </article>
 
