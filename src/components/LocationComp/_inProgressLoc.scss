@@ -8,19 +8,41 @@
         display: flex;
         flex-direction: column;
         align-items: end;
-        align-self: flex-end;
+        align-self: center;
         gap: 5px;
+        margin-right: 50px;
+        @media (min-width: $phoneScreenSize) {
+            flex-wrap: wrap;
+            gap: 15px;   
+            margin-right: 80px;     
+        }
         & a {
-            text-decoration: underline;
-            list-style:disc;
             transition: .2s;
             &:hover {
                 scale: 1.02;
                 transition: .2s;
             }
         }
-        & li {
-            list-style:disc;
+        & li a {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: flex-end;
+            img {
+                height: 60px;
+                @media (min-width: $phoneScreenSize) {
+                    height: 105px;        
+                }
+            }
+            i {
+                margin-left: -50px;
+                margin-bottom: -7px;
+                font-size: 20px;
+                @media (min-width: $phoneScreenSize) {
+                    margin-left: -80px;
+                    margin-bottom: -7px;
+                    font-size: 30px;        
+                }
+            }
         }
     }
     & .button-link {
@@ -36,3 +58,4 @@
         gap: 60px;
     }
 }
+
