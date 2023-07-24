@@ -68,7 +68,7 @@ function Contact() {
                     <li>{iconList}40 min de la gare TGV de Macon – Loché</li>
                     <li>{iconList}20 min de la gare TGV de Chalon sur Saône</li>
                     <li>{iconList}20 min de l’autoroute A6</li>
-                    <li>{iconList}Idéalement situé entre <strong>Cluny,</strong> <strong>Tournus,</strong> <strong>Chalon-sur-Saône</strong></li>
+                    <li>{iconList}Idéalement situé entre Cluny, Tournus, Chalon-sur-Saône</li>
                 </ul>
             </section>
             <section className='localisation'>

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import logo from './../../assets/logowebsite300.png'; // redimensionner en 200
 import LocationsList from "../LocationsList";
 
@@ -7,22 +7,39 @@ import LocationsList from "../LocationsList";
 function Header({ locationsDatas, currentPage }) {
     const [isActive, setActive] = useState(false);
     const [isActiveLocationList, setActiveLocationList] = useState(false);
+    const headerRef = useRef(null);
 
     const burgerToggle = (event) => {
         setActive(!isActive);
+        if (!isActive) {
+            setActiveLocationList(false);
+        };
     };
     const locationListToggle = (event) => {
         setActiveLocationList(!isActiveLocationList);
     };
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (headerRef.current && !headerRef.current.contains(event.target)) {
+                setActive(false);
+                setActiveLocationList(false);
+            }
+        };
+
+        document.addEventListener('click', handleClickOutside);
+
+        return () => {
+            document.removeEventListener('click', handleClickOutside);
+        };
+    }, []);
 
     const chevron = <i className="fa-solid fa-chevron-up chevron-up" onClick={locationListToggle}></i>;
 
     function setHeader(currentPage) {
         if (currentPage === '/location' || currentPage === '/') {
             return "header-home";
-        } else {
-            return "";
-        }
+        } return "";
     };
 
     function isActiveHeader(isActive, currentPage) {
@@ -32,12 +49,12 @@ function Header({ locationsDatas, currentPage }) {
             return "active active-header-home";
         } else if (isActive) {
             return "active";
-        } return '';
+        } return "";
     };
 
 
     return (
-        <header className={`${isActiveHeader(isActive, currentPage)} ${setHeader(currentPage)}`}>
+        <header className={`${isActiveHeader(isActive, currentPage)} ${setHeader(currentPage)}`} ref={headerRef}>
             <div className="header-phone">
                 <Link to='/' onClick={"#backTop-anchor"}><img src={logo} alt="A l'Est de la Grosne" /></Link>
                 <span className="burger-toggle" onClick={burgerToggle}>
@@ -49,7 +66,7 @@ function Header({ locationsDatas, currentPage }) {
             </div>
             <nav>
                 <Link to='/' onClick={"#backTop-anchor"}>Accueil</Link>
-                <div className={`${isActiveLocationList && "activeLocationList"}`}>
+                <div className={`${isActiveLocationList ? "activeLocationList" : ""}`}>
                     <div>
                         <Link to='/location' onClick={"#backTop-anchor"}>Nos gîtes</Link>
                         {chevron}
