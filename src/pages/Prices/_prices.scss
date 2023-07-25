@@ -52,6 +52,7 @@
                     margin-bottom: 10px;
                     font-size: 30px;
                     transition: .2s;
+                    opacity: .8;
                 }
             }
             & .locationDetails{
@@ -92,15 +93,15 @@
             font-size: 35px;
         }    
         .location-select{
-            max-width: none;
+            // max-width: none;
             .locations{
                 flex-direction: row;
                 flex-wrap: wrap;
-                justify-content: center;
+                justify-content: space-around;
                 align-items: flex-start;
                 gap: 70px;
                 & ul {
-                    gap: 50px;
+                    gap: 80px;
                     & li {
                         & h2 {
                             font-size: $h3SizesDesktop;
@@ -110,7 +111,7 @@
                         }
                     }
                     & .titleClickable {
-                        gap : 40px;
+                        gap : 25px;
                         transition: .2s;
                         & i {
                             font-size: 55px;
