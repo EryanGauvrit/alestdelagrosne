@@ -58,11 +58,6 @@ function Home({ locationsDatas, picturesDatas }) {
                                 <p>Des sites d’escalade</p>
 
                             </li>
-                            <li>
-                                {iconList}
-                                <p>Et bien d’autres encore !</p>
-
-                            </li>
                         </ul>
                     </article>
                     <NextEvent />
