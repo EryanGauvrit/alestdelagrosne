@@ -8,6 +8,8 @@ import ErrorComp from "../../components/ErrorComp";
 import ModifHead from "../../components/ModifHead";
 import GoogleMap from "../../components/GoogleMaps.jsx";
 import ButtonLink from "../../components/ButtonLink";
+import he from "he";
+import { encodeData } from "../../components/utils/EncodeDatas";
 
 function LocationTemplate({ locationsDatas }) {
 
@@ -56,15 +58,15 @@ function LocationTemplate({ locationsDatas }) {
         return (
             <main className="location-template">
                 <ModifHead
-                    titlePage={location.title}
-                    description={location.description}
+                    titlePage={he.decode(location.title)}
+                    description={he.decode(location.description)}
                     robots={location.inProgress && `index,follow`}
                 />
                 <h1>
                     <Logo
                         logoDesktop={location.logoDesktop}
                         logoPhone={location.logoPhone}
-                        alt={location.title}
+                        alt={he.decode(location.title)}
                     />
                 </h1>
 
@@ -77,7 +79,7 @@ function LocationTemplate({ locationsDatas }) {
                     location.inProgress ? (
                         <React.Fragment>
                             <section className="description">
-                                <h2>{location.description}</h2>
+                                <h2>{he.decode(location.description)}</h2>
                                 <InProgressLoc
                                     locationsDatas={locationsDatas}
                                 />
@@ -88,7 +90,7 @@ function LocationTemplate({ locationsDatas }) {
                         <React.Fragment>
                             <section className="description">
                                 <h2>Description :</h2>
-                                <p>{location.description}</p>
+                                <p>{he.decode(location.description)}</p>
                             </section>
 
                             <SpecificityBloc
@@ -103,7 +105,7 @@ function LocationTemplate({ locationsDatas }) {
                                         location.requirements.map((requirement) =>
                                             <li key={requirement}>
                                                 {iconList}
-                                                <p>{requirement}</p>
+                                                <p>{he.decode(requirement)}</p>
                                             </li>
                                         )
                                     }
@@ -114,8 +116,8 @@ function LocationTemplate({ locationsDatas }) {
                                     <ButtonLink link='/prices' content='Tarifs' />
                                     <h2>Adresse :</h2>
                                     <address>
-                                        <p>{location.address?.split(',')[0]},</p>
-                                        <p>{location.address?.split(',')[1]}</p>
+                                        <p>{he.decode(location.address?.split(',')[0])},</p>
+                                        <p>{he.decode(location.address?.split(',')[1])}</p>
                                     </address>
 
                                 </div>

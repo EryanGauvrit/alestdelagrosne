@@ -3,6 +3,7 @@ import bgImage1 from '../../assets/bg-img/bg-bloc-1-min.jpg';
 import bgImage2 from '../../assets/bg-img/bg-bloc-2-min.jpg';
 import bgImage3 from '../../assets/bg-img/bg-bloc-3-min.jpg';
 import React from 'react';
+import he from "he";
 
 function SpecificityBloc({ capacity, equipment, services }) {
 
@@ -49,13 +50,13 @@ function SpecificityBloc({ capacity, equipment, services }) {
                             capacity.floor &&
                             <React.Fragment>
                                 <h4>{iconList} Etage :</h4>
-                                {capacity.floorCapacity.map((floorCapacity) =>
+                                {capacity.floorCapacity?.map((floorCapacity) =>
                                     <li key={floorCapacity.titleRoom} className='floorCapacity-bloc'>
                                         {
                                             <React.Fragment>
                                                 <p>{floorCapacity.titleRoom}</p>
                                                 <ul>
-                                                    {floorCapacity.detailsRoom.map((detail) =>
+                                                    {floorCapacity.detailsRoom?.map((detail) =>
                                                         <li key={detail}>{iconListPoint}{detail}</li>
                                                     )}
                                                 </ul>
@@ -74,7 +75,7 @@ function SpecificityBloc({ capacity, equipment, services }) {
                 <ul>
                     {
                         equipment.map((equipment) =>
-                            <li key={equipment}>{iconList}{equipment}</li>
+                            <li key={equipment}>{iconList}{he.decode(equipment)}</li>
                         )
                     }
                 </ul>
@@ -84,7 +85,7 @@ function SpecificityBloc({ capacity, equipment, services }) {
                 <ul>
                     {
                         services.map((services) =>
-                            <li key={services}>{iconList}{services}</li>
+                            <li key={services}>{iconList}{he.decode(services)}</li>
                         )
                     }
                 </ul>
