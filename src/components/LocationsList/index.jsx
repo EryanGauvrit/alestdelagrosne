@@ -38,6 +38,7 @@ function LocationsList({ locationsDatas, homePage }) {
                             <li key={location.id}>
                                 <Link to={'/location/' + location.id} onClick={"#backTop-anchor"}>
                                     <img src={choosePicture(location.logoDesktop, location.logoPhone)} alt={location.title} />
+                                    {console.log("logoLink : ", location.logoDesktop)}
                                 </Link>
                                 {isInProgress(location.inProgress)}
                             </li>

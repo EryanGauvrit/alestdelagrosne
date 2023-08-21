@@ -1,7 +1,38 @@
 
-function DetailsPrices({ prices }) {
+function DetailsPrices({ price }) {
 
     const icon = <i className="fa-solid fa-square"></i>;
+
+    const initialPrice = price;
+    const midSeasonPrice = price * 1.14;
+    const highSeasonPrice = price * 1.27;
+
+    function calculatePrices(price) {
+        let pricesTab = []
+
+        for (let i = 2; i <= 7; i++) {
+            pricesTab.push(<td key={`${price * i}-${i}`}>{((price * i) / calculateReduce(i)).toFixed(2)} €</td>)
+        }
+        return pricesTab;
+    }
+
+    function calculateReduce(i) {
+        let reduce;
+        switch (i) {
+            case 2: reduce = 1.00;
+                break;
+            case 3: reduce = 1.03;
+                break;
+            case 4: reduce = 1.05;
+                break;
+            case 5: reduce = 1.08;
+                break;
+            case 6: reduce = 1.10;
+                break;
+            default: reduce = 1.12;
+        }
+        return reduce;
+    }
 
     return (
         <div className="prices-bloc">
@@ -21,26 +52,21 @@ function DetailsPrices({ prices }) {
                     <tbody>
                         <tr className="high">
                             <td>Haute</td>
-                            {prices.high.map((item) => (
-                                <td key={item}>{item} €</td>
-                            ))}
+                            {calculatePrices(highSeasonPrice)}
                         </tr>
                         <tr className="average">
                             <td>Moyenne</td>
-                            {prices.average.map((item) => (
-                                <td key={item}>{item} €</td>
-                            ))}
+                            {calculatePrices(midSeasonPrice)}
                         </tr>
                         <tr className="low">
                             <td>Basse</td>
-                            {prices.low.map((item) => (
-                                <td key={item}>{item} €</td>
-                            ))}
+                            {calculatePrices(initialPrice)}
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <p className="table-quote">* Les tarifs sont calculés pour le logement en lui-même, et non par personne.</p>
+            <p className="table-quote">* Le gîte est loué dans son intégralité.</p>
+            <p className="table-quote">** Taxe de séjour incluse.</p>
             <ul>
                 <li>{icon} Haute saison : de juillet à aout</li>
                 <li>{icon} Moyenne saison : de septembre à octobre et d'avril à juin</li>

@@ -17,7 +17,7 @@ function Prices({ locationsDatas }) {
                 <div className="locations">
                     {
                         locationsDatas.map((location) =>
-                            <CollapsePrices location={location} />
+                            <CollapsePrices key={location.id} location={location} />
                         )
                     }
                 </div>

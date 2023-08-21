@@ -41,8 +41,9 @@ function LocationTemplate({ locationsDatas }) {
     });
 
     useEffect(() => {
-        locationsDatas.map((location) => {
-            if (location.id === id) {
+        locationsDatas?.map((location) => {
+            if (Number(id) === location.id) {
+                console.log("Location template : ", location.picturesDesktop)
                 setLocation(location);
                 setIsGoodId(true)
             }
@@ -113,8 +114,8 @@ function LocationTemplate({ locationsDatas }) {
                                     <ButtonLink link='/prices' content='Tarifs' />
                                     <h2>Adresse :</h2>
                                     <address>
-                                        <p>{location.address.split(',')[0]},</p>
-                                        <p>{location.address.split(',')[1]}</p>
+                                        <p>{location.address?.split(',')[0]},</p>
+                                        <p>{location.address?.split(',')[1]}</p>
                                     </address>
 
                                 </div>

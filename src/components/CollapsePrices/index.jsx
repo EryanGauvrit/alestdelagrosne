@@ -24,7 +24,7 @@ function CollapsePrices({ location }) {
                             {chevron}
                         </li>
                         <li className="locationDetails">
-                            <DetailsPrices prices={location.prices} />
+                            <DetailsPrices price={location.prices} />
                             <ButtonLink
                                 link={`/location/${location.id}`}
                                 content="Détails du gîte"

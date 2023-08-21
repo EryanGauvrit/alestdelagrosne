@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-import { getLocationDatas, getPicturesHome, getPicturesLocationHome } from './components/utils/GetDatas';
+import { getLocationDatas, getPicturesHome, getPicturesLocationHome, locationsToArray, picturesToArray } from './app/GetDatas';
+import DataDisplay from './app/DataDisplay';
 import './style/normalize.css';
 import './style/main.scss';
 import Header from './components/Header';
@@ -20,26 +21,74 @@ function App() {
 
   const location = useLocation();
   const [currentPage, setCurrentPage] = useState('home');
+  const [picturesHomeData, setPicturesHomeData] = useState([
+    {
+      "size": "desktop",
+      "pictures": []
+    },
+    {
+      "size": "smartphone",
+      "pictures": []
+    }
+  ]);
+  const [pictureLocationHomeDatas, setPictureLocationHomeDatas] = useState([
+    {
+      "size": "desktop",
+      "pictures": []
+    },
+    {
+      "size": "smartphone",
+      "pictures": []
+    }
+  ]);
+  const [locationsDatas, setLocationsDatas] = useState([]);
 
+  const handlePicturesHomeChange = (picturesHomeData) => {
+    const pictures = picturesToArray(picturesHomeData)
+    setPicturesHomeData(pictures);
+    // console.log("in function : ", picturesHomeData);
+  };
+  const handlePicturesLocationHomeChange = (pictureLocationHomeDatas) => {
+    const pictures = picturesToArray(pictureLocationHomeDatas)
+    setPictureLocationHomeDatas(pictures);
+    // console.log("in function : ", picturesHomeData);
+  };
+  const handleLocationsChange = (locationsDatas) => {
+    const locations = locationsToArray(locationsDatas);
+    setLocationsDatas(locations);
+    // console.log("in function : ", locations);
+  };
+
+  // console.log("out function : ", locationsDatas);
   useEffect(() => {
+    // handlePicturesHomeChange();
     setCurrentPage(location.pathname);
   }, [location]);
+
 
   return (
 
     <React.Fragment>
+      <DataDisplay
+        onPicturesHomeChange={handlePicturesHomeChange}
+        onPicturesLocationHomeChange={handlePicturesLocationHomeChange}
+        onLocationsChange={handleLocationsChange}
+      />
       <div id="backTop-anchor"></div>
-      <Header locationsDatas={getLocationDatas()} currentPage={currentPage} />
+      <Header locationsDatas={locationsDatas} currentPage={currentPage} />
       <BackTop currentPage={currentPage} />
       <Routes>
         <Route exact path='/'
-          element={<Home locationsDatas={getLocationDatas()} picturesDatas={getPicturesLocationHome()} />}
+          element={<Home locationsDatas={locationsDatas} picturesDatas={picturesHomeData} />}
         />
+        {/* <Route exact path='/test'
+          element={<DataDisplay onPicturesHomeChange={handlePicturesHomeChange} />}
+        /> */}
         <Route exact path='/location'
-          element={<LocationHome locationsDatas={getLocationDatas()} picturesDatas={getPicturesLocationHome()} />}
+          element={<LocationHome locationsDatas={locationsDatas} picturesDatas={pictureLocationHomeDatas} />}
         />
         <Route exact path='/location/:id'
-          element={<LocationTemplate locationsDatas={getLocationDatas()} />}
+          element={<LocationTemplate locationsDatas={locationsDatas} />}
         />
         <Route exact path='/services'
           element={<InProgress />}
@@ -48,7 +97,7 @@ function App() {
           element={<InProgress />}
         />
         <Route exact path='/prices'
-          element={<Prices locationsDatas={getLocationDatas()} />}
+          element={<Prices locationsDatas={locationsDatas} />}
         />
         <Route exact path='/contact'
           element={<Contact />}

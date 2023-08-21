@@ -8,12 +8,15 @@ import logoPhone from "../../assets/logos/logoBlanc130-min.png";
 
 function FullScreenGallery({ locationsDatas, picturesDatas }) {
 
-    const [picturesDesktop] = useState(picturesDatas[0].pictures);
-    const [picturesPhone] = useState(picturesDatas[1].pictures);
+    const [picturesDesktop, setPicturesDesktop] = useState([]);
+    const [picturesPhone, setPicturesPhone] = useState([]);
+    const [pictureArray, setPictureArray] = useState([]);
 
-    const pictureArray = choosePicture(picturesDesktop, picturesPhone);
-
+    // console.log("gallery : ", picturesDatas);
     useEffect(() => {
+        setPicturesDesktop(picturesDatas[0].pictures);
+        setPicturesPhone(picturesDatas[1].pictures);
+        setPictureArray(choosePicture(picturesDesktop, picturesPhone))
         const handleScroll = (event) => {
             const delta = event.deltaY;
             const windowHeight = window.innerHeight;
@@ -35,7 +38,7 @@ function FullScreenGallery({ locationsDatas, picturesDatas }) {
         return () => {
             window.removeEventListener('wheel', handleScroll);
         };
-    }, []);
+    }, [picturesDatas, picturesDesktop, picturesPhone]);
 
     return (
         <section className="fullScreenGallery">

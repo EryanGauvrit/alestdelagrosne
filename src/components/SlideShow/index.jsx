@@ -53,7 +53,7 @@ function SlideShow({ pictures, onClick }) {
         <React.Fragment>
             <Slider className={`picture-gallery ${!onClick ? 'activeAnimation' : ''}`} {...settings}>
                 {
-                    pictures.map((picture) =>
+                    pictures?.map((picture) =>
                         <div className="current-picture-bloc" key={picture}>
                             <SpinnerLoader isLoad={isLoading} />
                             <img

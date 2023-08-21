@@ -7,6 +7,8 @@ function Home({ locationsDatas, picturesDatas }) {
 
     const iconList = <i className="fa-solid fa-wine-bottle"></i>;
 
+    console.log("home : ", picturesDatas);
+
     return (
         <React.Fragment>
             <ModifHead
