@@ -1,9 +1,26 @@
 import { Link } from "react-router-dom";
-import React from "react";
+import React, { useState } from "react";
 import ModifHead from "../../components/ModifHead";
 import CollapsePrices from "../../components/CollapsePrices";
 
-function Prices({ locationsDatas }) {
+function Prices({ locationsDatas, reservations }) {
+
+    console.log(reservations)
+    // const [sendReservations, setSendReservations] = useState([]);
+
+    const chooseReservations = ((locationId, reservations) => {
+        let sendReservations = [];
+        // eslint-disable-next-line array-callback-return
+        reservations.map((reservation) => {
+            if (locationId === reservation.location.id) {
+                sendReservations.push({
+                    start: new Date(reservation.startDate),
+                    end: new Date(reservation.endDate)
+                });
+            }
+        })
+        return sendReservations;
+    })
 
     return (
         <main className="prices-main">
@@ -17,7 +34,7 @@ function Prices({ locationsDatas }) {
                 <div className="locations">
                     {
                         locationsDatas.map((location) =>
-                            <CollapsePrices key={location.id} location={location} />
+                            <CollapsePrices key={location.id} location={location} reservations={chooseReservations(location.id, reservations)} />
                         )
                     }
                 </div>

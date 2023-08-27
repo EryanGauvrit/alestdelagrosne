@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-import { getLocationDatas, getPicturesHome, getPicturesLocationHome, locationsToArray, picturesToArray } from './app/GetDatas';
+import { getLocationDatas, getPicturesHome, getPicturesLocationHome, toArray, picturesToArray } from './app/GetDatas';
 import DataDisplay from './app/DataDisplay';
 import './style/normalize.css';
 import './style/main.scss';
@@ -42,6 +42,7 @@ function App() {
     }
   ]);
   const [locationsDatas, setLocationsDatas] = useState([]);
+  const [reservationsDatas, setReservationsDatas] = useState([]);
 
   const handlePicturesHomeChange = (picturesHomeData) => {
     const pictures = picturesToArray(picturesHomeData)
@@ -54,8 +55,13 @@ function App() {
     // console.log("in function : ", picturesHomeData);
   };
   const handleLocationsChange = (locationsDatas) => {
-    const locations = locationsToArray(locationsDatas);
+    const locations = toArray(locationsDatas);
     setLocationsDatas(locations);
+    // console.log("in function : ", locations);
+  };
+  const handleReservationsChange = (reservationsDatas) => {
+    const reservations = toArray(reservationsDatas);
+    setReservationsDatas(reservations);
     // console.log("in function : ", locations);
   };
 
@@ -73,6 +79,7 @@ function App() {
         onPicturesHomeChange={handlePicturesHomeChange}
         onPicturesLocationHomeChange={handlePicturesLocationHomeChange}
         onLocationsChange={handleLocationsChange}
+        onReservationsChange={handleReservationsChange}
       />
       <div id="backTop-anchor"></div>
       <Header locationsDatas={locationsDatas} currentPage={currentPage} />
@@ -97,7 +104,7 @@ function App() {
           element={<InProgress />}
         />
         <Route exact path='/prices'
-          element={<Prices locationsDatas={locationsDatas} />}
+          element={<Prices locationsDatas={locationsDatas} reservations={reservationsDatas} />}
         />
         <Route exact path='/contact'
           element={<Contact />}

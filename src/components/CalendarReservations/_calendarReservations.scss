@@ -1,0 +1,45 @@
+.reserved {
+    background-color: $color-four!important; 
+    color: $color-two!important; 
+    font-weight: bold; 
+  }
+
+  .react-calendar{
+    background-color: $color-two;
+    color: $color-one;
+    padding: 10px;
+    border-radius: 10px;
+    & .react-calendar__navigation {
+        margin: auto;
+    }
+  }
+
+  .react-calendar__tile:hover {
+    background-color: transparent !important;
+    color: inherit !important; 
+    cursor: default !important; 
+    border: none !important; 
+  }
+  .react-calendar__tile:focus {
+    background-color: transparent !important;
+    color: inherit !important; 
+    cursor: default !important; 
+    border: none !important; 
+  }
+
+.calendar-quote{
+  margin: 10px 0;
+  i {
+    color: $color-four;
+    border: 1px solid $color-two;
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 600px) {
+  .react-calendar {
+    font-size: 14px; /* Réduisez la taille de la police */
+    width: 300px!important;
+  }
+  /* Réorganisez ou masquez certains éléments si nécessaire */
+}

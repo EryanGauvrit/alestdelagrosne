@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import DetailsPrices from "../DetailsPrices";
 import ButtonLink from "../ButtonLink";
 import { choosePicture } from "../utils/ChoosePicture";
+import CalendarReservations from "../CalendarReservations";
 const chevron = <i className="fa-solid fa-chevron-up chevron-up"></i>;
 
-function CollapsePrices({ location }) {
+function CollapsePrices({ location, reservations }) {
 
     const [activeLocationDetails, setActiveLocationDetails] = useState(false);
     const [locationId, setLocationId] = useState('');
@@ -24,6 +25,7 @@ function CollapsePrices({ location }) {
                             {chevron}
                         </li>
                         <li className="locationDetails">
+                            <CalendarReservations reservations={reservations} />
                             <DetailsPrices price={location.prices} />
                             <ButtonLink
                                 link={`/location/${location.id}`}

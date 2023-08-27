@@ -44,7 +44,7 @@ export function picturesToArray(picturesDatas) {
 
     return pictureArray;
 };
-export function locationsToArray(locationsDatas) {
+export function toArray(locationsDatas) {
     const locationsArray = Object.values(locationsDatas);
     return locationsArray;
 };
