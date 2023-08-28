@@ -4,6 +4,7 @@ import bgImage2 from '../../assets/bg-img/bg-bloc-2-min.jpg';
 import bgImage3 from '../../assets/bg-img/bg-bloc-3-min.jpg';
 import React from 'react';
 import he from "he";
+import { uniqueKey } from '../../app/DatasFormating';
 
 function SpecificityBloc({ capacity, equipment, services }) {
 
@@ -15,7 +16,6 @@ function SpecificityBloc({ capacity, equipment, services }) {
             return `linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)),url(${isDesktopScreenSize() && img})`;
         }
     }
-
     return (
         <section className="specificityBloc">
 
@@ -30,13 +30,13 @@ function SpecificityBloc({ capacity, equipment, services }) {
                         <h4>{iconList} RDC :</h4>
                         {
                             capacity.rdcCapacity.map((item) =>
-                                <li key={item.titleRoom} className='floorCapacity-bloc'>
+                                <li key={uniqueKey(item.titleRoom)} className='floorCapacity-bloc'>
                                     {
                                         <React.Fragment>
                                             <p>{item.titleRoom}</p>
                                             <ul>
                                                 {item.detailsRoom.map((detail) =>
-                                                    <li key={detail}>{iconListPoint}{detail}</li>
+                                                    <li key={uniqueKey(detail)}>{iconListPoint}{detail}</li>
                                                 )}
                                             </ul>
                                         </React.Fragment>
@@ -51,13 +51,13 @@ function SpecificityBloc({ capacity, equipment, services }) {
                             <React.Fragment>
                                 <h4>{iconList} Etage :</h4>
                                 {capacity.floorCapacity?.map((floorCapacity) =>
-                                    <li key={floorCapacity.titleRoom} className='floorCapacity-bloc'>
+                                    <li key={uniqueKey(floorCapacity.titleRoom)} className='floorCapacity-bloc'>
                                         {
                                             <React.Fragment>
                                                 <p>{floorCapacity.titleRoom}</p>
                                                 <ul>
                                                     {floorCapacity.detailsRoom?.map((detail) =>
-                                                        <li key={detail}>{iconListPoint}{detail}</li>
+                                                        <li key={uniqueKey(detail)}>{iconListPoint}{detail}</li>
                                                     )}
                                                 </ul>
                                             </React.Fragment>
@@ -75,7 +75,7 @@ function SpecificityBloc({ capacity, equipment, services }) {
                 <ul>
                     {
                         equipment.map((equipment) =>
-                            <li key={equipment}>{iconList}{he.decode(equipment)}</li>
+                            <li key={uniqueKey(equipment)}>{iconList}{he.decode(equipment)}</li>
                         )
                     }
                 </ul>
@@ -85,7 +85,7 @@ function SpecificityBloc({ capacity, equipment, services }) {
                 <ul>
                     {
                         services.map((services) =>
-                            <li key={services}>{iconList}{he.decode(services)}</li>
+                            <li key={uniqueKey(services)}>{iconList}{he.decode(services)}</li>
                         )
                     }
                 </ul>

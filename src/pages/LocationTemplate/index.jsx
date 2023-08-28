@@ -9,7 +9,7 @@ import ModifHead from "../../components/ModifHead";
 import GoogleMap from "../../components/GoogleMaps.jsx";
 import ButtonLink from "../../components/ButtonLink";
 import he from "he";
-import { encodeData } from "../../components/utils/EncodeDatas";
+import { uniqueKey } from "../../app/DatasFormating";
 
 function LocationTemplate({ locationsDatas }) {
 
@@ -17,6 +17,7 @@ function LocationTemplate({ locationsDatas }) {
     const { id } = useParams();
 
     const [isGoodId, setIsGoodId] = useState(false);
+    const [inProgress, setInProgress] = useState();
     const [location, setLocation] = useState({
         title: '',
         logoDesktop: '',
@@ -44,10 +45,15 @@ function LocationTemplate({ locationsDatas }) {
 
     useEffect(() => {
         locationsDatas?.map((location) => {
-            if (Number(id) === location.id) {
-                console.log("Location template : ", location.picturesDesktop)
+            if (id === location.id) {
+                console.log("Location template : ", typeof (location.inProgress))
                 setLocation(location);
                 setIsGoodId(true)
+                if (Number(location.inProgress) === 0) {
+                    setInProgress(false);
+                } else {
+                    setInProgress(true);
+                }
             }
             return null;
         })
@@ -76,7 +82,7 @@ function LocationTemplate({ locationsDatas }) {
                 />
 
                 {
-                    location.inProgress ? (
+                    inProgress ? (
                         <React.Fragment>
                             <section className="description">
                                 <h2>{he.decode(location.description)}</h2>
@@ -103,7 +109,7 @@ function LocationTemplate({ locationsDatas }) {
                                 <ul>
                                     {
                                         location.requirements.map((requirement) =>
-                                            <li key={requirement}>
+                                            <li key={uniqueKey(requirement)}>
                                                 {iconList}
                                                 <p>{he.decode(requirement)}</p>
                                             </li>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import DetailsPrices from "../DetailsPrices";
 import ButtonLink from "../ButtonLink";
 import { choosePicture } from "../utils/ChoosePicture";
@@ -8,6 +8,7 @@ const chevron = <i className="fa-solid fa-chevron-up chevron-up"></i>;
 function CollapsePrices({ location, reservations }) {
 
     const [activeLocationDetails, setActiveLocationDetails] = useState(false);
+    const [inProgress, setInProgress] = useState();
     const [locationId, setLocationId] = useState('');
 
     const handleClick = (id) => {
@@ -15,10 +16,18 @@ function CollapsePrices({ location, reservations }) {
         setLocationId(id);
     };
 
+    useEffect(() => {
+        if (Number(location.inProgress) === 0) {
+            setInProgress(false);
+        } else {
+            setInProgress(true);
+        }
+    }, [location.inProgress])
+
     return (
         <ul key={location.id} className={activeLocationDetails && locationId === location.id ? 'activeLocationDetails' : ''}>
             {
-                !location.inProgress ?
+                !inProgress ?
                     <React.Fragment>
                         <li onClick={() => handleClick(location.id)} className="titleClickable">
                             <img src={choosePicture(location.logoDesktop, location.logoPhone)} alt={location.title} />

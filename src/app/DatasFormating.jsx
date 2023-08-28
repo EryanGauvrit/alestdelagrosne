@@ -23,3 +23,8 @@ export function toArray(locationsDatas) {
     return locationsArray;
 };
 
+export function uniqueKey(key) {
+    const randomNumber = Math.floor(Math.random() * 1000000) + 1;
+    return `${key}${randomNumber}`;
+}
+
