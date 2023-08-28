@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
-import { getLocationDatas, getPicturesHome, getPicturesLocationHome, toArray, picturesToArray } from './app/GetDatas';
+import { toArray, picturesToArray } from './app/DatasFormating';
 import DataDisplay from './app/DataDisplay';
 import './style/normalize.css';
 import './style/main.scss';

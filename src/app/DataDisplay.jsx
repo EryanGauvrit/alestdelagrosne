@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getLocationDatas, getPicturesHome, getPicturesLocationHome, toArray, picturesToArray } from './GetDatas';
+import { getLocationDatas, getPicturesHome, getPicturesLocationHome, toArray, picturesToArray } from './DatasFormating';
 import axios from "axios";
 import { Component } from "react";
 
@@ -15,10 +15,14 @@ class DataDisplay extends Component {
     }
 
     componentDidMount = () => {
-        const getPicturesHome = axios.get('http://localhost/alestdelagrosne.admin/front/homepage');
-        const getPicturesLocationHome = axios.get('http://localhost/alestdelagrosne.admin/front/locationhome');
-        const getLocations = axios.get('http://localhost/alestdelagrosne.admin/front/locations');
-        const getReservations = axios.get('http://localhost/alestdelagrosne.admin/front/reservation');
+
+        // const url = 'http://localhost/alestdelagrosne.admin/front/';
+        const url = 'https://espace-administrateur.alestdelagrosne.com/front/';
+
+        const getPicturesHome = axios.get(url + 'homepage');
+        const getPicturesLocationHome = axios.get(url + 'locationhome');
+        const getLocations = axios.get(url + 'locations');
+        const getReservations = axios.get(url + 'reservation');
         Promise.all([getPicturesHome, getPicturesLocationHome, getLocations, getReservations])
             .then(([picturesHomeResponse, picturesLocationHomeResponse, locationsResponse, reservationsResponse]) => {
                 const picturesHome = picturesHomeResponse.data;
