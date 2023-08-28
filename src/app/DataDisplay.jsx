@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import { getLocationDatas, getPicturesHome, getPicturesLocationHome, toArray, picturesToArray } from './DatasFormating';
+import { toArray, picturesToArray } from './DatasFormating';
 import axios from "axios";
 import { Component } from "react";
 
