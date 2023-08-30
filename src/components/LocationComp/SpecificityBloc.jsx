@@ -36,7 +36,7 @@ function SpecificityBloc({ capacity, equipment, services }) {
                                             <p>{item.titleRoom}</p>
                                             <ul>
                                                 {item.detailsRoom.map((detail) =>
-                                                    <li key={uniqueKey(detail)}>{iconListPoint}{detail}</li>
+                                                    <li key={uniqueKey(detail)}>{detail && iconListPoint}{detail}</li>
                                                 )}
                                             </ul>
                                         </React.Fragment>
@@ -57,7 +57,7 @@ function SpecificityBloc({ capacity, equipment, services }) {
                                                 <p>{floorCapacity.titleRoom}</p>
                                                 <ul>
                                                     {floorCapacity.detailsRoom?.map((detail) =>
-                                                        <li key={uniqueKey(detail)}>{iconListPoint}{detail}</li>
+                                                        <li key={uniqueKey(detail)}>{detail && iconListPoint}{detail}</li>
                                                     )}
                                                 </ul>
                                             </React.Fragment>

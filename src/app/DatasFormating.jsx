@@ -18,9 +18,9 @@ export function picturesToArray(picturesDatas) {
 
     return pictureArray;
 };
-export function toArray(locationsDatas) {
-    const locationsArray = Object.values(locationsDatas);
-    return locationsArray;
+export function toArray(datas) {
+    const datasArray = Object.values(datas);
+    return datasArray;
 };
 
 export function uniqueKey(key) {

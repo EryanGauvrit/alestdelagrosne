@@ -10,7 +10,7 @@ class DataDisplay extends Component {
         locations: [],
         reservations: [],
         events: null,
-        services: null,
+        services: [],
     }
 
     componentDidMount = () => {
@@ -22,14 +22,16 @@ class DataDisplay extends Component {
         const getPicturesLocationHome = axios.get(url + 'locationhome');
         const getLocations = axios.get(url + 'locations');
         const getReservations = axios.get(url + 'reservation');
-        Promise.all([getPicturesHome, getPicturesLocationHome, getLocations, getReservations])
-            .then(([picturesHomeResponse, picturesLocationHomeResponse, locationsResponse, reservationsResponse]) => {
+        const getServices = axios.get(url + 'services');
+        Promise.all([getPicturesHome, getPicturesLocationHome, getLocations, getReservations, getServices])
+            .then(([picturesHomeResponse, picturesLocationHomeResponse, locationsResponse, reservationsResponse, servicesResponse]) => {
                 const picturesHome = picturesHomeResponse.data;
                 const picturesLocationHome = picturesLocationHomeResponse.data;
                 const locations = locationsResponse.data;
                 const reservations = reservationsResponse.data;
+                const services = servicesResponse.data;
 
-                this.setState({ picturesHome, picturesLocationHome, locations, reservations }, () => {
+                this.setState({ picturesHome, picturesLocationHome, locations, reservations, services }, () => {
                     this.sendDataToParent();
                 });
                 // console.log("state : ", this.state.picturesHome)
@@ -41,18 +43,20 @@ class DataDisplay extends Component {
 
     sendDataToParent = () => {
 
-        const { onPicturesHomeChange, onPicturesLocationHomeChange, onLocationsChange, onReservationsChange } = this.props;
-        const { picturesHome, picturesLocationHome, locations, reservations } = this.state;
+        const { onPicturesHomeChange, onPicturesLocationHomeChange, onLocationsChange, onReservationsChange, onServicesChange } = this.props;
+        const { picturesHome, picturesLocationHome, locations, reservations, services } = this.state;
 
         const pictureHomeDatas = picturesToArray(picturesHome);
         const pictureLocationHomeDatas = picturesToArray(picturesLocationHome);
         const locationsDatas = toArray(locations);
         const reservationsDatas = toArray(reservations);
+        const servicesDatas = toArray(services);
 
         this.setState({ picturesHome: pictureHomeDatas })
         this.setState({ picturesLocationHome: pictureLocationHomeDatas })
         this.setState({ locations: locationsDatas })
         this.setState({ reservations: reservationsDatas })
+        this.setState({ services: servicesDatas })
 
         if (onPicturesHomeChange) {
             onPicturesHomeChange(picturesHome);
@@ -65,6 +69,9 @@ class DataDisplay extends Component {
         }
         if (onReservationsChange) {
             onReservationsChange(reservations);
+        }
+        if (onServicesChange) {
+            onServicesChange(services);
         }
     };
     render() {

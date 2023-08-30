@@ -46,7 +46,6 @@ function LocationTemplate({ locationsDatas }) {
     useEffect(() => {
         locationsDatas?.map((location) => {
             if (id === location.id) {
-                console.log("Location template : ", typeof (location.inProgress))
                 setLocation(location);
                 setIsGoodId(true)
                 if (Number(location.inProgress) === 0) {

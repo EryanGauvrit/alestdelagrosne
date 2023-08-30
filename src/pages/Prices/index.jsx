@@ -1,23 +1,21 @@
 import { Link } from "react-router-dom";
-import React, { useState } from "react";
+import React from "react";
 import ModifHead from "../../components/ModifHead";
 import CollapsePrices from "../../components/CollapsePrices";
 
 function Prices({ locationsDatas, reservations }) {
 
-    console.log(reservations)
-    // const [sendReservations, setSendReservations] = useState([]);
 
     const chooseReservations = ((locationId, reservations) => {
         let sendReservations = [];
-        // eslint-disable-next-line array-callback-return
         reservations.map((reservation) => {
             if (locationId === reservation.location.id) {
-                sendReservations.push({
+                return sendReservations.push({
                     start: new Date(reservation.startDate),
                     end: new Date(reservation.endDate)
                 });
             }
+            return sendReservations;
         })
         return sendReservations;
     })

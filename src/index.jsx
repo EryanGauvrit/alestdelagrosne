@@ -16,6 +16,7 @@ import Contact from './pages/Contact';
 import Mentions from './pages/mentions';
 import Prices from './pages/Prices';
 import LocationHome from './pages/LocationHome';
+import Services from './pages/Services';
 
 function App() {
 
@@ -43,6 +44,7 @@ function App() {
   ]);
   const [locationsDatas, setLocationsDatas] = useState([]);
   const [reservationsDatas, setReservationsDatas] = useState([]);
+  const [servicesDatas, setServicesDatas] = useState([]);
 
   const handlePicturesHomeChange = (picturesHomeData) => {
     const pictures = picturesToArray(picturesHomeData)
@@ -57,17 +59,18 @@ function App() {
   const handleLocationsChange = (locationsDatas) => {
     const locations = toArray(locationsDatas);
     setLocationsDatas(locations);
-    // console.log("in function : ", locations);
   };
   const handleReservationsChange = (reservationsDatas) => {
     const reservations = toArray(reservationsDatas);
     setReservationsDatas(reservations);
     // console.log("in function : ", locations);
   };
+  const handleServicesChange = (servicesDatas) => {
+    const services = toArray(servicesDatas);
+    setServicesDatas(services);
+  };
 
-  // console.log("out function : ", locationsDatas);
   useEffect(() => {
-    // handlePicturesHomeChange();
     setCurrentPage(location.pathname);
   }, [location]);
 
@@ -80,6 +83,7 @@ function App() {
         onPicturesLocationHomeChange={handlePicturesLocationHomeChange}
         onLocationsChange={handleLocationsChange}
         onReservationsChange={handleReservationsChange}
+        onServicesChange={handleServicesChange}
       />
       <div id="backTop-anchor"></div>
       <Header locationsDatas={locationsDatas} currentPage={currentPage} />
@@ -98,7 +102,7 @@ function App() {
           element={<LocationTemplate locationsDatas={locationsDatas} />}
         />
         <Route exact path='/services'
-          element={<InProgress />}
+          element={<Services servicesDatas={servicesDatas} />}
         />
         <Route exact path='/hobbies'
           element={<InProgress />}
