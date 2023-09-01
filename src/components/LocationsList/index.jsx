@@ -6,7 +6,7 @@ function LocationsList({ locationsDatas, homePage }) {
 
     const iconListHeader = <i className="fa-solid fa-house"></i>;
     const isInProgress = (inProgress) => {
-        if (inProgress) {
+        if (Number(inProgress)) {
             return ' (En cours de rénovation)';
         } else {
             return ' (Disponible)'

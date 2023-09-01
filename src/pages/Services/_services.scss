@@ -1,0 +1,50 @@
+.services{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    font-size: $pSizesPhone;
+    & h1 {
+        font-size: 28px;
+    }
+    & section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 90%;
+        & h2 {
+            font-size: 25px;
+        }
+        & .cards-bloc{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+    }
+}
+
+@media (min-width: $phoneScreenSize) {
+    .services{
+        padding-top: 50px;
+        font-size: $pSizesDesktop;
+        & h1 {
+            font-size: 35px;
+        }
+        & section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            width: 90%;
+            & h2 {
+                align-self: flex-start;
+                font-size: 30px;
+            }
+        }
+        & .cards-bloc{
+            gap: 50px;
+        }
+    }
+}

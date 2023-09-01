@@ -1,9 +1,11 @@
+import ServicesCards from "../../components/servicesCards";
+
 function Services({ servicesDatas }) {
 
-    console.log("Services : ", servicesDatas);
+    console.log(servicesDatas)
 
     return (
-        <main>
+        <main className="services">
             <h1>Nos Prestations</h1>
             {
                 (servicesDatas[0]) ?
@@ -11,6 +13,13 @@ function Services({ servicesDatas }) {
                     servicesDatas.map((service) =>
                         <section key={service.id}>
                             <h2>{service.title}</h2>
+                            <div className="cards-bloc">
+                                {
+                                    service.cards.map((card) =>
+                                        <ServicesCards key={card.id} card={card} />
+                                    )
+                                }
+                            </div>
                         </section>
                     )
                     :

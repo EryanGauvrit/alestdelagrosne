@@ -73,6 +73,9 @@
     .prices-bloc {
         align-items: center;
         gap: 20px;
+        & .table-container{
+            max-width: none;
+        }
         table {
             border: 2px solid $color-two;
         }
