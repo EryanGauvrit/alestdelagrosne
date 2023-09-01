@@ -6,17 +6,17 @@ import DataDisplay from './app/DataDisplay';
 import './style/normalize.css';
 import './style/main.scss';
 import Header from './components/Header';
-import InProgress from './components/InProgress';
 import Home from './pages/Home';
 import LocationTemplate from './pages/LocationTemplate';
 import BackTop from './components/BackTop';
 import Footer from './components/Footer';
 import ErrorComp from './components/ErrorComp';
 import Contact from './pages/Contact';
-import Mentions from './pages/mentions';
+import Mentions from './pages/Mentions';
 import Prices from './pages/Prices';
 import LocationHome from './pages/LocationHome';
 import Services from './pages/Services';
+import Hobbies from './pages/Hobbies';
 
 function App() {
 
@@ -45,6 +45,7 @@ function App() {
   const [locationsDatas, setLocationsDatas] = useState([]);
   const [reservationsDatas, setReservationsDatas] = useState([]);
   const [servicesDatas, setServicesDatas] = useState([]);
+  const [eventsDatas, setEventsDatas] = useState([]);
 
   const handlePicturesHomeChange = (picturesHomeData) => {
     const pictures = picturesToArray(picturesHomeData)
@@ -63,11 +64,14 @@ function App() {
   const handleReservationsChange = (reservationsDatas) => {
     const reservations = toArray(reservationsDatas);
     setReservationsDatas(reservations);
-    // console.log("in function : ", locations);
   };
   const handleServicesChange = (servicesDatas) => {
     const services = toArray(servicesDatas);
     setServicesDatas(services);
+  };
+  const handleEventsChange = (eventsDatas) => {
+    const events = toArray(eventsDatas);
+    setEventsDatas(events);
   };
 
   useEffect(() => {
@@ -84,6 +88,7 @@ function App() {
         onLocationsChange={handleLocationsChange}
         onReservationsChange={handleReservationsChange}
         onServicesChange={handleServicesChange}
+        onEventsChange={handleEventsChange}
       />
       <div id="backTop-anchor"></div>
       <Header locationsDatas={locationsDatas} currentPage={currentPage} />
@@ -105,7 +110,7 @@ function App() {
           element={<Services servicesDatas={servicesDatas} />}
         />
         <Route exact path='/hobbies'
-          element={<InProgress />}
+          element={<Hobbies events={eventsDatas} />}
         />
         <Route exact path='/prices'
           element={<Prices locationsDatas={locationsDatas} reservations={reservationsDatas} />}

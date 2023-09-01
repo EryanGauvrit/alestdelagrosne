@@ -1,10 +1,10 @@
-.services{
+.hobbies{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 50px;
     font-size: $pSizesPhone;
-    & h1 {
+    & h2 {
         font-size: 28px;
     }
     & section {
@@ -13,37 +13,38 @@
         align-items: center;
         gap: 20px;
         width: 90%;
-        & h2 {
+        & h3 {
             font-size: 25px;
         }
-        & .cards-bloc{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
+    }
+    & .events{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
     }
 }
 
 @media (min-width: $phoneScreenSize) {
-    .services{
+    .hobbies{
         padding-top: 50px;
         font-size: $pSizesDesktop;
-        & h1 {
+        & h2 {
             font-size: 35px;
+            width: 100%;
         }
         & section {
-            align-items: flex-start;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
             gap: 20px;
             width: 90%;
-            & h2 {
-                align-self: flex-start;
+            & h3 {
                 font-size: 30px;
             }
-            & .cards-bloc{
-                gap: 50px;
-                justify-content: flex-start;
-            }
+        }
+        & .events{
+            gap: 50px;
         }
     }
 }

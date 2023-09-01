@@ -1,0 +1,74 @@
+.eventLink{
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    background-color: rgba($color: $color-two, $alpha: .7);
+    color: $color-one;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-family: $policesGlobalBold;
+    & h3 {
+        font-size: $h3SizesPhone;
+    }
+    & img {
+        height: 200px;
+        width: 290px;
+        border-radius: 10px;
+    }
+    & div {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 90%;
+        padding: 10px;
+        border: solid 1px $color-four;
+        border-radius: 15px;
+        background-color: $color-two;
+        & ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0 5px;
+            :nth-child(1){
+                width: 100%;
+            }
+        }
+        & p {
+            padding: 20px 0;
+            text-align: center;
+        }
+    }
+}
+
+@media (min-width: $phoneScreenSize) {
+    .eventLink{
+        width: 450px;
+        height: 550px;        
+        transition: .5s;
+        &:hover{
+            scale: 1.02;
+            transition: .2s;
+        }
+        & h3 {
+            font-size: $h3SizesDesktop;
+        }
+        & img {
+            height: 300px;
+            width: 430px;
+        }
+        & div {
+            & ul {
+                gap: 0 5px;
+                :nth-child(1){
+                    width: 100%;
+                }
+            }
+            & p {
+                padding: 20px 0;
+                text-align: center;                
+            }
+        }
+    }
+}

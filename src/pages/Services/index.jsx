@@ -1,4 +1,4 @@
-import ServicesCards from "../../components/servicesCards";
+import ServicesCards from "../../components/ServicesCards";
 
 function Services({ servicesDatas }) {
 
