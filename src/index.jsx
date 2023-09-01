@@ -95,7 +95,7 @@ function App() {
       <BackTop currentPage={currentPage} />
       <Routes>
         <Route exact path='/'
-          element={<Home locationsDatas={locationsDatas} picturesDatas={picturesHomeData} />}
+          element={<Home locationsDatas={locationsDatas} picturesDatas={picturesHomeData} eventsDatas={eventsDatas} />}
         />
         {/* <Route exact path='/test'
           element={<DataDisplay onPicturesHomeChange={handlePicturesHomeChange} />}

@@ -3,7 +3,7 @@ import NextEvent from "../../components/NextEvent";
 import ModifHead from "../../components/ModifHead";
 import FullScreenGallery from "../../components/FullScreenGallery";
 
-function Home({ locationsDatas, picturesDatas }) {
+function Home({ locationsDatas, picturesDatas, eventsDatas }) {
 
     const iconList = <i className="fa-solid fa-wine-bottle"></i>;
 
@@ -60,7 +60,7 @@ function Home({ locationsDatas, picturesDatas }) {
                             </li>
                         </ul>
                     </article>
-                    <NextEvent />
+                    <NextEvent eventsDatas={eventsDatas} />
                 </section>
             </main>
         </React.Fragment>

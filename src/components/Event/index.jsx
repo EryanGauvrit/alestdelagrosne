@@ -2,13 +2,14 @@ import { choosePicture } from "../utils/ChoosePicture";
 import { formatDate } from "../utils/FormatDate";
 
 function Event({ event }) {
-    console.log(event)
 
     const handleClick = (e) => {
-        e.preventDefault();
+        if (!event.link) {
+            e.preventDefault();
+        }
     }
     return (
-        <a href={event.link} onClick={!event.link && handleClick} className="eventLink">
+        <a href={event.link} onClick={handleClick} className="eventLink">
             <h3>{event.title}</h3>
             <img src={choosePicture(event.coverPictureDesktop, event.coverPicturePhone)} alt={event.title} />
             <div>
