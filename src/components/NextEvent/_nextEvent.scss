@@ -18,11 +18,17 @@
         height: 255px;
         overflow: hidden;
         border-radius: 10px;
-        & img {
+        padding: 0 10px;
+        gap: 10px;
+        max-width: 300px;
+        & .bloc-img {
             height: 220px;
-            border-radius: 10px;
-            border: solid 1px $color-three;
+            width: 200px;
+            img {
+                height: 220px;
+            }
         }
+            
         & ul {
             width: 50%;
             display: flex;
@@ -57,7 +63,7 @@
 }
 
 @media (min-width: $phoneScreenSize) {
-    .event {
+    .nextEvent {
         gap: 50px;
         margin-bottom: 70px;
         & h3 {
@@ -69,8 +75,13 @@
             width: 100%;
             max-width: 900px;
             transition: .2s;
-            & img {
+            gap: 20px;
+            & .bloc-img {
                 height: 320px;
+                width: 250px;
+                img {
+                    height: 320px;
+                }
             }
             & ul {
                 gap: 20px;

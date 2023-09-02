@@ -50,3 +50,14 @@ ul, li {
     margin: 0;
     padding: 0;
 }
+
+.bloc-img {
+    overflow: hidden;
+    border-radius: 10px;
+    border: solid 1px $color-three;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-three;
+    // settings width & height in here comp
+}

@@ -13,10 +13,15 @@
     & h3 {
         font-size: $h3SizesPhone;
     }
-    & img {
+    & .bloc-img {
         height: 180px;
         width: 290px;
-        border-radius: 10px;
+        & img {
+            width: 290px;
+        }
+        & .spinnerLoader {
+            position: relative;
+        }
     }
     & p {
         width: 90%;
@@ -35,9 +40,15 @@
         & h3 {
             font-size: $h3SizesDesktop;
         }
-        & img {
+        & .bloc-img {
             height: 210px;
             width: 320px;
+            & img {
+                width: 320px;
+            }
+            & .spinnerLoader {
+                position: relative;
+            }
         }
     }
 }
