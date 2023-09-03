@@ -28,8 +28,6 @@ function GoogleMap({ mapUrl }) {
             >
             </iframe >
         )
-        console.log(mapUrl)
-        console.log(stateMapUrl)
     }, [mapUrl, stateMapUrl])
 
     return (
