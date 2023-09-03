@@ -1,5 +1,5 @@
 
-function DetailsPrices({ price }) {
+function DetailsPrices({ price, capacity }) {
 
     const icon = <i className="fa-solid fa-square"></i>;
 
@@ -33,6 +33,7 @@ function DetailsPrices({ price }) {
         }
         return reduce;
     }
+    console.log(capacity)
 
     return (
         <div className="prices-bloc">
@@ -65,8 +66,9 @@ function DetailsPrices({ price }) {
                     </tbody>
                 </table>
             </div>
-            <p className="table-quote">* Le gîte est loué dans son intégralité.</p>
-            <p className="table-quote">** Taxe de séjour incluse.</p>
+            <p className="table-quote">* Le gîte est loué pour une capacité de base de {capacity} personnes.</p>
+            <p className="table-quote">** Pour toute personne supplémentaire : 10€/nuits</p>
+            <p className="table-quote">*** Taxe de séjour incluse.</p>
             <ul>
                 <li>{icon} Haute saison : de juillet à aout</li>
                 <li>{icon} Moyenne saison : de septembre à octobre et d'avril à juin</li>

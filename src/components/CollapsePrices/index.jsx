@@ -35,7 +35,7 @@ function CollapsePrices({ location, reservations }) {
                         </li>
                         <li className="locationDetails">
                             <CalendarReservations reservations={reservations} />
-                            <DetailsPrices price={location.prices} />
+                            <DetailsPrices price={location.prices} capacity={location.capacity.maxCapacity} />
                             <ButtonLink
                                 link={`/location/${location.id}`}
                                 content="Détails du gîte"
