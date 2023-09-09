@@ -4,6 +4,7 @@ import 'react-calendar/dist/Calendar.css';
 function CalendarReservations({ reservations }) {
 
     const icon = <i className="fa-solid fa-square"></i>;
+    console.log(reservations[0]?.start)
 
     return (
         <div>
@@ -15,7 +16,10 @@ function CalendarReservations({ reservations }) {
                 tileClassName={({ date, view }) => {
                     if (view === 'month') {
                         const isReserved = reservations.some((reservation) => {
-                            return date >= reservation.start && date <= reservation.end;
+                            const startDate = reservation.start;
+                            const endDate = reservation.end;
+
+                            return date >= startDate && date <= endDate;
                         });
                         return isReserved ? 'reserved' : '';
                     }

@@ -1,5 +1,6 @@
 import SpinnerLoader from "../SpinnerLoader";
 import { choosePicture } from "../utils/ChoosePicture";
+import he from "he";
 
 function ServicesCards({ card }) {
 
@@ -10,16 +11,16 @@ function ServicesCards({ card }) {
 
     return (
         <div className="servicesCards">
-            <h3>{title}</h3>
+            <h3>{he.decode(title)}</h3>
             <div className="bloc-img">
                 {
                     pictureDesktop && picturePhone && title ?
-                        <img src={choosePicture(pictureDesktop, picturePhone)} alt={title} />
+                        <img src={choosePicture(pictureDesktop, picturePhone)} alt={he.decode(title)} />
                         :
                         <SpinnerLoader isLoad={true} />
                 }
             </div>
-            <p>{description}</p>
+            <p>{he.decode(description)}</p>
         </div>
     )
 };

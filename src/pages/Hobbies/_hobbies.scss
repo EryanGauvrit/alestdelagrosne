@@ -15,6 +15,12 @@
         width: 90%;
         & h3 {
             font-size: 25px;
+            text-align: center;
+        }
+        article {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
     }
     & .events{
@@ -22,6 +28,63 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: 20px;
+    }
+    & .button-link {
+        background-color: $color-one;
+    }
+}
+
+
+.hobbies-bloc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    & div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    & li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: $color-two;
+        color: $color-one;
+        gap: 5px;
+        & h4 {
+            font-size: 23px;
+            text-align: center;
+        }
+        & p {
+            align-self: flex-start;
+        }
+        & img {
+            background-color: $color-one;
+            border-radius: 10px;
+            width: 270px;
+            height: 170px;
+        }
+        & ul {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 95%;
+            & li {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                gap: 10px;
+                color: $color-one;
+                & a {
+                    color: $color-one;
+                }
+            }
+        }
     }
 }
 
@@ -38,14 +101,71 @@
             flex-wrap: wrap;
             flex-direction: row;
             justify-content: center;
-            gap: 20px;
+            gap: 50px;
             width: 90%;
             & h3 {
                 font-size: 30px;
             }
+            article {
+                gap: 50px;
+                margin-bottom: 30px;
+            }
         }
         & .events{
             gap: 50px;
+        }
+    }
+
+    
+    .hobbies-bloc {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: stretch;
+        justify-content: space-around;
+        gap: 20px;
+        & div {
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: stretch;
+            justify-content: space-around;
+            gap: 20px;
+        }
+        & li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            width: 370px;
+            gap: 10px;
+            & h4 {
+                font-size: 23px;
+                text-align: center;
+            }
+            & p {
+                align-self: flex-start;
+            }
+            & img {
+                background-color: $color-one;
+                border-radius: 10px;
+                width: 370px;
+                height: 270px;
+            }
+            & ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: auto;
+                & li {
+                    align-items: center;
+                    justify-content: flex-start;
+                    width: 80%;
+                    gap: 10px;
+                    color: $color-one;
+                    & a {
+                        color: $color-one;
+                    }
+                }
+            }
         }
     }
 }

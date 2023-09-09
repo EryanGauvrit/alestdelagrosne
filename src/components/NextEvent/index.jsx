@@ -7,7 +7,6 @@ import { formatDate } from "../utils/FormatDate";
 function NextEvent({ eventsDatas }) {
 
     const nextEvent = formatEvents(eventsDatas)[0];
-    console.log(nextEvent)
 
     return (
         <article className="nextEvent">

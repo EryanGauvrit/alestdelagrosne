@@ -7,13 +7,21 @@ function InProgressLoc({ locationsDatas }) {
 
     const iconList = <i className="fa-regular fa-hand-pointer"></i>;
 
+    const inProgress = (inProgress) => {
+        if (Number(inProgress) === 0) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
     return (
         <article className="inProgressLoc">
             <p>Nous vous invitons à consulter nos gîtes actuellement ouverts :</p>
             <ul>
                 {
                     locationsDatas.map((location) =>
-                        !location.inProgress && <li key={location.id}><Link to={`/location/${location.id}`} onClick={"#backTop-anchor"}>
+                        !inProgress(location.inProgress) && <li key={location.id}><Link to={`/location/${location.id}`} onClick={"#backTop-anchor"}>
                             {iconList}
                             <img src={choosePicture(location.logoDesktop, location.logoPhone)} alt={location.title} />
                         </Link></li>

@@ -69,7 +69,7 @@ function LocationTemplate({ locationsDatas }) {
                             <ModifHead
                                 titlePage={he.decode(location.title)}
                                 description={he.decode(location.description)}
-                                robots={location.inProgress && `index,follow`}
+                                robots={!inProgress && `index,follow`}
                             />
                             <h1>
                                 <Logo
@@ -88,7 +88,7 @@ function LocationTemplate({ locationsDatas }) {
                                 inProgress ? (
                                     <React.Fragment>
                                         <section className="description">
-                                            <h2>{he.decode(location.description)}</h2>
+                                            <h2 style={{ textTransform: "uppercase" }}>{he.decode(location.description)}</h2>
                                             <InProgressLoc
                                                 locationsDatas={locationsDatas}
                                             />

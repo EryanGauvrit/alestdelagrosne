@@ -2,7 +2,17 @@
     background-color: $color-four!important; 
     color: $color-two!important; 
     font-weight: bold; 
-  }
+}
+.reserved.react-calendar__tile:focus  {
+    background-color: $color-four!important; 
+    color: $color-two!important; 
+    font-weight: bold; 
+}
+.reserved:hover.react-calendar__tile:hover {
+    background-color: $color-four!important; 
+    color: $color-two!important; 
+    font-weight: bold; 
+}
 
   .react-calendar{
     background-color: $color-two;

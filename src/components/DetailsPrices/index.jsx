@@ -33,7 +33,6 @@ function DetailsPrices({ price, capacity }) {
         }
         return reduce;
     }
-    console.log(capacity)
 
     return (
         <div className="prices-bloc">

@@ -1,7 +1,8 @@
+import React from "react";
 import { Link } from "react-router-dom";
 
 
-function ButtonLink({ link, content, borderColor, color }) {
+function ButtonLink({ link, content, borderColor, color, externalNavigation }) {
 
     const style = {
         borderColor: borderColor,
@@ -10,9 +11,16 @@ function ButtonLink({ link, content, borderColor, color }) {
     };
 
     return (
-        <Link to={link} className="button-link" style={style} onClick={"#backTop-anchor"}>
-            {content}
-        </Link>
+        <React.Fragment>
+            {
+                !externalNavigation ?
+                    <Link to={link} className="button-link" style={style} onClick={"#backTop-anchor"}>
+                        {content}
+                    </Link>
+                    :
+                    <a href={link} className="button-link" style={style} target="_blank" rel="noreferrer">{content}</a>
+            }
+        </React.Fragment>
     )
 };
 

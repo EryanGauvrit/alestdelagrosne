@@ -50,12 +50,10 @@ function App() {
   const handlePicturesHomeChange = (picturesHomeData) => {
     const pictures = picturesToArray(picturesHomeData)
     setPicturesHomeData(pictures);
-    // console.log("in function : ", picturesHomeData);
   };
   const handlePicturesLocationHomeChange = (pictureLocationHomeDatas) => {
     const pictures = picturesToArray(pictureLocationHomeDatas)
     setPictureLocationHomeDatas(pictures);
-    // console.log("in function : ", picturesHomeData);
   };
   const handleLocationsChange = (locationsDatas) => {
     const locations = toArray(locationsDatas);

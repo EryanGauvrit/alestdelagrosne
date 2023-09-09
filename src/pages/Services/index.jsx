@@ -1,8 +1,7 @@
 import ServicesCards from "../../components/ServicesCards";
+import he from "he";
 
 function Services({ servicesDatas }) {
-
-    console.log(servicesDatas)
 
     return (
         <main className="services">
@@ -12,7 +11,7 @@ function Services({ servicesDatas }) {
 
                     servicesDatas.map((service) =>
                         <section key={service.id}>
-                            <h2>{service.title}</h2>
+                            <h2>{he.decode(service.title)}</h2>
                             <div className="cards-bloc">
                                 {
                                     service.cards.map((card) =>

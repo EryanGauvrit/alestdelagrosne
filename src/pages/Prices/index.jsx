@@ -9,9 +9,11 @@ function Prices({ locationsDatas, reservations }) {
     const chooseReservations = ((locationId, reservations) => {
         let sendReservations = [];
         reservations.map((reservation) => {
+            const startDate = new Date(reservation.startDate);
+            startDate.setDate(startDate.getDate() - 1);
             if (locationId === reservation.location.id) {
                 return sendReservations.push({
-                    start: new Date(reservation.startDate),
+                    start: startDate,
                     end: new Date(reservation.endDate)
                 });
             }
