@@ -3,6 +3,7 @@ import Event from "../../components/Event";
 import { formatEvents } from "../../components/utils/SortEvents";
 import SlideShow from "../../components/SlideShow";
 import ButtonLink from "../../components/ButtonLink";
+import { bike, castle, cave, climb, heritage, hiking, waterway, wineRoad } from "../../components/utils/HobbiesPictures";
 
 function Hobbies({ events }) {
 
@@ -29,7 +30,7 @@ function Hobbies({ events }) {
                 <article>
                     <h3>Activités sportives</h3>
                     <ul className="hobbies-bloc">
-                        <li>
+                        <li className="hobbies-bloc-list">
                             <h4>Escalade</h4>
                             <img src="" alt="Escalade" />
                             <p>2 sites à proximité :</p>
@@ -37,9 +38,9 @@ function Hobbies({ events }) {
                                 <li>{listLinkIcon}<a href="http://escalade-cote-sud.fr/2020/09/29/etrigny/" target="_blank" rel="noreferrer">À Etrigny - 5 kms</a></li>
                                 <li>{listLinkIcon}<a href="http://escalade-cote-sud.fr/2020/06/12/culles-les-roches-topo-ffme/" target="_blank" rel="noreferrer">Culles les Roches - 10 kms</a></li>
                             </ul>
-                            <img src="" alt="Escalade" />
+                            <img src={climb(2)} alt="Escalade" />
                         </li>
-                        <li>
+                        <li className="hobbies-bloc-list">
                             <h4>Randonnées à vélo</h4>
                             <p>
                                 A 5 kms du gîte vous trouverez la voie verte.
@@ -51,10 +52,10 @@ function Hobbies({ events }) {
                                 <li>Liens utils :</li>
                                 <li>{listLinkIcon}<a href="https://www.destination-saone-et-loire.fr/fr/nos-destinations/a-velo.html" target="_blank" rel="noreferrer">destination-saone-et-loire.fr</a></li>
                                 <li>{listLinkIcon}<a href="https://www.francevelotourisme.com/itineraire/bourgogne-du-sud-chalon-sur-saone-macon" target="_blank" rel="noreferrer">francevelotourisme.com</a></li>
-                                <li><img src="" alt="Randonnées à vélo" /></li>
                             </ul>
+                            <img src={bike()} alt="Randonnées à vélo" />
                         </li>
-                        <li>
+                        <li className="hobbies-bloc-list">
                             <h4>Randonnées</h4>
                             <p>
                                 A 30m du gîte, vous trouverez des départs de sentiers et la Forêt du Grand Bragny.
@@ -66,13 +67,11 @@ function Hobbies({ events }) {
                                 content={"En savoir plus ?"}
                                 externalNavigation={true}
                             />
-                            <ul>
-                                <li><img src="" alt="randonnée" /></li>
-                                <li><img src="" alt="randonnée" /></li>
-                            </ul>
+                            <img src={hiking(1)} alt="randonnée" />
+                            <img src={hiking(2)} alt="randonnée" />
                         </li>
-                        <div>
-                            <li>
+                        <div className="hobbies-bloc-div ">
+                            <li className="hobbies-bloc-list">
                                 <h4>Equitation</h4>
                                 <p>Plusieurs centres à proximité du gîte (situés entre 1 et 10 kms) :</p>
                                 <ul>
@@ -82,7 +81,7 @@ function Hobbies({ events }) {
                                     <li>{icon}Etrigny</li>
                                 </ul>
                             </li>
-                            <li>
+                            <li className="hobbies-bloc-list">
                                 <h4>Terrains de tennis</h4>
                                 <p>2 sites à proximité : </p>
                                 <ul>
@@ -90,14 +89,14 @@ function Hobbies({ events }) {
                                     <li>{icon}Sennecey le Grand – 10 kms</li>
                                 </ul>
                             </li>
-                            <li>
+                            <li className="hobbies-bloc-list">
                                 <h4>Piscines et lieux de baignade les plus proches :</h4>
                                 <ul>
                                     <li>{listLinkIcon}<a href="https://www.senneceylegrand.fr/piscine-municipale" target="_blank" rel="noreferrer">Piscine découverte à Sennecey le Grand – 10 kms</a></li>
                                     <li>{listLinkIcon}<a href="https://www.bourgogne-tourisme.com/baignade/base-nautique-lacs-de-laives" target="_blank" rel="noreferrer">Base nautique des lacs de Laives – 10 kms</a></li>
                                 </ul>
                             </li>
-                            <li>
+                            <li className="hobbies-bloc-list">
                                 <h4>Pêche (dans la Grosne, la Saône)</h4>
                                 <p>La rivière la Grosne est à 200m du gîte !</p>
                                 <ul>
@@ -105,8 +104,9 @@ function Hobbies({ events }) {
                                     <li>{listLinkIcon}<a href="https://www.peche-saone-et-loire.fr/ou-pecher/les-rivieres/grosne/" target="_blank" rel="noreferrer">En savoir plus ?</a></li>
                                 </ul>
                             </li>
-                            <li>
+                            <li className="hobbies-bloc-list">
                                 <h4>Voies navigables</h4>
+                                <img src={waterway()} alt="Voies navigables" />
                                 <ButtonLink
                                     link={"https://www.bourgogne-tourisme.com/decouvrir/au-fil-des-canaux-et-rivieres/"}
                                     content={"Toutes les infos se trouvent ici"}
@@ -119,12 +119,12 @@ function Hobbies({ events }) {
                 <article>
                     <h3>Patrimoine</h3>
                     <ul className="hobbies-bloc">
-                        <li>
+                        <li className="hobbies-bloc-list">
                             <h4>Cluny / Dijon / Beaune / Chalon sur Saône / Macon / Tournus / Chapaize ….</h4>
-                            {/* <SlideShow
-                                // pictures={""}
+                            <SlideShow
+                                pictures={heritage()}
                                 onClick={false}
-                            /> */}
+                            />
                             <ButtonLink
                                 link={"https://www.destination-saone-et-loire.fr/fr/71-experiences/patrimoine-et-artisanat-dart.html"}
                                 content={"Toutes les informations"}
@@ -132,20 +132,19 @@ function Hobbies({ events }) {
 
                             />
                         </li>
-                        <li>
+                        <li className="hobbies-bloc-list">
                             <h4>Les grottes de Blanot / Les grottes d’Azé ….</h4>
-                            <img src="" alt="Les grottes de Blanot / Les grottes d’Azé" />
+                            <img src={cave()} alt="Les grottes de Blanot / Les grottes d’Azé" />
                         </li>
-                        <li>
+                        <li className="hobbies-bloc-list">
                             <h4>Châteaux de Brancion / Cormatin ….</h4>
-                            <img src="" alt="Châteaux de Brancion / Cormatin" />
-                            <img src="" alt="Châteaux de Brancion / Cormatin" />
+                            <img src={castle()} alt="Châteaux de Brancion / Cormatin" />
                         </li>
-                        <li>
+                        <li className="hobbies-bloc-list">
                             <h4>La route des vins</h4>
-                            <img src="" alt="La route des vins" />
+                            <img src={wineRoad(2)} alt="La route des vins" />
                         </li>
-                        <li>
+                        <li className="hobbies-bloc-list">
                             <h4>Gastronomie</h4>
                             <ul>
                                 <li>{icon}Marchés</li>
