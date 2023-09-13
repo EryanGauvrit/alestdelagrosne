@@ -32,7 +32,7 @@ function Hobbies({ events }) {
                     <ul className="hobbies-bloc">
                         <li className="hobbies-bloc-list">
                             <h4>Escalade</h4>
-                            <img src="" alt="Escalade" />
+                            <img src={climb(1)} alt="Escalade" className="climb" />
                             <p>2 sites à proximité :</p>
                             <ul>
                                 <li>{listLinkIcon}<a href="http://escalade-cote-sud.fr/2020/09/29/etrigny/" target="_blank" rel="noreferrer">À Etrigny - 5 kms</a></li>

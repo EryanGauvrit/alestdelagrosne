@@ -4,6 +4,9 @@
     align-items: center;
     gap: 50px;
     font-size: $pSizesPhone;
+    background-image: $bgImgMain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     & h2 {
         font-size: 28px;
     }
@@ -68,6 +71,14 @@
             border-radius: 10px;
             width: 270px;
             height: 170px;
+        }
+        .climb {
+            background-color: #292929;
+            height: 100px;
+            object-fit: none;
+            @media (min-width: $phoneScreenSize) {
+                height: 120px;
+            }
         }
         & ul {
             display: flex;
@@ -201,6 +212,7 @@
             justify-content: flex-start;
             width: 370px;
             gap: 15px;
+            background-color: rgba($color: $color-two, $alpha: .85);
             & h4 {
                 font-size: 23px;
                 text-align: center;

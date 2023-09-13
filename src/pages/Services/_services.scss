@@ -29,6 +29,9 @@
     .services{
         padding-top: 50px;
         font-size: $pSizesDesktop;
+        background-image: $bgImgSecondary;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
         & h1 {
             font-size: 35px;
         }

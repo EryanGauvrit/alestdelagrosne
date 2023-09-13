@@ -132,6 +132,9 @@ header{
         padding: 0;
         box-shadow: none;
         height: 150px;
+        background-image: $bgImgHeader;
+        background-position: right;
+        background-size: cover;
         .header-phone{
             & img {
                 width: 170px;
@@ -339,6 +342,7 @@ header{
         align-items: center;
         justify-content: center;
         height: 50px;
+        background-image: none;
         & nav {
             align-items: center;
             margin-right: 0;

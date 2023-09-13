@@ -16,8 +16,9 @@
     & .bloc-img {
         height: 220px;
         width: 200px;
+        overflow: hidden;
         & img {
-            height: 220px;
+            width: 100%;
         }
         & .spinnerLoader {
             position: relative;

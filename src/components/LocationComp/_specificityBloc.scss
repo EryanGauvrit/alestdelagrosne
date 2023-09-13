@@ -113,6 +113,7 @@ $color-bloc3 : #C89D1B;
         }
         
         & .capacity{
+            background-attachment: inherit;
             border-radius: 15px 0 0 15px;
             div{
                 width: 100%;
@@ -123,9 +124,11 @@ $color-bloc3 : #C89D1B;
             }
         }
         & .equipment{
+            background-attachment: inherit;
             border-radius: 0;
         }
         & .services{
+            background-attachment: inherit;
             border-radius: 0 15px 15px 0;
         }
     }

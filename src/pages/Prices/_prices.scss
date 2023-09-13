@@ -89,6 +89,9 @@
         gap: 50px;
         margin-bottom: 0;
         font-size: $pSizesDesktop;
+        background-image: $bgImgSecondary;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
         & h1 {
             font-size: 35px;
         }    

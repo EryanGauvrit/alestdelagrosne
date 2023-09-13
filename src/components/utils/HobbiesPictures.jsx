@@ -6,6 +6,8 @@ import castlePhone from "../../assets/pictures/hobbies/castle-1-270-min.jpg";
 import castleDesktop from "../../assets/pictures/hobbies/castle-1-370-min.jpg";
 import cavePhone from "../../assets/pictures/hobbies/cave-1-270-min.jpg";
 import caveDesktop from "../../assets/pictures/hobbies/cave-1-370-min.jpg";
+import climbPhone1 from "../../assets/pictures/hobbies/climb-1-270-min.jpg";
+import climbDesktop1 from "../../assets/pictures/hobbies/climb-1-370-min.jpg";
 import climbPhone2 from "../../assets/pictures/hobbies/climb-2-270-min.jpg";
 import climbDesktop2 from "../../assets/pictures/hobbies/climb-2-370-min.jpg";
 import heritagePhone1 from "../../assets/pictures/hobbies/heritage-1-270-min.jpg";
@@ -42,7 +44,7 @@ export const cave = () => {
 };
 export const climb = (nbr) => {
     if (nbr === 1) {
-        return false;
+        return choosePicture(climbDesktop1, climbPhone1);
     } else {
         return choosePicture(climbDesktop2, climbPhone2);
     }
