@@ -64,6 +64,9 @@
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
+        background-image: $bgImgSecondary;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
         .title-home {
             margin: auto;
             bottom: 100px;
@@ -87,7 +90,7 @@
         flex-wrap: wrap;
         justify-content: space-around;
         align-items: flex-start;
-        gap: 50px;
+        gap: 50px;        
         & article {
             gap: 35px;
             & h3 {
