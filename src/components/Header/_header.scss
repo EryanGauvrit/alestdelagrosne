@@ -347,8 +347,12 @@ header{
         & nav {
             align-items: center;
             margin-right: 0;
-            & div:hover {
-                margin: 0 10px;
+            & div {
+                @media (min-width: $phoneScreenSize) {
+                    margin: 0 5px;
+                }
+            }
+            & div:hover {                
                 ul {
                     @media (min-width: $phoneScreenSize) {
                         top: 0;
