@@ -301,8 +301,9 @@ header{
         & div:hover {
             ul {
                 @media (min-width: $phoneScreenSize) {
-                    background-color: transparent;
-                    top: 80px;
+                    top: 0;
+                    height: 130px;
+                    justify-content: flex-end;
                 }
             }
         }
@@ -347,10 +348,12 @@ header{
             align-items: center;
             margin-right: 0;
             & div:hover {
+                margin: 0 10px;
                 ul {
                     @media (min-width: $phoneScreenSize) {
-                        // background-color: rgba($color: $color-two, $alpha: .7);
-                        top: 30px;
+                        top: 0;
+                        height: 130px;
+                        justify-content: flex-end;
                     }
                 }
             }

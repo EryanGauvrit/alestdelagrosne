@@ -9,6 +9,17 @@
         transform: scale(.8);
     }
 }
+@keyframes changeOpacity {
+    0% {
+        opacity: .4;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: .4;
+    }
+}
 
 @keyframes loading-spinner{
     to{
@@ -42,4 +53,12 @@
     100% {
       transform: scale(1.5);
     }
-  }
+}
+
+@keyframes changeLinearGradientBg {
+    0% {background-image: linear-gradient(0deg, rgba($color-two, 0.4), rgba($color-one, 0));}
+    25% {background-image: linear-gradient(0deg, rgba($color-two, 0.45), rgba($color-one, 0));}
+    50% {background-image: linear-gradient(0deg, rgba($color-two, 0.5), rgba($color-one, 0));}
+    75% {background-image: linear-gradient(0deg, rgba($color-two, 0.55), rgba($color-one, 0));}
+    100% {background-image: linear-gradient(0deg, rgba($color-two, 0.6), rgba($color-one, 0));}
+}

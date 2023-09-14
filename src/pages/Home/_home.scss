@@ -5,7 +5,7 @@
         position: relative;
         width: 80%;
         margin: auto;
-        margin-top: -100px;
+        margin-top: -165px;
         margin-bottom: 70px;
         & h3 {
             font-style: italic;
@@ -24,6 +24,7 @@
     flex-direction: column;
     gap: 15px;
     padding: 0 15px;
+    padding-top: 30px;
     & article {
         display: flex;
         flex-direction: column;
@@ -69,7 +70,7 @@
         background-attachment: fixed;
         .title-home {
             margin: auto;
-            bottom: 100px;
+            bottom: 250px;
             max-width: $desktopScreenSize;
             & h3 {
                 font-size: $h3SizesDesktop;
@@ -91,6 +92,7 @@
         justify-content: space-around;
         align-items: flex-start;
         gap: 50px;        
+        padding-top: 0;
         & article {
             gap: 35px;
             & h3 {
