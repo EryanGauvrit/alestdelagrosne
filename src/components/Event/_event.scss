@@ -2,7 +2,7 @@
     width: 300px;
     height: 400px;
     overflow: hidden;
-    background-color: rgba($color: $color-two, $alpha: .7);
+    background-image: url("../../assets/bg-img/bg-card-event.jpg");
     color: $color-one;
     border-radius: 15px;
     display: flex;
@@ -12,6 +12,7 @@
     font-family: $policesGlobalBold;
     & h3 {
         font-size: $h3SizesPhone;
+        color: $color-two;
     }
     & .bloc-img {
         height: 220px;
@@ -30,9 +31,9 @@
         gap: 10px;
         width: 90%;
         padding: 10px;
-        border: solid 1px $color-four;
+        border: solid 1px $color-one;
         border-radius: 15px;
-        background-color: $color-two;
+        background-color: rgba($color-two, .8);
         & ul {
             display: flex;
             flex-wrap: wrap;

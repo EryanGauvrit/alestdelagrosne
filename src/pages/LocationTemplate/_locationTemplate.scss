@@ -139,9 +139,6 @@
 @media (min-width: $phoneScreenSize) {
     .location-template{
         padding: 0;
-        background-image: $bgImgMain;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
         & h1 {
             & img {
                 height: 130px;

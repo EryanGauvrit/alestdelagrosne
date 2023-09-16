@@ -12,7 +12,7 @@
         justify-content: space-around;
         align-self: center;
         align-items: center;
-        background-color: rgba($color: $color-two, $alpha: .85);
+        background-image: url("../../assets/bg-img/bg-card-event.jpg");
         color: $color-one;
         height: 255px;
         overflow: hidden;
@@ -34,6 +34,9 @@
             flex-direction: column;
             gap: 15px;
             font-size: 16px;
+            background-color: rgba($color-two, .8);
+            padding: 15px 10px;
+            border-radius: 15px;
             & li {
                 display: flex;
                 align-items: baseline;

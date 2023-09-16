@@ -4,9 +4,6 @@
     align-items: center;
     gap: 50px;
     font-size: $pSizesPhone;
-    background-image: $bgImgMain;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     & h2 {
         font-size: 28px;
     }
@@ -56,7 +53,8 @@
         width: 90%;
         padding: 10px;
         border-radius: 10px;
-        background-color: $color-two;
+        background-image: url("../../assets/bg-img/bg-card-hobbies.jpg");
+        background-size: cover;
         color: $color-one;
         gap: 5px;
         & h4 {

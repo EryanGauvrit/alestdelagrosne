@@ -11,7 +11,6 @@ function ServicesCards({ card }) {
 
     return (
         <div className="servicesCards">
-            <h3>{he.decode(title)}</h3>
             <div className="bloc-img">
                 {
                     pictureDesktop && picturePhone && title ?
@@ -20,7 +19,10 @@ function ServicesCards({ card }) {
                         <SpinnerLoader isLoad={true} />
                 }
             </div>
-            <p>{he.decode(description)}</p>
+            <div className="bloc-quote">
+                <h3>{he.decode(title)}</h3>
+                <p>{he.decode(description)}</p>
+            </div>
         </div>
     )
 };

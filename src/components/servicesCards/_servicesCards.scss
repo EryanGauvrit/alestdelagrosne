@@ -2,17 +2,14 @@
     width: 300px;
     height: 300px;
     overflow: hidden;
-    background-color: rgba($color: $color-two, $alpha: .7);
-    color: $color-one;
+    background-image: url("../../assets/bg-img/bg-card.jpg");
+    color: $color-two;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     font-family: $policesGlobalBold;
-    & h3 {
-        font-size: $h3SizesPhone;
-    }
     & .bloc-img {
         height: 180px;
         width: 290px;
@@ -23,13 +20,21 @@
             position: relative;
         }
     }
-    & p {
+    & .bloc-quote {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 15px;
         width: 90%;
         padding: 20px 0;
-        text-align: center;
-        border: solid 1px $color-four;
+        border: solid 2px $color-one;
         border-radius: 15px;
-        background-color: $color-two;
+        background-color: rgba($color-two, .8);
+        color: $color-one;
+        & h3 {
+            font-size: $h3SizesPhone;
+        }
     }
 }
 

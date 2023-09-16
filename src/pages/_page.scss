@@ -20,7 +20,10 @@ main {
     padding-top: 100px;
     padding-bottom: 30px;
     min-height: 50vh;
-    background-color: $color-three;
+    // background-color: $color-three;    
+    background-image: linear-gradient(45deg, $color-one 0%, rgba($color-two, .2) 25%, rgba($color-one,1) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     @media (min-width: $phoneScreenSize) {
         min-height: 47vh;
     }
@@ -58,6 +61,6 @@ ul, li {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: $color-three;
+    background-color: rgba($color-three, .8);
     // settings width & height in here comp
 }
