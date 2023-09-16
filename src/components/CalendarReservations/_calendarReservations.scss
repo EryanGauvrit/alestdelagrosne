@@ -3,6 +3,18 @@
     color: $color-two!important; 
     font-weight: bold; 
 }
+.start-date {
+  font-weight: bold; 
+  background-color: $color-four!important;
+  color: $color-one!important;
+  background: linear-gradient(-45deg, rgba($color-four,1) 0%, rgba($color-four,1) 50%, rgba(255,255,255,0) 50%, rgba(255,255,255,0) 100%) !important;
+}
+.end-date {
+  font-weight: bold; 
+  background-color: $color-four!important;
+  color: $color-one!important;
+  background: linear-gradient(135deg, rgba($color-four,1) 0%, rgba($color-four,1) 50%, rgba(255,255,255,0) 50%, rgba(255,255,255,0) 100%) !important;
+}
 .reserved.react-calendar__tile:focus  {
     background-color: $color-four!important; 
     color: $color-two!important; 

@@ -4,7 +4,6 @@ import 'react-calendar/dist/Calendar.css';
 function CalendarReservations({ reservations }) {
 
     const icon = <i className="fa-solid fa-square"></i>;
-    console.log(reservations[0]?.start)
 
     return (
         <div>
@@ -15,13 +14,33 @@ function CalendarReservations({ reservations }) {
                 defaultView="month"
                 tileClassName={({ date, view }) => {
                     if (view === 'month') {
-                        const isReserved = reservations.some((reservation) => {
-                            const startDate = reservation.start;
-                            const endDate = reservation.end;
+                        const isReserved = () => {
+                            let className = '';
 
-                            return date >= startDate && date <= endDate;
-                        });
-                        return isReserved ? 'reserved' : '';
+                            reservations.some((reservation) => {
+                                const startDate = reservation.start;
+                                const endDate = reservation.end;
+
+                                if (date.toDateString() === startDate.toDateString()) {
+                                    className = 'start-date';
+                                }
+
+                                if (startDate <= date && date <= endDate) {
+                                    if (date.toDateString() === startDate.toDateString()) {
+                                        className = 'start-date';
+                                    } else if (date.toDateString() === endDate.toDateString()) {
+                                        className = 'end-date';
+                                    } else {
+                                        className = 'reserved';
+                                    }
+                                }
+                                return className;
+                            });
+
+                            return className;
+                        }
+                        // console.log(isReserved())
+                        return isReserved();
                     }
                     return '';
                 }}
