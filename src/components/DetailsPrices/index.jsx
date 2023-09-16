@@ -11,7 +11,7 @@ function DetailsPrices({ price, capacity }) {
         let pricesTab = []
 
         for (let i = 2; i <= 7; i++) {
-            pricesTab.push(<td key={`${price * i}-${i}`}>{((price * i) / calculateReduce(i)).toFixed(2)} €</td>)
+            pricesTab.push(<td key={`${price * i}-${i}`}>{((price * i) / calculateReduce(i)).toFixed(0)} €</td>)
         }
         return pricesTab;
     }

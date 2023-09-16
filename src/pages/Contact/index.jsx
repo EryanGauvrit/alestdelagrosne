@@ -34,15 +34,6 @@ function Contact() {
             <section className='contact-profil'>
                 <article>
                     <div>
-                        <h2>Pascal</h2>
-                        <a href="tel:0615109225">06.15.10.92.25</a>
-                    </div>
-                    <figcaption className='pp'>
-                        <img src={choosePicture(ppPascalDesktop, ppPascalPhone)} alt='Pascal' />
-                    </figcaption>
-                </article>
-                <article>
-                    <div>
                         <h2>Leslie</h2>
                         <a href="tel:0629515288">06.29.51.52.88</a>
                         <p>Langues parlées : Anglais et allemand</p>
@@ -51,13 +42,22 @@ function Contact() {
                         <img src={choosePicture(ppLeslieDesktop, ppLesliePhone)} alt='Leslie' />
                     </figcaption>
                 </article>
+                <article>
+                    <div>
+                        <h2>Pascal</h2>
+                        <a href="tel:0615109225">06.15.10.92.25</a>
+                    </div>
+                    <figcaption className='pp'>
+                        <img src={choosePicture(ppPascalDesktop, ppPascalPhone)} alt='Pascal' />
+                    </figcaption>
+                </article>
             </section>
             <a href="mailto:alestdelagrosne@gmail.com">alestdelagrosne@gmail.com</a>
             <section className='social-link'>
                 <h2>Retrouvez-nous sur nos réseaux : </h2>
                 <div>
                     <a href='https://www.facebook.com/profile.php?id=100092562339758' target="_blank" rel='noreferrer'><img src={chooseLogo(facebook64, facebook100)} alt='lien vers facebook' /></a>
-                    <a href='#'><img src={choosePicture(linkedin64, linkedin100)} alt='lien vers linkedin' /></a>
+                    <a href='#'><img src={choosePicture(linkedin100, linkedin64)} alt='lien vers linkedin' /></a>
                 </div>
 
             </section>

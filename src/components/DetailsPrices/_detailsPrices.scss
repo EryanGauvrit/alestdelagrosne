@@ -22,7 +22,7 @@
         border: 1px solid $color-two;
     }
     th {
-        background-color: rgba($color: $color-two, $alpha: .15);
+        background-color: rgba($color: $color-three, $alpha: .85);
     }
     .high {
         background-color: rgba($color: $color-high, $alpha: .8);
@@ -75,6 +75,7 @@
         gap: 20px;
         & .table-container{
             max-width: none;
+            border: none;
         }
         table {
             border: 2px solid $color-two;
