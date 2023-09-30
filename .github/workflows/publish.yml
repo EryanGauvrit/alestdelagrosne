@@ -19,6 +19,13 @@ jobs:
       - name: Build
         run: npm run build # The build command of your project
 
+      - name: Create .htaccess
+        run: |
+          echo "Options -MultiViews" > .htaccess
+          echo "RewriteEngine On" >> .htaccess
+          echo "RewriteCond %{REQUEST_FILENAME} !-f" >> .htaccess
+          echo "RewriteRule ^ index.html [QSA,L]" >> .htaccess
+
       - name: Push
         uses: s0/git-publish-subdir-action@develop
         env:
