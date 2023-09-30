@@ -2,7 +2,7 @@ import SpinnerLoader from "../SpinnerLoader";
 import { choosePicture } from "../utils/ChoosePicture";
 import he from "he";
 
-function ServicesCards({ card }) {
+function ServiceCards({ card }) {
 
     const pictureDesktop = card.coverPictureDesktop;
     const picturePhone = card.coverPicturePhone;
@@ -27,4 +27,4 @@ function ServicesCards({ card }) {
     )
 };
 
-export default ServicesCards;
+export default ServiceCards;
