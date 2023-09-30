@@ -12,11 +12,11 @@ import BackTop from './components/BackTop';
 import Footer from './components/Footer';
 import ErrorComp from './components/ErrorComp';
 import Contact from './pages/Contact';
-import Mentions from './pages/Mentions';
 import Prices from './pages/Prices';
 import LocationHome from './pages/LocationHome';
 import Services from './pages/Services';
 import Hobbies from './pages/Hobbies';
+import LegalNotices from './pages/LegalNotices';
 
 function App() {
 
@@ -116,8 +116,8 @@ function App() {
         <Route exact path='/contact'
           element={<Contact />}
         />
-        <Route exact path='/mentions'
-          element={<Mentions />}
+        <Route exact path='/legalnotices'
+          element={<LegalNotices />}
         />
         <Route exact path='*'
           element={<ErrorComp />}
