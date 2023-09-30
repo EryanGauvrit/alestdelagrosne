@@ -1,7 +1,4 @@
 Options -MultiViews
 RewriteEngine On
-RewriteCond %{HTTP_HOST} ^alestdelagrosne/\.tld$ [NC]
-RewriteCond %{REQUEST_URI} !^/prod/
-RewriteRule ^(.*)$ /prod/ [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^ index.html [QSA,L]
