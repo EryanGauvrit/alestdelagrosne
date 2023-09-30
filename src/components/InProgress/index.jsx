@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import ModifHead from "../ModifHead";
 
 
-function InProgress() {
+function InProgress({ needHomeLink }) {
     return (
         <main className="inProgress">
             <ModifHead
@@ -28,7 +28,10 @@ function InProgress() {
                     <i className="fa-solid fa-laptop-code"></i>
                 </aside>
                 <h2>Revenez plus tard</h2>
-                <p><Link to={'/'} onClick={"#backTop-anchor"}>Retour à l'accueil</Link></p>
+                {
+                    needHomeLink && <p><Link to={'/'} onClick={"#backTop-anchor"}>Retour à l'accueil</Link></p>
+                }
+
             </section>
 
         </main>
