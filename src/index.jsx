@@ -90,8 +90,8 @@ function App() {
         onEventsChange={handleEventsChange}
       /> */}
       {/* <div id="backTop-anchor"></div> */}
-      {/* <Header locationsDatas={locationsDatas} currentPage={currentPage} />
-      <BackTop currentPage={currentPage} /> */}
+      <Header locationsDatas={locationsDatas} currentPage={currentPage} />
+      {/* <BackTop currentPage={currentPage} /> */}
       <Routes>
         {/* <Route exact path='/'
           element={<Home locationsDatas={locationsDatas} picturesDatas={picturesHomeData} eventsDatas={eventsDatas} />}
