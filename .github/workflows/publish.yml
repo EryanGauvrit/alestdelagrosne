@@ -23,7 +23,7 @@ jobs:
         run: |
           echo "Options -MultiViews" > build/.htaccess
           echo "RewriteEngine On" >> build/.htaccess
-          echo "RewriteCond %{HTTP_HOST} ^votre_domaine\.tld$ [NC]" >> build/.htaccess
+          echo "RewriteCond %{HTTP_HOST} ^alestdelagrosne/\.tld$ [NC]" >> build/.htaccess
           echo "RewriteCond %{REQUEST_URI} !^/prod/" >> build/.htaccess
           echo "RewriteRule ^(.*)$ /prod/$1 [L]" >> build/.htaccess
           echo "RewriteCond %{REQUEST_FILENAME} !-f" >> build/.htaccess
