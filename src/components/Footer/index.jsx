@@ -20,7 +20,7 @@ function Footer({ currentPage }) {
                 <li><i className="fa-solid fa-wine-bottle"></i></li>
                 <li><Link to={'/contact'} onClick={"#backTop-anchor"}>Contact</Link></li>
                 <li><i className="fa-solid fa-wine-bottle"></i></li>
-                <li><Link to={'/mentions'} onClick={"#backTop-anchor"}>Mentions légales</Link></li>
+                <li><Link to={'/legalnotices'} onClick={"#backTop-anchor"}>Mentions légales</Link></li>
             </ul>
             <p>© 2023 alestdelagrosne.com. Tous droits réservés. <a href={"https://espace-administrateur.alestdelagrosne.com/"} target="_blank" rel='noreferrer'>espace administration</a></p>
         </footer>

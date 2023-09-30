@@ -1,4 +1,4 @@
-name: Generate a build and push to another branch
+name: Generate a build and push build-main
 
 on:
   push:
@@ -11,7 +11,7 @@ jobs:
     name: Build and Push
     steps:
       - name: git-checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Install all dependencies
         run: npm install
@@ -19,11 +19,18 @@ jobs:
       - name: Build
         run: npm run build # The build command of your project
 
+      - name: Create .htaccess
+        run: |
+          echo "Options -MultiViews" > build/.htaccess
+          echo "RewriteEngine On" >> build/.htaccess
+          echo "RewriteCond %{REQUEST_FILENAME} !-f" >> build/.htaccess
+          echo "RewriteRule ^ index.html [QSA,L]" >> build/.htaccess
+
       - name: Push
         uses: s0/git-publish-subdir-action@develop
         env:
           REPO: self
-          BRANCH: main # The branch name where you want to push the assets
-          FOLDER: main # The directory where your assets are generated
+          BRANCH: build-main # The branch name where you want to push the assets
+          FOLDER: build # The directory where your assets are generated
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub will automatically add this - you don't need to bother getting a token
           MESSAGE: "Build: ({sha}) {msg}" # The commit message

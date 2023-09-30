@@ -1,4 +1,4 @@
-import ServicesCards from "../../components/ServicesCards";
+import ServiceCards from "../../components/ServiceCards";
 import he from "he";
 
 function Services({ servicesDatas }) {
@@ -15,7 +15,7 @@ function Services({ servicesDatas }) {
                             <div className="cards-bloc">
                                 {
                                     service.cards.map((card) =>
-                                        <ServicesCards key={card.id} card={card} />
+                                        <ServiceCards card={card} />
                                     )
                                 }
                             </div>

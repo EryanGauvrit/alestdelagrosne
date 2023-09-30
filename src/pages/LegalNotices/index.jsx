@@ -1,7 +1,7 @@
 import ModifHead from "../../components/ModifHead";
 
 
-function Mentions() {
+function LegalNotices() {
 
     const companyName = "A l'Est de la Grosne";
     const webSiteName = 'www.alestdelagrosne.com';
@@ -83,4 +83,4 @@ function Mentions() {
     )
 };
 
-export default Mentions;
+export default LegalNotices;
