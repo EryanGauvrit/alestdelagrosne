@@ -1,9 +1,9 @@
-name: Generate a build and push to build-dev branch
+name: Generate a build and push build-main
 
 on:
   push:
     branches:
-      - dev
+      - main
 
 jobs:
   build:
@@ -30,7 +30,7 @@ jobs:
         uses: s0/git-publish-subdir-action@develop
         env:
           REPO: self
-          BRANCH: build-dev # The branch name where you want to push the assets
+          BRANCH: build-main # The branch name where you want to push the assets
           FOLDER: build # The directory where your assets are generated
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub will automatically add this - you don't need to bother getting a token
           MESSAGE: "Build: ({sha}) {msg}" # The commit message
