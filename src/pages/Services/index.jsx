@@ -15,7 +15,7 @@ function Services({ servicesDatas }) {
                             <div className="cards-bloc">
                                 {
                                     service.cards.map((card) =>
-                                        <ServicesCards key={card.id} card={card} />
+                                        <ServicesCards card={card} />
                                     )
                                 }
                             </div>
