@@ -21,10 +21,10 @@ jobs:
 
       - name: Create .htaccess
         run: |
-          echo "Options -MultiViews" > .htaccess
-          echo "RewriteEngine On" >> .htaccess
-          echo "RewriteCond %{REQUEST_FILENAME} !-f" >> .htaccess
-          echo "RewriteRule ^ index.html [QSA,L]" >> .htaccess
+          echo "Options -MultiViews" > build/.htaccess
+          echo "RewriteEngine On" >> build/.htaccess
+          echo "RewriteCond %{REQUEST_FILENAME} !-f" >> build/.htaccess
+          echo "RewriteRule ^ index.html [QSA,L]" >> build/.htaccess
 
       - name: Push
         uses: s0/git-publish-subdir-action@develop
