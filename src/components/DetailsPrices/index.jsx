@@ -66,7 +66,7 @@ function DetailsPrices({ price, capacity }) {
                 </table>
             </div>
             <p className="table-quote">* Le gîte est loué pour une capacité de base de {capacity} personnes.</p>
-            <p className="table-quote">** Pour toute personne supplémentaire : 10€/nuits</p>
+            <p className="table-quote">** Pour toute personne supplémentaire : 15€/nuits</p>
             <p className="table-quote">*** Taxe de séjour incluse.</p>
             <ul>
                 <li>{icon} Haute saison : de juillet à aout</li>

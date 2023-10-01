@@ -18,15 +18,15 @@
     }
     .content-bloc {
         position: absolute;
-        top: 20px;
+        top: 0;
         left: 0;
         z-index: 10;
-        height: 80vh;
+        height: 100%;
         width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 90px;
+        justify-content: space-around;
         max-width: none;
         & .locationHome-title {
             flex-direction: column;
@@ -39,7 +39,7 @@
             flex-direction: column;
             align-items: center;
             img {
-                width: 90px;
+                width: 100px;
             }
             h1{
                 font-family: $policesTitle;
@@ -79,14 +79,14 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                gap: 40px;
+                gap: 2rem;
                 li {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     font-size: $pSizesPhone;
-                    width: 190px;
                     text-align: center;
+                    opacity: .8;
                     a {                        
                         display: flex;
                         justify-content: center;
@@ -95,9 +95,17 @@
                 }
             }
             img {
-                height: 60px;
+                height: 55px;
                 width: auto;
             }
+        }
+    }
+    .fullScreenGallery-basic {
+        justify-content: start;
+        top: 2rem;
+        gap: 6rem;
+        & .locationHome-title {
+            gap: 6rem;
         }
     }
     & .picture-zoom {
@@ -123,13 +131,11 @@
         }
         font-size: $pSizesDesktop;
         .content-bloc {
-            height: 90vh;
-            gap: 160px;
-            justify-content: flex-start;
-            margin-top: 70px;
             & .locationHome-title{
                 flex-direction: row-reverse;
                 align-items: flex-start;
+                gap: 3rem;
+                margin-top: 5rem;
                 & .title-bloc {
                     display: flex;
                     flex-direction: column;
@@ -137,9 +143,9 @@
                 }
                 & a {
                     width: auto;
-                    margin-top: 20px;
+                    margin-top: 15px;
                     & img {
-                        height: 50px;
+                        height: 65px;
                         width: auto;
                     }
                 }
@@ -197,7 +203,7 @@
                     }
                 }
                 img {
-                    height: 100px;
+                    height: 80px;
                     width: 280px;
                     object-fit: contain;
                 }

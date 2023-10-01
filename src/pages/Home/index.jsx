@@ -2,7 +2,6 @@ import React from "react";
 import NextEvent from "../../components/NextEvent";
 import ModifHead from "../../components/ModifHead";
 import FullScreenGallery from "../../components/FullScreenGallery";
-import ScrollBottom from "../../components/ScrollBottom";
 
 function Home({ locationsDatas, picturesDatas, eventsDatas }) {
 
@@ -16,16 +15,12 @@ function Home({ locationsDatas, picturesDatas, eventsDatas }) {
                 robots="index, follow"
             />
             <main className="main-home">
-                <FullScreenGallery locationsDatas={locationsDatas} picturesDatas={picturesDatas} />
-                <ScrollBottom />
-                <div className="title-home">
-                    <h3>Idéalement situés entre la côte <strong>chalonnaise</strong> et la côte <strong>mâconnaise</strong> ...</h3>
-                </div>
+                <FullScreenGallery locationsDatas={locationsDatas} picturesDatas={picturesDatas} isHomePage={true} />
                 <section className="home-description">
                     <article>
                         <h3>À quoi s'attendre ?</h3>
                         <p>Venez séjourner dans nos <strong>gîtes en Saône et Loire</strong> au cœur des grands crus bourguignons,
-                            sur les commune de <strong>La Chapelle-de-Bragny</strong> et de <strong>Messey-sur-Grosne</strong>.</p>
+                            sur les communes de <strong>La Chapelle-de-Bragny</strong> et de <strong>Messey-sur-Grosne</strong>.</p>
                     </article>
                     <article>
                         <h3>Notre région vous propose :</h3>
@@ -58,6 +53,11 @@ function Home({ locationsDatas, picturesDatas, eventsDatas }) {
                             <li>
                                 {iconList}
                                 <p>Des sites d’escalade</p>
+
+                            </li>
+                            <li>
+                                {iconList}
+                                <p>...</p>
 
                             </li>
                         </ul>

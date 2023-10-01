@@ -1,0 +1,9 @@
+.scroll-bottom {
+    background-color: rgba($color-one, .8);
+}
+
+@media (min-width: $phoneScreenSize) {
+    .scroll-bottom {
+        cursor: pointer;        
+    }
+}
