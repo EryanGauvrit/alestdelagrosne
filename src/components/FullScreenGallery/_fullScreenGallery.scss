@@ -130,6 +130,7 @@
             & .locationHome-title{
                 flex-direction: row-reverse;
                 align-items: flex-start;
+                gap: 3rem;
                 & .title-bloc {
                     display: flex;
                     flex-direction: column;
@@ -137,9 +138,9 @@
                 }
                 & a {
                     width: auto;
-                    margin-top: 20px;
+                    margin-top: 15px;
                     & img {
-                        height: 50px;
+                        height: 65px;
                         width: auto;
                     }
                 }
