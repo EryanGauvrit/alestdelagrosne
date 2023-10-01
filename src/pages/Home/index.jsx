@@ -2,7 +2,6 @@ import React from "react";
 import NextEvent from "../../components/NextEvent";
 import ModifHead from "../../components/ModifHead";
 import FullScreenGallery from "../../components/FullScreenGallery";
-import ScrollBottom from "../../components/ScrollBottom";
 
 function Home({ locationsDatas, picturesDatas, eventsDatas }) {
 
@@ -16,11 +15,7 @@ function Home({ locationsDatas, picturesDatas, eventsDatas }) {
                 robots="index, follow"
             />
             <main className="main-home">
-                <FullScreenGallery locationsDatas={locationsDatas} picturesDatas={picturesDatas} />
-                <ScrollBottom />
-                <div className="title-home">
-                    <h3>Idéalement situés entre la côte <strong>chalonnaise</strong> et la côte <strong>mâconnaise</strong> ...</h3>
-                </div>
+                <FullScreenGallery locationsDatas={locationsDatas} picturesDatas={picturesDatas} isHomePage={true} />
                 <section className="home-description">
                     <article>
                         <h3>À quoi s'attendre ?</h3>

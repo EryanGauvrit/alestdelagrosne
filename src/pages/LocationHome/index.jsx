@@ -11,7 +11,7 @@ function LocationHome({ locationsDatas, picturesDatas }) {
                 description='Voici nos plus beaux gîtes dans les campagnes de Bourgogne, non loin de Châlon-Sur-Saône.'
                 robots='index, follow'
             />
-            <FullScreenGallery locationsDatas={locationsDatas} picturesDatas={picturesDatas} />
+            <FullScreenGallery locationsDatas={locationsDatas} picturesDatas={picturesDatas} isHomePage={false} />
         </main>
     )
 };
