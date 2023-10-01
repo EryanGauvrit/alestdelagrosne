@@ -13,32 +13,10 @@ function FullScreenGallery({ locationsDatas, picturesDatas, isHomePage }) {
     const [picturesPhone, setPicturesPhone] = useState([]);
     const [pictureArray, setPictureArray] = useState([]);
 
-    // console.log("gallery : ", picturesDatas);
     useEffect(() => {
         setPicturesDesktop(picturesDatas[0].pictures);
         setPicturesPhone(picturesDatas[1].pictures);
         setPictureArray(choosePicture(picturesDesktop, picturesPhone))
-        // const handleScroll = (event) => {
-        //     const delta = event.deltaY;
-        //     const windowHeight = window.innerHeight;
-        //     const scrollStep = windowHeight * 1.2;
-        //     const documentHeight = document.documentElement.scrollHeight;
-
-        //     if (delta > 0 && window.innerHeight + window.scrollY >= documentHeight - scrollStep) {
-        //         // Faire défiler vers le bas de 100vh
-        //         window.scrollTo({ top: windowHeight, behavior: 'smooth' });
-        //         event.preventDefault(); // Empêche le défilement par défaut de la page
-        //     } else if (delta < 0 && window.scrollY <= scrollStep) {
-        //         window.scrollTo({ top: -windowHeight, behavior: 'smooth' });
-        //         event.preventDefault();
-        //     }
-        // };
-
-        // window.addEventListener('wheel', handleScroll, { passive: false });
-
-        // return () => {
-        //     window.removeEventListener('wheel', handleScroll);
-        // };
     }, [picturesDatas, picturesDesktop, picturesPhone]);
 
     return (
@@ -62,12 +40,10 @@ function FullScreenGallery({ locationsDatas, picturesDatas, isHomePage }) {
                 </article>
                 {
                     isHomePage && (
-                        <React.Fragment>
-                            <div className="title-home">
-                                <h3>Idéalement situés entre la côte <strong>chalonnaise</strong> et la côte <strong>mâconnaise</strong> ...</h3>
-                                <ButtonScrollBottom />
-                            </div>
-                        </React.Fragment>
+                        <div className="title-home">
+                            <h3>Idéalement situés entre la côte <strong>chalonnaise</strong> et la côte <strong>mâconnaise</strong> ...</h3>
+                            <ButtonScrollBottom />
+                        </div>
                     )
                 }
             </div>

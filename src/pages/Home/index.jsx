@@ -20,7 +20,7 @@ function Home({ locationsDatas, picturesDatas, eventsDatas }) {
                     <article>
                         <h3>À quoi s'attendre ?</h3>
                         <p>Venez séjourner dans nos <strong>gîtes en Saône et Loire</strong> au cœur des grands crus bourguignons,
-                            sur les commune de <strong>La Chapelle-de-Bragny</strong> et de <strong>Messey-sur-Grosne</strong>.</p>
+                            sur les communes de <strong>La Chapelle-de-Bragny</strong> et de <strong>Messey-sur-Grosne</strong>.</p>
                     </article>
                     <article>
                         <h3>Notre région vous propose :</h3>
@@ -53,6 +53,11 @@ function Home({ locationsDatas, picturesDatas, eventsDatas }) {
                             <li>
                                 {iconList}
                                 <p>Des sites d’escalade</p>
+
+                            </li>
+                            <li>
+                                {iconList}
+                                <p>...</p>
 
                             </li>
                         </ul>
