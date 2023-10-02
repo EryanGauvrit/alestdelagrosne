@@ -52,10 +52,6 @@
         align-items: center;
         width: 90%;
         padding: 10px;
-        border-radius: 10px;
-        background-image: url("../../assets/bg-img/bg-card-hobbies.jpg");
-        background-size: cover;
-        color: $color-one;
         gap: 5px;
         & h4 {
             font-size: 23px;
@@ -65,8 +61,6 @@
             align-self: flex-start;
         }
         & img {
-            background-color: $color-one;
-            border-radius: 10px;
             width: 270px;
             height: 170px;
         }
@@ -89,10 +83,6 @@
                 align-items: flex-start;
                 overflow: hidden;
                 gap: 10px;
-                color: $color-one;
-                & a {
-                    color: $color-one;
-                }
             }
         }
     }
@@ -210,7 +200,6 @@
             justify-content: flex-start;
             width: 370px;
             gap: 15px;
-            background-color: rgba($color: $color-two, $alpha: .85);
             & h4 {
                 font-size: 23px;
                 text-align: center;
@@ -219,8 +208,6 @@
                 align-self: flex-start;
             }
             & img {
-                background-color: $color-one;
-                border-radius: 10px;
                 width: 370px;
                 height: 270px;
             }
@@ -234,9 +221,7 @@
                     justify-content: flex-start;
                     width: 80%;
                     gap: 10px;
-                    color: $color-one;
                     & a {
-                        color: $color-one;
                         transition: .2s;
                         &:hover {
                             scale: 1.02;
