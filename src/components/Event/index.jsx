@@ -19,7 +19,7 @@ function Event({ event }) {
         }
     }
     return (
-        <a href={link} onClick={handleClick} className="eventLink">
+        <a href={link} onClick={handleClick} target="_blank" rel='noreferrer' className="eventLink">
             <h3>{he.decode(title)}</h3>
             <div className="bloc-img">
                 {

@@ -2,7 +2,6 @@
     width: 300px;
     height: 400px;
     overflow: hidden;
-    background-image: url("../../assets/bg-img/bg-card-event.jpg");
     color: $color-one;
     border-radius: 15px;
     display: flex;
@@ -15,8 +14,6 @@
         color: $color-two;
     }
     & .bloc-img {
-        height: 220px;
-        width: 200px;
         overflow: hidden;
         & img {
             width: 100%;
@@ -31,9 +28,7 @@
         gap: 10px;
         width: 90%;
         padding: 10px;
-        border: solid 1px $color-one;
-        border-radius: 15px;
-        background-color: rgba($color-two, .8);
+        color: $color-two;
         & ul {
             display: flex;
             flex-wrap: wrap;

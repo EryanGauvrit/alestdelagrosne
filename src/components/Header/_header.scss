@@ -129,12 +129,9 @@ header{
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
-        padding: 0;
         box-shadow: none;
         height: 150px;
-        background-image: $bgImgHeader;
-        background-position: right;
-        background-size: cover;
+        padding: 1rem 0;
         .header-phone{
             & img {
                 width: 170px;
@@ -229,7 +226,6 @@ header{
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 0;
         box-shadow: none;
         & .header-phone{
             width: auto;
@@ -355,7 +351,7 @@ header{
             & div:hover {                
                 ul {
                     @media (min-width: $phoneScreenSize) {
-                        top: 0;
+                        top: 15px;
                         height: 130px;
                         justify-content: flex-end;
                     }
