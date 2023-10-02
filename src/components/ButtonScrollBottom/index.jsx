@@ -16,9 +16,9 @@ function ButtonScrollBottom() {
     };
 
     return (
-        <button className="scroll-bottom button-link" onClick={handleScrollDownClick}>
+        <a href="#discover" className="scroll-bottom button-link" onClick={handleScrollDownClick}>
             Découvrir
-        </button>
+        </a>
     )
 };
 
