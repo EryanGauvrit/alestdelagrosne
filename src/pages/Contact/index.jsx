@@ -2,10 +2,12 @@ import facebook64 from '../../assets/social/facebook64.png';
 import linkedin64 from '../../assets/social/linkedin64.png';
 import facebook100 from '../../assets/social/facebook100.png';
 import linkedin100 from '../../assets/social/linkedin100.png';
-import ppPascalDesktop from "../../assets/profile/pp_pascal_100-min.jpg";
-import ppPascalPhone from "../../assets/profile/pp_pascal_70-min.jpg";
-import ppLeslieDesktop from "../../assets/profile/pp_leslie_100-min.jpg";
-import ppLesliePhone from "../../assets/profile/pp_leslie_70-min.jpg";
+import ppPascalDesktop from "../../assets/contact/pp_pascal_100-min.jpg";
+import ppPascalPhone from "../../assets/contact/pp_pascal_70-min.jpg";
+import ppLeslieDesktop from "../../assets/contact/pp_leslie_100-min.jpg";
+import ppLesliePhone from "../../assets/contact/pp_leslie_70-min.jpg";
+import mapDesktop from "../../assets/contact/contact-map-desktop-min.jpg";
+import mapPhone from "../../assets/contact/contact-map-phone-min.jpg";
 import { isDesktopScreenSize } from '../../components/utils/IsDesktopScreenSize';
 import GoogleMap from '../../components/GoogleMaps.jsx';
 import ModifHead from '../../components/ModifHead';
@@ -71,11 +73,12 @@ function Contact() {
                     <li>{iconList}Idéalement situé entre Cluny, Tournus, Chalon-sur-Saône</li>
                 </ul>
             </section>
-            <section className='localisation'>
-                <GoogleMap
+            <div className='localisation'>
+                <img src={choosePicture(mapDesktop, mapPhone)} alt='Idéalement situé entre Cluny, Tournus, Chalon-sur-Saône<' />
+                {/* <GoogleMap
                     mapUrl="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d416666.3660693397!2d4.5456125453467955!3d46.68025649265147!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f306b5bfdd02cf%3A0x7971ed8ea3c0764e!2sL%27Abergement%2C%2071390%20Messey-sur-Grosne!5e0!3m2!1sfr!2sfr!4v1689948566591!5m2!1sfr!2sfr"
-                />
-            </section>
+                /> */}
+            </div>
         </main>
     )
 };
