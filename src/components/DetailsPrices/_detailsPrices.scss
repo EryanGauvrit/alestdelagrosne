@@ -20,18 +20,19 @@
         padding: 3px;
         text-align: center;
         border: 1px solid $color-two;
+        color: $color-one;
     }
     th {
-        background-color: rgba($color: $color-three, $alpha: .85);
+        background-color: rgba($color: $color-two, $alpha: .5);
     }
     .high {
-        background-color: rgba($color: $color-high, $alpha: .8);
+        background-color: $color-high;
     }
     .average {
-        background-color: rgba($color: $color-average, $alpha: .8);
+        background-color: $color-average;
     }
     .low {
-        background-color: rgba($color: $color-low, $alpha: .5);
+        background-color: $color-low;
     }
     ul {
         display: flex;
@@ -40,17 +41,17 @@
         gap: 10px;
         & :nth-child(1) {
             i {
-                color: rgba($color: $color-high, $alpha: .8);
+                color: $color-high;
             }
         }
         & :nth-child(2) {
             i {
-                color: rgba($color: $color-average, $alpha: .8);
+                color: $color-average;
             }
         }
         & :nth-child(3) {
             i {
-                color: rgba($color: $color-low, $alpha: .5);
+                color: $color-low;
             }
         }
         & li {
