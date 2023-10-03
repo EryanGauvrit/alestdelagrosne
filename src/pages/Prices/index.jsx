@@ -39,7 +39,7 @@ function Prices({ locationsDatas, reservations }) {
             </section>
             <section>
                 <p>Pour toute réservation ou demande d'information supplémentaire, n'hésitez pas à nous <Link to='/contact'>contacter</Link>.</p>
-                <p>Les heures précises d’arrivée et de départ seront définies avec vous directement pour une meilleure flexibilité.</p>
+                <p>Les heures précises d’arrivées et de départs seront définies avec vous directement pour une meilleure flexibilité.</p>
             </section>
         </main>
     )
