@@ -11,9 +11,7 @@
         background-color: $color-one;
         .current-picture-bloc {
             height: 100vh;
-            & img {       
-                opacity: .45;
-            }
+            opacity: .5;
         }
     }
     .content-bloc {
