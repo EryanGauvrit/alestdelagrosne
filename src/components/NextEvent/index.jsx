@@ -14,7 +14,7 @@ function NextEvent({ eventsDatas }) {
                 eventsDatas[0] &&
                 <React.Fragment>
                     <h3>Prochaine manifestation : </h3>
-                    <a href={nextEvent.link} target="_blank" rel='noreferrer' className="event-bloc">
+                    <a href={nextEvent.link} onClick={(e) => !nextEvent.link && e.preventDefault()} target="_blank" rel='noreferrer' className="event-bloc">
                         <div className="bloc-img">
                             <img src={choosePicture(nextEvent.coverPictureDesktop, nextEvent.coverPicturePhone)} alt="évenement" />
                         </div>
