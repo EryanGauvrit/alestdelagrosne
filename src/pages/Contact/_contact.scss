@@ -91,15 +91,10 @@
                 align-items: center;
                 overflow: hidden;
                 padding: 5px;
-                background-color: $color-two;
+                background-color: $color-one;
                 border-radius: 50%;
-                width: 70px;
-                height: 70px;
-                & img {
-                    object-fit: cover;
-                    width: 80px;
-                    height: 80px;
-                }
+                width: 55px;
+                height: 55px;
             }
         }
     }
@@ -108,8 +103,7 @@
 @media (min-width: $phoneScreenSize) {
     .contact {
         font-size: $pSizesDesktop;
-        margin-bottom: 50px;
-        background-color: rgba($color-one, 0.6);
+        background-color: rgba($color-one, 0.8);
         background-blend-mode: darken;
         background-image: url("../../assets/bg-img/img_home_1_1920-min.jpg");
         background-position: center;
@@ -121,6 +115,7 @@
             font-size: $h3SizesDesktop;
         }
         section {
+            align-items: center;
             & ul {
                 gap: 10px;
                 & li {
@@ -157,6 +152,7 @@
             }
         }
         .social-link {
+            align-items: center;
             gap: 50px;
             & div {
                 gap: 50px;
@@ -176,6 +172,7 @@
             }
         }
         .localisation {
+            align-items: center;
             img {
                 width: 800px;
                 height: 456px;
