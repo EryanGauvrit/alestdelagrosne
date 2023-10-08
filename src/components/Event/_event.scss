@@ -1,6 +1,6 @@
 .eventLink{
     width: 300px;
-    height: 400px;
+    height: 360px;
     overflow: hidden;
     color: $color-one;
     border-radius: 15px;
@@ -28,10 +28,11 @@
         gap: 10px;
         width: 90%;
         padding: 10px;
-        color: $color-two;
+        color: rgba($color-two, .75);
         & ul {
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
             gap: 0 5px;
             :nth-child(1){
                 width: 100%;
@@ -40,6 +41,7 @@
             }
         }
         & p {
+            text-align: center;
             padding: 5px 0;
         }
     }
