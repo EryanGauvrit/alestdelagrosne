@@ -20,7 +20,6 @@ function Event({ event }) {
     }
     return (
         <a href={link} onClick={handleClick} target="_blank" rel='noreferrer' className="eventLink">
-            <h3>{he.decode(title)}</h3>
             <div className="bloc-img">
                 {
                     pictureDesktop && picturePhone && title ?
@@ -30,6 +29,7 @@ function Event({ event }) {
                 }
             </div>
             <div className="card-quote">
+                <h3>{he.decode(title)}</h3>
                 <ul>
                     <li>{he.decode(address)}</li>
                     <li>Du {formatDate(startDate)}</li>

@@ -15,7 +15,7 @@ function Footer({ currentPage }) {
                 <li><i className="fa-solid fa-circle"></i></li>
                 <li className="link-icon"><a href="#"><i className="fa-brands fa-linkedin"></i></a></li>
                 <li><i className="fa-solid fa-circle"></i></li>
-                <li className="link-icon"><a href="mailto:alestdelagrosne@gmail.com"><i className="fa-solid fa-at"></i></a></li>
+                <li className="link-icon"><a href="mailto:alestdelagrosne@gmail.com"><i className="fa-regular fa-envelope"></i></a></li>
             </ul>
             <ul className="link-list">
                 <li><Link to={'/'} onClick={"#backTop-anchor"}>Accueil</Link></li>
