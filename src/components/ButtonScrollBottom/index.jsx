@@ -3,7 +3,7 @@
 function ButtonScrollBottom() {
 
     return (
-        <a href="#discover" className="scroll-bottom button-link">
+        <a href="#discover" className="button-link scroll-bottom">
             Découvrir
         </a>
     )
