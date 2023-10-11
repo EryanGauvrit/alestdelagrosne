@@ -11,9 +11,6 @@
         background-color: $color-one;
         .current-picture-bloc {
             height: 100vh;
-            & img {       
-                opacity: .45;
-            }
         }
     }
     .content-bloc {
@@ -124,9 +121,6 @@
             .current-picture-bloc {
                 width: 100vh;
                 height: auto;
-                & img {       
-                    opacity: .45;
-                }
             }
         }
         font-size: $pSizesDesktop;
