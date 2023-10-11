@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.3f5aac0d.css",
-    "main.js": "/static/js/main.67ceee81.js",
+    "main.css": "/static/css/main.86cb2451.css",
+    "main.js": "/static/js/main.46fb2d06.js",
     "static/media/img_home_1_1920-min.jpg": "/static/media/img_home_1_1920-min.cf094b61d0d261d8cab7.jpg",
     "static/media/Cormorant.ttf": "/static/media/Cormorant.949e3c1866de5bd4eb3a.ttf",
     "static/media/Cormorant-Bold.ttf": "/static/media/Cormorant-Bold.d1c508eab0cba804314e.ttf",
@@ -45,11 +45,11 @@
     "static/media/bg-bloc-2-min.jpg": "/static/media/bg-bloc-2-min.45b606f16c1704fedd94.jpg",
     "static/media/bg-bloc-1-min.jpg": "/static/media/bg-bloc-1-min.6030f927004dfeed2517.jpg",
     "index.html": "/index.html",
-    "main.3f5aac0d.css.map": "/static/css/main.3f5aac0d.css.map",
-    "main.67ceee81.js.map": "/static/js/main.67ceee81.js.map"
+    "main.86cb2451.css.map": "/static/css/main.86cb2451.css.map",
+    "main.46fb2d06.js.map": "/static/js/main.46fb2d06.js.map"
   },
   "entrypoints": [
-    "static/css/main.3f5aac0d.css",
-    "static/js/main.67ceee81.js"
+    "static/css/main.86cb2451.css",
+    "static/js/main.46fb2d06.js"
   ]
 }
