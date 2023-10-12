@@ -1,9 +1,7 @@
 import React from "react";
 import Event from "../../components/Event";
 import { formatEvents } from "../../components/utils/SortEvents";
-import SlideShow from "../../components/SlideShow";
-import ButtonLink from "../../components/ButtonLink";
-import { bike, castle, cave, climb, heritage, hiking, waterway, wineRoad } from "../../components/utils/HobbiesPictures";
+import { bike, castle, cave, climb, food, heritage, hiking, horse, pool, waterway, wineRoad } from "../../components/utils/HobbiesPictures";
 import HobbiesCard from "../../components/HobbiesCard";
 
 function Hobbies({ events }) {
@@ -40,7 +38,7 @@ function Hobbies({ events }) {
                                     { link: 'http://escalade-cote-sud.fr/2020/09/29/etrigny/', content: "À Etrigny - 5 kms" },
                                     { link: 'http://escalade-cote-sud.fr/2020/06/12/culles-les-roches-topo-ffme/', content: "Culles les Roches - 10 kms" }
                                 ]}
-                                pictures={[climb(1), climb(2)]}
+                                pictures={[climb(2)]}
                             />
                         </div>
                         <div className="hobbies-card-placement">
@@ -57,7 +55,7 @@ function Hobbies({ events }) {
                                 ]}
                                 btnLink={false}
                                 btnText={false}
-                                pictures={[bike()]}
+                                pictures={[bike(1), bike(2)]}
                             />
                         </div>
                         <div className="hobbies-card-placement">
@@ -78,6 +76,7 @@ function Hobbies({ events }) {
                                 description="Plusieurs centres à proximité du gîte (situés entre 1 et 10 kms) :"
                                 listText={["La Chapelle de Bragny", "Corlay", "Messey sur Grosne", "Etrigny"]}
                                 iconListLink={false}
+                                pictures={[horse(1), horse(2)]}
                             />
                         </div>
                         <div className="hobbies-card-placement">
@@ -92,6 +91,7 @@ function Hobbies({ events }) {
                             <HobbiesCard
                                 title="Piscines et lieux de baignade les plus proches :"
                                 listLink={[{ link: "https://www.senneceylegrand.fr/piscine-municipale", content: "Piscine découverte à Sennecey le Grand – 10 kms" }, { link: "https://www.bourgogne-tourisme.com/baignade/base-nautique-lacs-de-laives", content: "Base nautique des lacs de Laives – 10 kms" }]}
+                                pictures={[pool()]}
                             />
                         </div>
                         <div className="hobbies-card-placement">
@@ -106,7 +106,7 @@ function Hobbies({ events }) {
                         <div className="hobbies-card-placement">
                             <HobbiesCard
                                 title="Voies navigables"
-                                pictures={[waterway()]}
+                                pictures={[waterway(1), waterway(2)]}
                                 iconListLink={false}
                                 btnLink="https://www.bourgogne-tourisme.com/decouvrir/au-fil-des-canaux-et-rivieres/"
                                 btnText="Toutes les infos se trouvent ici"
@@ -143,15 +143,16 @@ function Hobbies({ events }) {
                         <div className="hobbies-card-placement">
                             <HobbiesCard
                                 title="La route des vins"
-                                pictures={[wineRoad(2)]}
+                                pictures={[wineRoad(1), wineRoad(2)]}
                                 iconListLink={false}
                             />
                         </div>
                         <div className="hobbies-card-placement">
                             <HobbiesCard
-                                title="Châteaux de Brancion / Cormatin …."
+                                title="Gastronomie"
                                 listText={["Marchés", "Restaurants", "Caves", "..."]}
                                 listLink={[{ link: "https://www.vigneronsdebuxy.fr/", content: "Les Vignerons de Buxy" }, { link: "https://www.cave-bissey.com/", content: "Cave de Bissey" }]}
+                                pictures={food()}
                             />
                         </div>
                     </div>
