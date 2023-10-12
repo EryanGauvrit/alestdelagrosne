@@ -1,9 +1,12 @@
 .scroll-bottom {
     background-color: rgba($color-one, .8);
+    padding: 15px 50px;
+    text-transform: uppercase;
 }
 
 @media (min-width: $phoneScreenSize) {
     .scroll-bottom {
-        cursor: pointer;        
+        cursor: pointer;    
+        padding: 35px 110px;    
     }
 }

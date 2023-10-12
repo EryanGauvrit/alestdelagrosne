@@ -27,6 +27,7 @@
     .slick-active {
         & img {
             animation: scaling-image-animation 15s linear;
+            object-fit: contain;
         }
     }
 }
