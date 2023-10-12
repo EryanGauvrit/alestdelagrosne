@@ -98,11 +98,11 @@
         }
     }
     .fullScreenGallery-basic {
-        justify-content: start;
         top: 2rem;
-        gap: 6rem;
+        gap: 3rem;
+        height: 75vh;
         & .locationHome-title {
-            gap: 6rem;
+            gap: 3rem;
         }
     }
     & .picture-zoom {
