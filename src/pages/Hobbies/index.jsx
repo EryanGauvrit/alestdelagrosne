@@ -26,8 +26,9 @@ function Hobbies({ events }) {
                     </React.Fragment>
                 }
             </section>
+            <div className="separation-lign"></div>
             <section>
-                <h2>Les activités en Saône et Loire</h2>
+                <h1>Les activités en Saône et Loire</h1>
                 <article>
                     <h3>Activités sportives</h3>
                     <div className="hobbies-bloc">

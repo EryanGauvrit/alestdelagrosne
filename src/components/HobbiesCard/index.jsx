@@ -28,7 +28,10 @@ function HobbiesCard({
     return (
         <div className="hobbies-bloc-list">
             <h4>{title}</h4>
-            <p>{description}</p>
+            {
+                description &&
+                <p>{description}</p>
+            }
             <ul>
                 {
                     listText[0] && listText.map((item) =>

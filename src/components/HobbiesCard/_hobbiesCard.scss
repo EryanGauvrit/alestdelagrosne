@@ -4,13 +4,14 @@
     align-items: center;
     width: 90%;
     padding: 10px;
-    gap: 5px;
+    gap: 1rem;
+    max-width: 400px;
     & h4 {
         font-size: 23px;
         text-align: center;
     }
     & p {
-        align-self: flex-start;
+        // align-self: flex-start;
         opacity: .85;
     }
     & img {
@@ -28,9 +29,9 @@
     & ul {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        width: 95%;
-        opacity: .85;
+        opacity: .75;
+        gap: .5rem;
+        margin-bottom: 1.5rem;
         & li {
             display: flex;
             flex-direction: row;
@@ -91,14 +92,6 @@
         .slick-dots li button:before {
             display: initial;
         }
-        .slick-dots{
-            display: flex!important;
-            flex-direction: row;
-            bottom: 10px;
-            @media (min-width: $phoneScreenSize) {
-                    bottom: -20px;
-            }
-        }
     }
     .picture-zoom {
         display: none;
@@ -107,11 +100,7 @@
 
 @media (min-width: $phoneScreenSize) {
     .hobbies-bloc-list {
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
         width: 370px;
-        gap: 15px;
         & h4 {
             font-size: 23px;
             text-align: center;
@@ -126,7 +115,7 @@
         & ul {
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-self: flex-start;
             width: auto;
             & li {
                 align-items: center;

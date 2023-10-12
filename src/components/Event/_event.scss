@@ -9,9 +9,13 @@
     align-items: center;
     justify-content: space-around;
     font-family: $policesGlobalBold;
-    & h3 {
+    background-color: rgba($color-two, .05);
+    border: 2px solid rgba($color-two, .1);
+    padding: 1rem 0;    
+    & h4 {
         font-size: $h3SizesPhone;
         color: $color-two;
+        text-align: center;
     }
     & .bloc-img {
         overflow: hidden;
@@ -49,22 +53,20 @@
 
 @media (min-width: $phoneScreenSize) {
     .eventLink{
-        width: 450px;
-        height: 550px;        
-        transition: .5s;
+        width: 375px;
+        height: 470px;        
+        transition: .5s;        
         &:hover{
-            scale: 1.02;
+            scale: 1.015;
             transition: .2s;
+            background-color: rgba($color-two, .15);
         }
-        & h3 {
+        & h4 {
             font-size: $h3SizesDesktop;
         }
         & .bloc-img {
-            height: 320px;
-            width: 250px;
-            & img {
-                height: 320px;
-            }
+            height: 270px;
+            width: 210px;
             & .spinnerLoader {
                 position: relative;
             }

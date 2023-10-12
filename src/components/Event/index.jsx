@@ -29,7 +29,7 @@ function Event({ event }) {
                 }
             </div>
             <div className="card-quote">
-                <h3>{he.decode(title)}</h3>
+                <h4>{he.decode(title)}</h4>
                 <ul>
                     <li>{he.decode(address)}</li>
                     <li>Du {formatDate(startDate)}</li>

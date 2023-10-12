@@ -64,3 +64,9 @@ ul, li {
     height: 100%;
     // settings width & height in here comp
 }
+
+.separation-lign {
+    width: 100%;
+    height: 1px;
+    background-color: rgba($color: $color-two, $alpha: .3);
+}
