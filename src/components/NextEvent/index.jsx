@@ -2,6 +2,7 @@ import ButtonLink from "../ButtonLink";
 import { formatEvents } from "../utils/SortEvents";
 import { choosePicture } from "../utils/ChoosePicture";
 import React from "react";
+import he from "he";
 import { formatDate } from "../utils/FormatDate";
 
 function NextEvent({ eventsDatas }) {
@@ -21,13 +22,13 @@ function NextEvent({ eventsDatas }) {
                         <ul className="event-details">
                             <li className="title-list">
                                 <i className="fa-solid fa-circle-info"></i>
-                                <h4>{nextEvent.title}</h4>
+                                <h4>{he.decode(nextEvent.title)}</h4>
                                 <i className="fa-solid fa-circle-info"></i>
                             </li>
-                            <li><i className="fa-solid fa-chevron-right"></i>{nextEvent.description}</li>
+                            <li><i className="fa-solid fa-chevron-right"></i>{he.decode(nextEvent.description)}</li>
                             <li><i className="fa-solid fa-chevron-right"></i>Du {formatDate(nextEvent.startDate)}</li>
                             <li><i className="fa-solid fa-chevron-right"></i>au {formatDate(nextEvent.endDate)}</li>
-                            <li><i className="fa-solid fa-chevron-right"></i>{nextEvent.address}</li>
+                            <li><i className="fa-solid fa-chevron-right"></i>{he.decode(nextEvent.address)}</li>
                         </ul>
                     </a>
                     <ButtonLink
