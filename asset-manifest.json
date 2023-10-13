@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.a0db9f51.css",
-    "main.js": "/static/js/main.6ca26a85.js",
+    "main.css": "/static/css/main.53cb3052.css",
+    "main.js": "/static/js/main.96eaa27c.js",
     "static/media/img_home_1_1920-min.jpg": "/static/media/img_home_1_1920-min.cf094b61d0d261d8cab7.jpg",
     "static/media/Cormorant.ttf": "/static/media/Cormorant.949e3c1866de5bd4eb3a.ttf",
     "static/media/Cormorant-Bold.ttf": "/static/media/Cormorant-Bold.d1c508eab0cba804314e.ttf",
@@ -61,11 +61,11 @@
     "static/media/horse-2-370-min.jpg": "/static/media/horse-2-370-min.7aa62d07ca929e2b28f2.jpg",
     "static/media/bg-bloc-1-min.jpg": "/static/media/bg-bloc-1-min.6030f927004dfeed2517.jpg",
     "index.html": "/index.html",
-    "main.a0db9f51.css.map": "/static/css/main.a0db9f51.css.map",
-    "main.6ca26a85.js.map": "/static/js/main.6ca26a85.js.map"
+    "main.53cb3052.css.map": "/static/css/main.53cb3052.css.map",
+    "main.96eaa27c.js.map": "/static/js/main.96eaa27c.js.map"
   },
   "entrypoints": [
-    "static/css/main.a0db9f51.css",
-    "static/js/main.6ca26a85.js"
+    "static/css/main.53cb3052.css",
+    "static/js/main.96eaa27c.js"
   ]
 }
