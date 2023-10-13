@@ -21,12 +21,13 @@ function LegalNotices() {
             <br />
 
             <p>
-                Aussi, conformément à l’article n°6 de la Loi n°2004-575 du 21 Juin 2004 pour la confiance dans l’économie numérique, les responsables du présent site internet www.anthedesign.fr sont :
+                Aussi, conformément à l’article n°6 de la Loi n°2004-575 du 21 Juin 2004 pour la confiance dans l’économie numérique, les responsables du présent site internet {webSiteName} sont :
             </p>
             <section>
                 <h2>Éditeur du Site :</h2>
                 <ul>
-                    <li>{companyName} de SIRET : </li>
+                    <li>{companyName}</li>
+                    <li>Numéro de SIRET : </li>
                     <li>Responsable éditorial : Pascal Rorgues</li>
                     <li>L'Abergement, 71390 Messey-sur-Grosne</li>
                     <li>Téléphone : 06.15.10.92.25</li>
