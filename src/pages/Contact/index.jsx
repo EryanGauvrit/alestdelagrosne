@@ -53,8 +53,8 @@ function Contact() {
                 <h2>Retrouvez-nous et contactez-nous sur nos réseaux : </h2>
                 <div>
                     <a href='https://www.facebook.com/profile.php?id=100092562339758' target="_blank" rel='noreferrer'>{choosePicture(fbDesktop, fbPhone)}</a>
-                    <a href='#'>{choosePicture(instaDesktop, instaPhone)}</a>
-                    <a href='#'>{choosePicture(linkedinDesktop, linkedinPhone)}</a>
+                    <a href='#' target="_blank" rel='noreferrer'>{choosePicture(instaDesktop, instaPhone)}</a>
+                    <a href='https://www.linkedin.com/in/pascal-rorgues-4196a157' target="_blank" rel='noreferrer'>{choosePicture(linkedinDesktop, linkedinPhone)}</a>
                     <a href="mailto:alestdelagrosne@gmail.com">{choosePicture(atDesktop, atPhone)}</a>
                 </div>
 

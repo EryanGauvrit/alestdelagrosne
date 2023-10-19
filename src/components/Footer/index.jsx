@@ -13,7 +13,7 @@ function Footer({ currentPage }) {
                 <li><i className="fa-solid fa-circle"></i></li>
                 <li className="link-icon"><a href="#" target="_blank" rel='noreferrer'><i className="fa-brands fa-instagram"></i></a></li>
                 <li><i className="fa-solid fa-circle"></i></li>
-                <li className="link-icon"><a href="#"><i className="fa-brands fa-linkedin"></i></a></li>
+                <li className="link-icon"><a href="https://www.linkedin.com/in/pascal-rorgues-4196a157" target="_blank" rel='noreferrer'><i className="fa-brands fa-linkedin"></i></a></li>
                 <li><i className="fa-solid fa-circle"></i></li>
                 <li className="link-icon"><a href="mailto:alestdelagrosne@gmail.com"><i className="fa-regular fa-envelope"></i></a></li>
             </ul>

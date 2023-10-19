@@ -14,6 +14,10 @@
         // align-self: flex-start;
         opacity: .85;
     }
+    & .hobbie-logo{
+        height: 85px;
+        object-fit: contain;
+    }
     & img {
         width: 270px;
         height: 170px;
@@ -107,6 +111,9 @@
         }
         & p {
             align-self: flex-start;
+        }
+        & .hobbie-logo{
+            height: 95px;
         }
         & img {
             width: 370px;

@@ -39,6 +39,7 @@ function Hobbies({ events }) {
                                     { link: 'http://escalade-cote-sud.fr/2020/06/12/culles-les-roches-topo-ffme/', content: "Culles les Roches - 10 kms" }
                                 ]}
                                 pictures={[climb(2)]}
+                                logo={climb(1)}
                             />
                         </div>
                         <div className="hobbies-card-placement">
@@ -90,7 +91,7 @@ function Hobbies({ events }) {
                         <div className="hobbies-card-placement">
                             <HobbiesCard
                                 title="Piscines et lieux de baignade les plus proches :"
-                                listLink={[{ link: "https://www.senneceylegrand.fr/piscine-municipale", content: "Piscine découverte à Sennecey le Grand – 10 kms" }, { link: "https://www.bourgogne-tourisme.com/baignade/base-nautique-lacs-de-laives", content: "Base nautique des lacs de Laives – 10 kms" }]}
+                                listLink={[{ link: "https://www.destination-saone-et-loire.fr/fr/activite/piscine.html-6", content: "Piscine découverte à Sennecey le Grand – 10 kms" }, { link: "https://www.bourgogne-tourisme.com/baignade/base-nautique-lacs-de-laives", content: "Base nautique des lacs de Laives – 10 kms" }]}
                                 pictures={[pool()]}
                             />
                         </div>

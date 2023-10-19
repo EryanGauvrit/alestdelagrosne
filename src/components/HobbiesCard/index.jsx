@@ -11,7 +11,8 @@ function HobbiesCard({
     iconListLink = true,
     btnLink = "",
     btnText = "",
-    pictures = [""]
+    pictures = [""],
+    logo = ""
 }) {
 
     const listLinkIcon = <i className="fa-solid fa-arrow-up-right-from-square"></i>;
@@ -21,13 +22,17 @@ function HobbiesCard({
         if (tabImg.length === 1) {
             return <img src={tabImg[0]} alt={title} />
         } else {
-            return <SlideShow pictures={tabImg} onClick={false} activeDots={false} />
+            return <SlideShow pictures={tabImg} onClick={false} activeDots={false} autoplaySpeed={2000} />
         }
     }
 
     return (
         <div className="hobbies-bloc-list">
             <h4>{title}</h4>
+            {
+                logo &&
+                <img src={logo} alt={title} className="hobbie-logo" />
+            }
             {
                 description &&
                 <p>{description}</p>
