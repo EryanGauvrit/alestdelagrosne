@@ -4,7 +4,8 @@
     width: 100%;
     max-width: 800px;
     height: 500px;
-    background-image: linear-gradient(155deg, rgba($color-one, 0.8) 0%,rgba($color-two, 0.8) 35%,rgba($color-two, 0.8) 65%, rgba($color-one, 0.8) 100%);
+    background-image: linear-gradient(155deg, rgba($color-one, 1) 35%,rgba(rgb(44, 44, 44), 0.5) 45%,rgba(rgb(44, 44, 44), 0.5) 60%, rgba($color-one, 1) 65%);
+    // background-color: rgba($color: $color-two, $alpha: .3);
     opacity: 1;
     z-index: 10000;
     text-align: center;
@@ -12,16 +13,15 @@
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: 2rem;
     overflow: hidden;
     & .img-bloc{
         max-height: 400px;
         width: 95%;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        overflow: auto;
         & img {       
+            object-fit: cover;
+            height: auto;
             width: 100%;
         }
     }
@@ -31,12 +31,20 @@
         justify-content: center;
         cursor: pointer;
         font-size: 20px;
-        background-color: $color-one;
+        background-color: rgba($color-two, .8);
         width: 30px;
         height: 30px;
         border-radius: 50%;
         & p {
+            font-family: $policesGlobalBold;
+            color: $color-one;
             display: none;
+            opacity: 1;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        & i {
+            color: $color-one;
         }
     }
 }
@@ -51,11 +59,11 @@
         max-width: $desktopScreenSize;
         height: 800px;
         top: 100px;
-        gap: 15px;
         align-self: center;
         border: 2px solid $color-three;
         & .img-bloc{
-            max-height: 400px;
+            height: 560px;
+            max-height: none;
             width: 95%;
             & img {       
                 width: 100%;
