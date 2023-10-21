@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.69c22d42.css",
-    "main.js": "/static/js/main.9683b4ca.js",
+    "main.js": "/static/js/main.512d5c96.js",
     "static/media/img_home_1_1920-min.jpg": "/static/media/img_home_1_1920-min.cf094b61d0d261d8cab7.jpg",
     "static/media/Cormorant.ttf": "/static/media/Cormorant.949e3c1866de5bd4eb3a.ttf",
     "static/media/Cormorant-Bold.ttf": "/static/media/Cormorant-Bold.d1c508eab0cba804314e.ttf",
@@ -22,6 +22,7 @@
     "static/media/heritage-4-370-min.jpg": "/static/media/heritage-4-370-min.69b5fceb96718365ff20.jpg",
     "static/media/pool-1-370-min.jpg": "/static/media/pool-1-370-min.5fd86298f47a08dae7ee.jpg",
     "static/media/food-2-370-min.jpg": "/static/media/food-2-370-min.7d4b15d3f76da5ca2825.jpg",
+    "static/media/castle-2-370-min.jpg": "/static/media/castle-2-370-min.433fdbc2024da0156e9b.jpg",
     "static/media/heritage-7-370-min.jpg": "/static/media/heritage-7-370-min.cb52e84cc555dd76aece.jpg",
     "static/media/pp_pascal_100-min.jpg": "/static/media/pp_pascal_100-min.c628142084afbc77021f.jpg",
     "static/media/heritage-2-370-min.jpg": "/static/media/heritage-2-370-min.065aac181746c350db92.jpg",
@@ -48,6 +49,7 @@
     "static/media/heritage-6-270-min.jpg": "/static/media/heritage-6-270-min.cb29aae08f2dae86345b.jpg",
     "static/media/wine-road-1-370-min.jpg": "/static/media/wine-road-1-370-min.db9bbf39f62f18cfc3a2.jpg",
     "static/media/pp_pascal_70-min.jpg": "/static/media/pp_pascal_70-min.11b5961a4d79099dd20a.jpg",
+    "static/media/castle-2-270-min.jpg": "/static/media/castle-2-270-min.11f34d40cf4a4829a1bd.jpg",
     "static/media/pool-1-270-min.jpg": "/static/media/pool-1-270-min.6c6aa79cb26b8b3f5fb6.jpg",
     "static/media/food-2-270-min.jpg": "/static/media/food-2-270-min.a6fbd2371d51083967f7.jpg",
     "static/media/heritage-7-270-min.jpg": "/static/media/heritage-7-270-min.277bba457c53d3c42f42.jpg",
@@ -62,10 +64,10 @@
     "static/media/bg-bloc-1-min.jpg": "/static/media/bg-bloc-1-min.6030f927004dfeed2517.jpg",
     "index.html": "/index.html",
     "main.69c22d42.css.map": "/static/css/main.69c22d42.css.map",
-    "main.9683b4ca.js.map": "/static/js/main.9683b4ca.js.map"
+    "main.512d5c96.js.map": "/static/js/main.512d5c96.js.map"
   },
   "entrypoints": [
     "static/css/main.69c22d42.css",
-    "static/js/main.9683b4ca.js"
+    "static/js/main.512d5c96.js"
   ]
 }
