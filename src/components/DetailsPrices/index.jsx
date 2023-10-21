@@ -4,14 +4,16 @@ function DetailsPrices({ price, capacity }) {
     const icon = <i className="fa-solid fa-square"></i>;
 
     const initialPrice = price;
-    const midSeasonPrice = price * 1.14;
-    const highSeasonPrice = price * 1.27;
+    const midSeasonPrice = price * 1.11;
+    const highSeasonPrice = price * 1.4;
 
     function calculatePrices(price) {
         let pricesTab = []
 
         for (let i = 2; i <= 7; i++) {
-            pricesTab.push(<td key={`${price * i}-${i}`}>{((price * i) / calculateReduce(i)).toFixed(0)} €</td>)
+            let calculPrice = ((price * i) / calculateReduce(i)).toFixed(0);
+            let finalPrice = Math.ceil(calculPrice / 10) * 10;
+            pricesTab.push(<td key={`${price * i}-${i}`}>{finalPrice} €</td>)
         }
         return pricesTab;
     }
@@ -21,15 +23,15 @@ function DetailsPrices({ price, capacity }) {
         switch (i) {
             case 2: reduce = 1.00;
                 break;
-            case 3: reduce = 1.03;
+            case 3: reduce = 1.02;
                 break;
-            case 4: reduce = 1.05;
+            case 4: reduce = 1.025;
                 break;
-            case 5: reduce = 1.08;
+            case 5: reduce = 1.03;
                 break;
-            case 6: reduce = 1.10;
+            case 6: reduce = 1.035;
                 break;
-            default: reduce = 1.12;
+            default: reduce = 1.04;
         }
         return reduce;
     }
@@ -69,7 +71,7 @@ function DetailsPrices({ price, capacity }) {
             <p className="table-quote">** Pour toute personne supplémentaire : 15€/nuits</p>
             <p className="table-quote">*** Taxe de séjour incluse.</p>
             <ul>
-                <li>{icon} Haute saison : de juillet à aout</li>
+                <li>{icon} Haute saison : de juillet à aout - vacances scolaires Noël / Nouvel An</li>
                 <li>{icon} Moyenne saison : de septembre à octobre et d'avril à juin</li>
                 <li>{icon} Basse saison : de novembre à mars</li>
             </ul>
