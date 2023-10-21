@@ -137,7 +137,7 @@ function Hobbies({ events }) {
                         <div className="hobbies-card-placement">
                             <HobbiesCard
                                 title="Châteaux de Brancion / Cormatin …."
-                                pictures={[castle()]}
+                                pictures={[castle(1), castle(2)]}
                                 iconListLink={false}
                             />
                         </div>

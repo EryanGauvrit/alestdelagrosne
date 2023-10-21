@@ -4,8 +4,10 @@ import bikePhone1 from "../../assets/pictures/hobbies/bike-1-270-min.jpg";
 import bikeDesktop1 from "../../assets/pictures/hobbies/bike-1-370-min.jpg";
 import bikePhone2 from "../../assets/pictures/hobbies/bike-2-270-min.jpg";
 import bikeDesktop2 from "../../assets/pictures/hobbies/bike-2-370-min.jpg";
-import castlePhone from "../../assets/pictures/hobbies/castle-1-270-min.jpg";
-import castleDesktop from "../../assets/pictures/hobbies/castle-1-370-min.jpg";
+import castlePhone1 from "../../assets/pictures/hobbies/castle-1-270-min.jpg";
+import castleDesktop1 from "../../assets/pictures/hobbies/castle-1-370-min.jpg";
+import castlePhone2 from "../../assets/pictures/hobbies/castle-2-270-min.jpg";
+import castleDesktop2 from "../../assets/pictures/hobbies/castle-2-370-min.jpg";
 import cavePhone from "../../assets/pictures/hobbies/cave-1-270-min.jpg";
 import caveDesktop from "../../assets/pictures/hobbies/cave-1-370-min.jpg";
 import climbPhone1 from "../../assets/pictures/hobbies/climb-1-270-min.jpg";
@@ -58,8 +60,12 @@ export const bike = (nbr) => {
         return choosePicture(bikeDesktop2, bikePhone2);
     }
 };
-export const castle = () => {
-    return choosePicture(castleDesktop, castlePhone);
+export const castle = (nbr) => {
+    if (nbr === 1) {
+        return choosePicture(castleDesktop1, castlePhone1);
+    } else {
+        return choosePicture(castleDesktop2, castlePhone2);
+    }
 };
 export const cave = () => {
     return choosePicture(caveDesktop, cavePhone);
