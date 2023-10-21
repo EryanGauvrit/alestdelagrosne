@@ -6,9 +6,6 @@ import HobbiesCard from "../../components/HobbiesCard";
 
 function Hobbies({ events }) {
 
-    const listLinkIcon = <i className="fa-solid fa-arrow-up-right-from-square"></i>;
-    const icon = <i className="fa-solid fa-check"></i>
-
     return (
         <main className="hobbies">
             <section className="events">

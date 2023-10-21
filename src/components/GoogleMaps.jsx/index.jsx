@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { isDesktopScreenSize } from "../utils/IsDesktopScreenSize";
 
-// address props need address like this form (ex: "L'Abergement, 71390 Messey-sur-Grosne")
 function GoogleMap({ mapUrl }) {
 
     const changeSize = (phone, desktop) => {

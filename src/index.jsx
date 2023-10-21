@@ -17,7 +17,6 @@ import LocationHome from './pages/LocationHome';
 import Services from './pages/Services';
 import Hobbies from './pages/Hobbies';
 import LegalNotices from './pages/LegalNotices';
-import InProgress from './components/InProgress';
 
 function App() {
 
@@ -120,9 +119,6 @@ function App() {
         <Route exact path='*'
           element={<ErrorComp />}
         />
-        {/* <Route exact path='*'
-          element={<InProgress needHomeLink={false} />}
-        /> */}
       </Routes>
       <Footer currentPage={currentPage} />
     </React.Fragment>

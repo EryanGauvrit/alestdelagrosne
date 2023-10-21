@@ -36,7 +36,6 @@ class DataDisplay extends Component {
                 this.setState({ picturesHome, picturesLocationHome, locations, reservations, services, events }, () => {
                     this.sendDataToParent();
                 });
-                // console.log("state : ", this.state.picturesHome)
             })
             .catch(error => {
                 console.error('Error fetching data:', error);

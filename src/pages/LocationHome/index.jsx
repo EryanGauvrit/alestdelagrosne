@@ -3,7 +3,6 @@ import FullScreenGallery from "../../components/FullScreenGallery";
 
 
 function LocationHome({ locationsDatas, picturesDatas }) {
-    // console.log("LocationHome : ", picturesDatas)
     return (
         <main className="locationHome">
             <ModifHead

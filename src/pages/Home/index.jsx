@@ -11,7 +11,7 @@ function Home({ locationsDatas, picturesDatas, eventsDatas }) {
         <React.Fragment>
             <ModifHead
                 titlePage="A l'Est de la Grosne"
-                description="A l'Est de la Grosne vous propose des séjours dans nos de gîtes, situés en Saône et Loire sur les communes de La Chapelle-de-Bragny et de Messey-sur-Grosne, Venez séjourner dans nos gîtes situés en Saône et Loire au cœur des grands crus bourguignons"
+                description="A l'Est de la Grosne vous propose des séjours dans nos de gîtes, situés en Saône et Loire sur les communes de La Chapelle-de-Bragny et de Messey-sur-Grosne, Venez séjourner dans nos gîtes en Saône et Loire au cœur des grands crus bourguignons"
                 robots="index, follow"
             />
             <main className="main-home">
