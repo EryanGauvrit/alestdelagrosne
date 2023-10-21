@@ -9,6 +9,7 @@ function Gallery({ picturesDesktop, picturesPhone }) {
         <SlideShow
             pictures={pictures}
             onClick={true}
+            autoplaySpeed={2500}
         />
     )
 };
