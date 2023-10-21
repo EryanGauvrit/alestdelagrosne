@@ -33,7 +33,7 @@ function NextEvent({ eventsDatas }) {
                     </a>
                     <ButtonLink
                         link="/hobbies"
-                        content="Loisir"
+                        content="Loisirs"
                         borderColor='$color-two'
                         color='$color-two'
                     />

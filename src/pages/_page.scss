@@ -59,6 +59,9 @@ ul, li {
     width: 100%;
     height: 100%;
     // settings width & height in here comp
+    img {
+        object-fit: contain;
+    }
 }
 
 .separation-lign {
