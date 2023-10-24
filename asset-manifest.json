@@ -1,11 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.3fde1be3.css",
-    "main.js": "/static/js/main.e9be68fe.js",
+    "main.css": "/static/css/main.8a29627f.css",
+    "main.js": "/static/js/main.91627077.js",
     "static/media/img_home_1_1920-min.jpg": "/static/media/img_home_1_1920-min.cf094b61d0d261d8cab7.jpg",
     "static/media/Cormorant.ttf": "/static/media/Cormorant.949e3c1866de5bd4eb3a.ttf",
     "static/media/Cormorant-Bold.ttf": "/static/media/Cormorant-Bold.d1c508eab0cba804314e.ttf",
-    "static/media/contact-map-desktop-min.jpg": "/static/media/contact-map-desktop-min.65ebe5238e6ed978ea9b.jpg",
+    "static/media/contact-map-desktop-min.jpg": "/static/media/contact-map-desktop-min.a3e579fb426639d81c03.jpg",
+    "static/media/contact-map-phone-min.jpg": "/static/media/contact-map-phone-min.53c31c4405ccef81c540.jpg",
     "static/media/VladimirScript.ttf": "/static/media/VladimirScript.fefe613e3d4d876be0a8.ttf",
     "static/media/heritage-5-370-min.jpg": "/static/media/heritage-5-370-min.e407a67e5607f5cf24ce.jpg",
     "static/media/cave-1-370-min.jpg": "/static/media/cave-1-370-min.f9d62966a3a459e2fc65.jpg",
@@ -39,7 +40,6 @@
     "static/media/castle-1-270-min.jpg": "/static/media/castle-1-270-min.75149ffc66b20b841418.jpg",
     "static/media/cave-1-270-min.jpg": "/static/media/cave-1-270-min.f0249198a47a0aa287a9.jpg",
     "static/media/waterway-1-270-min.jpg": "/static/media/waterway-1-270-min.a9d6dcffeb43530b72eb.jpg",
-    "static/media/contact-map-phone-min.jpg": "/static/media/contact-map-phone-min.dee5eef4d11fc84b25e3.jpg",
     "static/media/bike-1-270-min.jpg": "/static/media/bike-1-270-min.b94ba496e86dac145de3.jpg",
     "static/media/heritage-3-270-min.jpg": "/static/media/heritage-3-270-min.7a22130fb9fdaf987c82.jpg",
     "static/media/heritage-4-270-min.jpg": "/static/media/heritage-4-270-min.949cedc6a54f5bbab774.jpg",
@@ -63,11 +63,11 @@
     "static/media/horse-2-370-min.jpg": "/static/media/horse-2-370-min.7aa62d07ca929e2b28f2.jpg",
     "static/media/bg-bloc-1-min.jpg": "/static/media/bg-bloc-1-min.6030f927004dfeed2517.jpg",
     "index.html": "/index.html",
-    "main.3fde1be3.css.map": "/static/css/main.3fde1be3.css.map",
-    "main.e9be68fe.js.map": "/static/js/main.e9be68fe.js.map"
+    "main.8a29627f.css.map": "/static/css/main.8a29627f.css.map",
+    "main.91627077.js.map": "/static/js/main.91627077.js.map"
   },
   "entrypoints": [
-    "static/css/main.3fde1be3.css",
-    "static/js/main.e9be68fe.js"
+    "static/css/main.8a29627f.css",
+    "static/js/main.91627077.js"
   ]
 }
