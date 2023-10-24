@@ -120,7 +120,9 @@
             background-attachment: inherit;
             border-radius: 15px 0 0 15px;
             div{
-                width: 100%;
+                width: 95%;
+                height: 85%;
+                overflow: auto;
                 ul {
                     width: 90%;
                     margin: auto;
