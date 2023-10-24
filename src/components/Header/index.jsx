@@ -59,14 +59,14 @@ function Header({ locationsDatas, currentPage }) {
         <header className={`${isActiveHeader(isActive, currentPage)} ${setHeader(currentPage)}`} ref={headerRef}>
             <div className="header-phone">
                 <Link to='/' onClick={"#backTop-anchor"}><img src={choosePicture(logoDesktop, logoPhone)} alt="A l'Est de la Grosne" /></Link>
-                <span className="burger-toggle" onClick={burgerToggle}>
+                {/* <span className="burger-toggle" onClick={burgerToggle}>
                     <span></span>
                     <span></span>
                     <span></span>
-                </span>
+                </span> */}
 
             </div>
-            <nav>
+            {/* <nav>
                 <Link to='/' onClick={"#backTop-anchor"}>Accueil</Link>
                 <div className={`${isActiveLocationList ? "activeLocationList" : ""}`}>
                     <div>
@@ -79,7 +79,7 @@ function Header({ locationsDatas, currentPage }) {
                 <Link to='/hobbies' onClick={"#backTop-anchor"}>Loisirs</Link>
                 <Link to='/prices' onClick={"#backTop-anchor"}>Tarifs & disponibilités</Link>
                 <Link to='/contact' onClick={"#backTop-anchor"}>Nous contacter</Link>
-            </nav>
+            </nav> */}
         </header>
     )
 };

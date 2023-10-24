@@ -11,9 +11,10 @@ function InProgress({ needHomeLink }) {
                 robots='noindex, nofollow'
             />
             <section>
+                <h1>A l'Est de la Grosne</h1>
                 <article>
                     <i className="fa-solid fa-triangle-exclamation"></i>
-                    <h1>En cours de développement !</h1>
+                    <h2>En cours de développement !</h2>
                     <i className="fa-solid fa-triangle-exclamation"></i>
                 </article>
                 <aside>
