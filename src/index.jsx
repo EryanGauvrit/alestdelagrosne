@@ -17,7 +17,6 @@ import LocationHome from './pages/LocationHome';
 import Services from './pages/Services';
 import Hobbies from './pages/Hobbies';
 import LegalNotices from './pages/LegalNotices';
-import InProgress from './components/InProgress';
 
 function App() {
 
@@ -73,27 +72,27 @@ function App() {
     setEventsDatas(events);
   };
 
-  // useEffect(() => {
-  //   setCurrentPage(location.pathname);
-  // }, [location]);
+  useEffect(() => {
+    setCurrentPage(location.pathname);
+  }, [location]);
 
 
   return (
 
     <React.Fragment>
-      {/* <DataDisplay
+      <DataDisplay
         onPicturesHomeChange={handlePicturesHomeChange}
         onPicturesLocationHomeChange={handlePicturesLocationHomeChange}
         onLocationsChange={handleLocationsChange}
         onReservationsChange={handleReservationsChange}
         onServicesChange={handleServicesChange}
         onEventsChange={handleEventsChange}
-      /> */}
-      {/* <div id="backTop-anchor"></div> */}
+      />
+      <div id="backTop-anchor"></div>
       <Header locationsDatas={locationsDatas} currentPage={currentPage} />
-      {/* <BackTop currentPage={currentPage} /> */}
+      <BackTop currentPage={currentPage} />
       <Routes>
-        {/* <Route exact path='/'
+        <Route exact path='/'
           element={<Home locationsDatas={locationsDatas} picturesDatas={picturesHomeData} eventsDatas={eventsDatas} />}
         />
         <Route exact path='/location'
@@ -119,12 +118,9 @@ function App() {
         />
         <Route exact path='*'
           element={<ErrorComp />}
-        /> */}
-        <Route exact path='*'
-          element={<InProgress needHomeLink={false} />}
         />
       </Routes>
-      {/* <Footer currentPage={currentPage} /> */}
+      <Footer currentPage={currentPage} />
     </React.Fragment>
   );
 };

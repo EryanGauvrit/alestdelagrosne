@@ -3,34 +3,19 @@ html {
     background-color: $color-one;
     color: $color-two;
     font-family: $policesGlobal, $policesDefault;
-    // position: relative;
 }
 
-// body {
-//     // margin-left: 20px;
-//     // margin-right: 20px;
-//     // @media (min-width: $phoneScreenSize) {
-//     //     margin-left: 50px;
-//     //     margin-right: 50px;   
-//     // }
-    
-// }
-
 main {
-    padding-top: 100px;
-    padding-bottom: 30px;
-    min-height: 50vh;
-    // background-color: $color-three;    
-    background-image: linear-gradient(45deg, $color-one 0%, rgba($color-two, .2) 25%, rgba($color-one,1) 100%);
+    padding-top: 10rem;
+    padding-bottom: 8rem;
+    background-color: $color-three;    
     background-repeat: no-repeat;
     background-attachment: fixed;
     @media (min-width: $phoneScreenSize) {
-        min-height: 47vh;
+        padding-bottom: 10rem;
     }
     @media (min-width: $desktopScreenSize) {
-        // max-width: $desktopScreenSize;
-        min-height: 57vh;
-        // margin: auto;
+        padding-bottom: 11rem;
     }
 }
 
@@ -56,11 +41,20 @@ ul, li {
 
 .bloc-img {
     overflow: hidden;
-    border-radius: 10px;
-    border: solid 1px $color-three;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba($color-three, .8);
+    color: $color-two;
+    width: 100%;
+    height: 100%;
     // settings width & height in here comp
+    img {
+        object-fit: contain;
+    }
+}
+
+.separation-lign {
+    width: 100%;
+    height: 1px;
+    background-color: rgba($color: $color-two, $alpha: .3);
 }

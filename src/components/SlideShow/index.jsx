@@ -3,13 +3,13 @@ import Slider from "react-slick";
 import SpinnerLoader from "../SpinnerLoader";
 import ZoomPicture from "../ZoomPicture";
 
-function SlideShow({ pictures, onClick }) {
+function SlideShow({ pictures, onClick, activeDots = true, autoplaySpeed = undefined }) {
 
     /********** Gestion des images **********/
     const settings = {
         autoplay: true,
-        autoplaySpeed: 5000,
-        dots: true,
+        autoplaySpeed: autoplaySpeed || 5000,
+        dots: activeDots,
         infinite: true,
         speed: !onClick ? 0 : 500,
         slidesToShow: 1,

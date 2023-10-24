@@ -107,27 +107,27 @@ function LocationTemplate({ locationsDatas }) {
                                             equipment={location.equipment}
                                             services={location.services}
                                         />
-                                        <section className="requirement">
-                                            <h2>Conditions : </h2>
-                                            <ul>
-                                                {
-                                                    location.requirements.map((requirement) =>
-                                                        <li key={uniqueKey(requirement)}>
-                                                            {iconList}
-                                                            <p>{he.decode(requirement)}</p>
-                                                        </li>
-                                                    )
-                                                }
-                                            </ul>
-                                        </section>
                                         <section className="google-maps">
                                             <div className="address-bloc">
-                                                <ButtonLink link='/prices' content='Tarifs' />
+                                                <div className="requirement">
+                                                    <h2>Conditions : </h2>
+                                                    <ul>
+                                                        {
+                                                            location.requirements.map((requirement) =>
+                                                                <li key={uniqueKey(requirement)}>
+                                                                    {iconList}
+                                                                    <p>{he.decode(requirement)}</p>
+                                                                </li>
+                                                            )
+                                                        }
+                                                    </ul>
+                                                </div>
                                                 <h2>Adresse :</h2>
                                                 <address>
-                                                    <p>{he.decode(location.address?.split(',')[0])},</p>
+                                                    <p>{he.decode(location.address?.split(',')[0]) + ","}</p>
                                                     <p>{he.decode(location.address?.split(',')[1])}</p>
                                                 </address>
+                                                <ButtonLink link='/prices' content='Tarifs' />
 
                                             </div>
                                             <GoogleMap

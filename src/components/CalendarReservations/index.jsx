@@ -39,7 +39,6 @@ function CalendarReservations({ reservations }) {
 
                             return className;
                         }
-                        // console.log(isReserved())
                         return isReserved();
                     }
                     return '';

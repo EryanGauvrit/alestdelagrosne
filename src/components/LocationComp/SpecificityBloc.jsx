@@ -23,7 +23,7 @@ function SpecificityBloc({ capacity, equipment, services }) {
                 <h3>Capacité d'accueil :</h3>
                 <div>
                     <ul>
-                        <h4>{iconList} Capacité maximale :</h4>
+                        <h4>{iconList} Capacité idéale :</h4>
                         <p style={{ textAlign: 'end' }}>{capacity.maxCapacity} personnes</p>
                     </ul>
                     <ul>
@@ -49,7 +49,7 @@ function SpecificityBloc({ capacity, equipment, services }) {
                         {
                             capacity.floor &&
                             <React.Fragment>
-                                <h4>{iconList} Etage :</h4>
+                                <h4>{iconList} Étage :</h4>
                                 {capacity.floorCapacity?.map((floorCapacity) =>
                                     <li key={uniqueKey(floorCapacity.titleRoom)} className='floorCapacity-bloc'>
                                         {
@@ -71,7 +71,7 @@ function SpecificityBloc({ capacity, equipment, services }) {
                 </div>
             </article>
             <article className="equipment" style={{ backgroundImage: activeBgImg(bgImage2) }}>
-                <h3>Equipements intérieur :</h3>
+                <h3>Équipements intérieur :</h3>
                 <ul>
                     {
                         equipment.map((equipment) =>
