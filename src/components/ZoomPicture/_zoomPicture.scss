@@ -11,16 +11,14 @@
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 1rem;
     overflow: hidden;
     & .img-bloc{
-        max-height: 400px;
-        width: 95%;
+        width: 100%;
         overflow: auto;
+        height: 80vh;
         & img {       
-            object-fit: cover;
-            height: auto;
-            width: 100%;
+            object-fit: contain;
         }
     }
     & .close-zoom {
@@ -55,10 +53,8 @@
     .picture-zoom {
         align-self: center;
         border: 2px solid $color-three;
-        & .img-bloc{
-            height: 80vh;
-            max-height: none;
-            width: 95%;
+        & .img-bloc{  
+            width: 90%;   
             & img {       
                 width: $desktopScreenSize;
             }
