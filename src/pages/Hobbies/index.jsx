@@ -3,11 +3,17 @@ import Event from "../../components/Event";
 import { formatEvents } from "../../components/utils/SortEvents";
 import { bike, castle, cave, climb, food, heritage, hiking, horse, pool, waterway, wineRoad } from "../../components/utils/HobbiesPictures";
 import HobbiesCard from "../../components/HobbiesCard";
+import ModifHead from "../../components/ModifHead";
 
 function Hobbies({ events }) {
 
     return (
         <main className="hobbies">
+            <ModifHead
+                titlePage='Loisirs'
+                description='Quelques loisirs et évènements en bourgogne non loin de Chalon-Sur-Saône et Mâcon'
+                robots='index, follow'
+            />
             <section className="events">
                 {
                     events[0] &&

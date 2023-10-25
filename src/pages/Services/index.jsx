@@ -1,3 +1,4 @@
+import ModifHead from "../../components/ModifHead";
 import ServiceCards from "../../components/ServiceCards";
 import he from "he";
 
@@ -5,7 +6,12 @@ function Services({ servicesDatas }) {
 
     return (
         <main className="services">
-            <h1>Nos Prestations</h1>
+            <ModifHead
+                titlePage='Nos préstations'
+                description="En plus de votre séjour en location dans les campagnes de Bourgogne, nous proposons quelques produits locaux et location de vélos à prix abordable."
+                robots='index, follow'
+            />
+            <h1>Nos Préstations</h1>
             {
                 (servicesDatas[0]) ?
 
