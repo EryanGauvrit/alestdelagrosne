@@ -12,7 +12,7 @@ function Hobbies({ events }) {
             <ModifHead
                 titlePage='Loisirs'
                 description='Quelques loisirs et évènements en bourgogne non loin de Chalon-Sur-Saône et Mâcon'
-                robots='index, follow'
+                robots='noindex, nofollow'
             />
             <section className="events">
                 {

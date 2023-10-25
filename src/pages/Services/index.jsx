@@ -9,7 +9,7 @@ function Services({ servicesDatas }) {
             <ModifHead
                 titlePage='Nos préstations'
                 description="En plus de votre séjour en location dans les campagnes de Bourgogne, nous proposons quelques produits locaux et location de vélos à prix abordable."
-                robots='index, follow'
+                robots='noindex, nofollow'
             />
             <h1>Nos Préstations</h1>
             {

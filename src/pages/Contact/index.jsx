@@ -26,7 +26,7 @@ function Contact() {
             <ModifHead
                 titlePage='Contact'
                 description='Contactez nous directement par téléphone ou par mail pour toute demande de réservation ou information.'
-                robots='index, follow'
+                robots='noindex, nofollow'
             />
             <section className='contact-profil'>
                 <article>

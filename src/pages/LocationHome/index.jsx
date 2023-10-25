@@ -8,7 +8,7 @@ function LocationHome({ locationsDatas, picturesDatas }) {
             <ModifHead
                 titlePage='Nos Gîtes'
                 description="Voici nos plus beaux gîtes en location dans les campagnes de Bourgogne, non loin de Châlon-Sur-Saône, disponibles tout le long d'année, des vacances d'été ou scolaire aux fêtes de fin d'année."
-                robots='index, follow'
+                robots='noindex, nofollow'
             />
             <FullScreenGallery locationsDatas={locationsDatas} picturesDatas={picturesDatas} isHomePage={false} />
         </main>

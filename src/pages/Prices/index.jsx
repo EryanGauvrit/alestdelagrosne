@@ -26,7 +26,7 @@ function Prices({ locationsDatas, reservations }) {
             <ModifHead
                 titlePage='Tarifs et disponibilités'
                 description='Vous pouvez visualiser les tarifs et disponibilités en fonction du gîte qui vous plaît.'
-                robots='index, follow'
+                robots='noindex, nofollow'
             />
             <section className="location-select" >
                 <div className="locations">
