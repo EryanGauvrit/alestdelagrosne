@@ -7,11 +7,11 @@ function Services({ servicesDatas }) {
     return (
         <main className="services">
             <ModifHead
-                titlePage='Nos préstations'
+                titlePage='Nos prestations'
                 description="En plus de votre séjour en location dans les campagnes de Bourgogne, nous proposons quelques produits locaux et location de vélos à prix abordable."
                 robots='index, follow'
             />
-            <h1>Nos Préstations</h1>
+            <h1>Nos Prestations</h1>
             {
                 (servicesDatas[0]) ?
 
@@ -28,7 +28,7 @@ function Services({ servicesDatas }) {
                         </section>
                     )
                     :
-                    <h2>Il n'y a pas de préstation pour le moment</h2>
+                    <h2>Il n'y a pas de prestation pour le moment</h2>
             }
         </main>
     )
