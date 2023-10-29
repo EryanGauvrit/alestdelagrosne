@@ -75,7 +75,7 @@ function Header({ locationsDatas, currentPage }) {
                     </div>
                     <LocationsList locationsDatas={locationsDatas} homePage={false} />
                 </div>
-                <Link to='/services' onClick={"#backTop-anchor"}>Nos préstations</Link>
+                <Link to='/services' onClick={"#backTop-anchor"}>Nos prestations</Link>
                 <Link to='/hobbies' onClick={"#backTop-anchor"}>Loisirs</Link>
                 <Link to='/prices' onClick={"#backTop-anchor"}>Tarifs & disponibilités</Link>
                 <Link to='/contact' onClick={"#backTop-anchor"}>Nous contacter</Link>

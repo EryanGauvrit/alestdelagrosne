@@ -1,7 +1,6 @@
 .prices-bloc {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 15px;
     width: 100%;
     .table-container {
@@ -72,7 +71,6 @@
 
 @media (min-width: $phoneScreenSize) {
     .prices-bloc {
-        align-items: center;
         gap: 20px;
         & .table-container{
             max-width: none;

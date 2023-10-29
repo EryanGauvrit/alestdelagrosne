@@ -81,7 +81,7 @@ function SpecificityBloc({ capacity, equipment, services }) {
                 </ul>
             </article>
             <article className="services" style={{ backgroundImage: activeBgImg(bgImage3) }}>
-                <h3>Services :</h3>
+                <h3>Équipements exterieur :</h3>
                 <ul>
                     {
                         services.map((services) =>

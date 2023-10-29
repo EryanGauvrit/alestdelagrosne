@@ -54,12 +54,19 @@
         align-self: center;
         border: 2px solid $color-three;
         & .img-bloc{  
-            width: 90%;   
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
             & img {       
-                width: $desktopScreenSize;
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
             }
         }
-        & .close-zoom {            
+        & .close-zoom {     
+            position: fixed;  
+            top: 2rem;     
+            right: 3rem;     
             width: auto;
             height: 30px;
             display: flex;
