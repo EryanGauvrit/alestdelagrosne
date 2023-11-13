@@ -6,8 +6,8 @@ export function formatEvents(events) {
         let aH = moment(a.startDate);
         let bH = moment(b.startDate);
 
-        if (aH.valueOf() > bH.valueOf()) return -1;
-        if (aH.valueOf() < bH.valueOf()) return 1;
+        if (aH.valueOf() < bH.valueOf()) return -1;
+        if (aH.valueOf() > bH.valueOf()) return 1;
         return 0;
     });
 
