@@ -4,36 +4,51 @@ function DetailsPrices({ price, capacity }) {
     const icon = <i className="fa-solid fa-square"></i>;
 
     const initialPrice = price;
-    const midSeasonPrice = price * 1.11;
-    const highSeasonPrice = price * 1.4;
+    const midSeasonPrice = Math.floor((price * 1.15) / 5) * 5;
+    const highSeasonPrice = Math.ceil((price * 1.3) / 15) * 15;    
 
-    function calculatePrices(price) {
-        let pricesTab = []
-
-        for (let i = 2; i <= 7; i++) {
-            let calculPrice = ((price * i) / calculateReduce(i)).toFixed(0);
-            let finalPrice = Math.ceil(calculPrice / 10) * 10;
-            pricesTab.push(<td key={`${price * i}-${i}`}>{finalPrice} €</td>)
+    function calculatePrice(i, price, season) {
+        let finalPrice;
+        switch (i) {
+            case 1: {
+                if(season === 'high') {
+                    finalPrice = Math.floor((price * 2) / 1.25 / 10) * 10;
+                } else if(season === 'mid') {
+                    finalPrice = Math.ceil((price * 2) / 1.25 / 15) * 15;
+                } else {
+                    finalPrice = Math.floor((price * 2) / 1.15 / 10) * 10;
+                }
+            }
+                break;
+            case 2: finalPrice = price * 3;
+                break;
+            case 3: finalPrice = price * 2;
+                break;
+            case 4: finalPrice = price * 3;
+                break;
+            case 5: finalPrice = price * 4;
+                break;
+            case 6: finalPrice = price * 5;
+                break;
+            case 7: finalPrice = price * 6;
+                break;
+            default: {
+                if(season === 'mid') {
+                    finalPrice = Math.ceil((price * 7) / 1.025 / 10) * 10;
+                } else {
+                    finalPrice = Math.floor((price * 7) / 1.025 / 10) * 10;
+                }
+            }
         }
-        return pricesTab;
+        return finalPrice;
     }
 
-    function calculateReduce(i) {
-        let reduce;
-        switch (i) {
-            case 2: reduce = 1.00;
-                break;
-            case 3: reduce = 1.02;
-                break;
-            case 4: reduce = 1.025;
-                break;
-            case 5: reduce = 1.03;
-                break;
-            case 6: reduce = 1.035;
-                break;
-            default: reduce = 1.04;
+    const getPrices = (price, season) => {
+        const prices = [];
+        for (let i = 1; i <= 8; i++) {
+            prices.push(calculatePrice(i, price, season));
         }
-        return reduce;
+        return prices;
     }
 
     return (
@@ -43,6 +58,8 @@ function DetailsPrices({ price, capacity }) {
                     <thead>
                         <tr>
                             <th>Saison</th>
+                            <th>1 nuit</th>
+                            <th>Weekend</th>
                             <th>2 nuits</th>
                             <th>3 nuits</th>
                             <th>4 nuits</th>
@@ -54,22 +71,21 @@ function DetailsPrices({ price, capacity }) {
                     <tbody>
                         <tr className="high">
                             <td>Haute</td>
-                            {calculatePrices(highSeasonPrice)}
+                            {getPrices(highSeasonPrice, 'high').map((price, index) => <td key={index}>{price} €</td>)}
                         </tr>
-                        <tr className="average">
+                        <tr className="mid">
                             <td>Moyenne</td>
-                            {calculatePrices(midSeasonPrice)}
+                            {getPrices(midSeasonPrice, 'mid').map((price, index) => <td key={index}>{price} €</td>)}
                         </tr>
                         <tr className="low">
                             <td>Basse</td>
-                            {calculatePrices(initialPrice)}
+                            {getPrices(initialPrice).map((price, index) => <td key={index}>{price} €</td>)}
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <p className="table-quote">* Le gîte est loué pour une capacité de base de {capacity} personnes. Pour toute personne supplémentaire : 15€/jour</p>
-            <p className="table-quote">** Frais ménage si nécessaire : 85€ et Charges chauffage : 10€/jour</p>
-            <p className="table-quote">*** Taxe de séjour incluse.</p>
+            <p className="table-quote">* Au-delà de {capacity} personnes. Le tarif est de 15€/nuit/personnes supplémentaires</p>
+            <p className="table-quote">** Taxe de séjour et frais de gestion inclus.</p>
             <ul>
                 <li>{icon} Haute saison : de juillet à aout - vacances scolaires Noël / Nouvel An</li>
                 <li>{icon} Moyenne saison : de septembre à octobre et d'avril à juin</li>

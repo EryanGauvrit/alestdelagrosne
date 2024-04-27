@@ -27,8 +27,8 @@
     .high {
         background-color: $color-high;
     }
-    .average {
-        background-color: $color-average;
+    .mid {
+        background-color: $color-mid;
     }
     .low {
         background-color: $color-low;
@@ -45,7 +45,7 @@
         }
         & :nth-child(2) {
             i {
-                color: $color-average;
+                color: $color-mid;
             }
         }
         & :nth-child(3) {

@@ -1,15 +1,15 @@
+import he from "he";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Logo from "../../components/LocationComp/Logo";
-import Gallery from "../../components/LocationComp/Gallery";
-import SpecificityBloc from "../../components/LocationComp/SpecificityBloc";
-import InProgressLoc from "../../components/LocationComp/InProgressLoc";
-import ErrorComp from "../../components/ErrorComp";
-import ModifHead from "../../components/ModifHead";
-import GoogleMap from "../../components/GoogleMaps.jsx";
-import ButtonLink from "../../components/ButtonLink";
-import he from "he";
 import { uniqueKey } from "../../app/DatasFormating";
+import ButtonLink from "../../components/ButtonLink";
+import ErrorComp from "../../components/ErrorComp";
+import GoogleMap from "../../components/GoogleMaps.jsx";
+import Gallery from "../../components/LocationComp/Gallery";
+import InProgressLoc from "../../components/LocationComp/InProgressLoc";
+import Logo from "../../components/LocationComp/Logo";
+import SpecificityBloc from "../../components/LocationComp/SpecificityBloc";
+import ModifHead from "../../components/ModifHead";
 import SpinnerLoader from "../../components/SpinnerLoader";
 
 function LocationTemplate({ locationsDatas }) {
@@ -38,7 +38,7 @@ function LocationTemplate({ locationsDatas }) {
         mapUrl: '',
         prices: {
             high: [],
-            average: [],
+            mid: [],
             low: []
         },
         inProgress: undefined,
