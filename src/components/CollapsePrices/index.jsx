@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import DetailsPrices from "../DetailsPrices";
 import ButtonLink from "../ButtonLink";
-import { choosePicture } from "../utils/ChoosePicture";
 import CalendarReservations from "../CalendarReservations";
+import DetailsPrices from "../DetailsPrices";
+import { choosePicture } from "../utils/ChoosePicture";
 const chevron = <i className="fa-solid fa-chevron-up chevron-up"></i>;
 
 function CollapsePrices({ location, reservations }) {
@@ -35,7 +35,7 @@ function CollapsePrices({ location, reservations }) {
                         </li>
                         <li className="locationDetails">
                             <CalendarReservations reservations={reservations} />
-                            <DetailsPrices price={location.prices} capacity={location.capacity.maxCapacity} />
+                            <DetailsPrices initialPrice={location.prices} capacity={location.capacity.maxCapacity} />
                             <ButtonLink
                                 link={`/location/${location.id}`}
                                 content="Détails du gîte"

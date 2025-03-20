@@ -8,7 +8,8 @@
         border: 1px solid $color-two;
         width: 100%;
         max-width: 472px;
-      }
+        margin-inline: auto;
+    }
     table {
         border: 1px solid $color-two;
         border-radius: 4px;
@@ -41,16 +42,19 @@
         & :nth-child(1) {
             i {
                 color: $color-high;
+                background-color: $color-high;
             }
         }
         & :nth-child(2) {
             i {
                 color: $color-mid;
+                background-color: $color-mid;
             }
         }
         & :nth-child(3) {
             i {
                 color: $color-low;
+                background-color: $color-low;
             }
         }
         & li {
@@ -67,6 +71,9 @@
 .table-quote {
     font-size: 12px;
     margin-top: -10px;
+    width: 100%;
+    max-width: 472px;
+    margin-inline: auto;
 }
 
 @media (min-width: $phoneScreenSize) {
