@@ -1,9 +1,9 @@
-import ppPascalDesktop from "../../assets/contact/pp_pascal_100-min.jpg";
-import ppPascalPhone from "../../assets/contact/pp_pascal_70-min.jpg";
-import ppLeslieDesktop from "../../assets/contact/pp_leslie_100-min.jpg";
-import ppLesliePhone from "../../assets/contact/pp_leslie_70-min.jpg";
 import mapDesktop from "../../assets/contact/contact-map-desktop-min.jpg";
 import mapPhone from "../../assets/contact/contact-map-phone-min.jpg";
+import ppLeslieDesktop from "../../assets/contact/pp_leslie_100-min.jpg";
+import ppLesliePhone from "../../assets/contact/pp_leslie_70-min.jpg";
+import ppPascalDesktop from "../../assets/contact/pp_pascal_100-min.jpg";
+import ppPascalPhone from "../../assets/contact/pp_pascal_70-min.jpg";
 import ModifHead from '../../components/ModifHead';
 import { choosePicture } from '../../components/utils/ChoosePicture';
 
@@ -51,11 +51,13 @@ function Contact() {
             </section>
             <section className='social-link'>
                 <h2>Retrouvez-nous et contactez-nous sur nos réseaux : </h2>
+                    <a href="mailto:alestdelagrosne@gmail.com">
+                        alestdelagrosne@gmail.com
+                    </a>
                 <div>
                     <a href='https://www.facebook.com/profile.php?id=100092562339758' target="_blank" rel='noreferrer'>{choosePicture(fbDesktop, fbPhone)}</a>
                     <a href='#' target="_blank" rel='noreferrer'>{choosePicture(instaDesktop, instaPhone)}</a>
                     <a href='https://www.linkedin.com/in/pascal-rorgues-4196a157' target="_blank" rel='noreferrer'>{choosePicture(linkedinDesktop, linkedinPhone)}</a>
-                    <a href="mailto:alestdelagrosne@gmail.com">{choosePicture(atDesktop, atPhone)}</a>
                 </div>
 
             </section>

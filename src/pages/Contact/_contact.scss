@@ -80,6 +80,10 @@
         }
     }
     .social-link {
+        a {
+            text-align: center;
+            text-decoration: underline;
+        };
         & div {
             display: flex;
             justify-content: center;
