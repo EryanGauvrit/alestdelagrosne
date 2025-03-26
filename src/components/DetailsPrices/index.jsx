@@ -23,7 +23,7 @@ function DetailsPrices({ initialPrice, capacity }) {
                 break;
             case 3: finalPrice = price * 3;
                 break;
-            case 4: finalPrice = (price * 7) - 25;
+            case 4: finalPrice = Math.round((price * 7) / 1.025 / 10) * 10;
                 break;
         }
         return finalPrice;
@@ -66,7 +66,7 @@ function DetailsPrices({ initialPrice, capacity }) {
                     </tbody>
                 </table>
             </div>
-            <p className="table-quote">* À partir de {capacity} personnes, le tarif est de 15€/nuit/personnes supplémentaires</p>
+            <p className="table-quote">* Au-delà de {capacity} personnes, la nuit par personne supplémentaire est à partir de 15€</p>
             <p className="table-quote">** Taxe de séjour et frais de gestion inclus.</p>
             <ul>
                 <li>{icon} Haute saison : de juin à août - vacances scolaires Noël / Nouvel An / Jours fériés</li>
