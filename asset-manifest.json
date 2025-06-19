@@ -1,12 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.260b4a59.css",
-    "main.js": "/static/js/main.76f21f8f.js",
+    "main.css": "/static/css/main.32115a35.css",
+    "main.js": "/static/js/main.8bf0511b.js",
     "static/media/img_home_1_1920-min.jpg": "/static/media/img_home_1_1920-min.cf094b61d0d261d8cab7.jpg",
     "static/media/Cormorant.ttf": "/static/media/Cormorant.949e3c1866de5bd4eb3a.ttf",
     "static/media/Cormorant-Bold.ttf": "/static/media/Cormorant-Bold.d1c508eab0cba804314e.ttf",
+    "static/media/bg-img-accueil-velo.jpg": "/static/media/bg-img-accueil-velo.94558af8a84aea861513.jpg",
     "static/media/contact-map-desktop-min.jpg": "/static/media/contact-map-desktop-min.a3e579fb426639d81c03.jpg",
     "static/media/contact-map-phone-min.jpg": "/static/media/contact-map-phone-min.53c31c4405ccef81c540.jpg",
+    "static/media/logo-transparent.png": "/static/media/logo-transparent.b9ba93c44a1d67cedc5f.png",
     "static/media/VladimirScript.ttf": "/static/media/VladimirScript.fefe613e3d4d876be0a8.ttf",
     "static/media/heritage-5-370-min.jpg": "/static/media/heritage-5-370-min.e407a67e5607f5cf24ce.jpg",
     "static/media/cave-1-370-min.jpg": "/static/media/cave-1-370-min.f9d62966a3a459e2fc65.jpg",
@@ -63,11 +65,11 @@
     "static/media/horse-2-370-min.jpg": "/static/media/horse-2-370-min.7aa62d07ca929e2b28f2.jpg",
     "static/media/bg-bloc-1-min.jpg": "/static/media/bg-bloc-1-min.6030f927004dfeed2517.jpg",
     "index.html": "/index.html",
-    "main.260b4a59.css.map": "/static/css/main.260b4a59.css.map",
-    "main.76f21f8f.js.map": "/static/js/main.76f21f8f.js.map"
+    "main.32115a35.css.map": "/static/css/main.32115a35.css.map",
+    "main.8bf0511b.js.map": "/static/js/main.8bf0511b.js.map"
   },
   "entrypoints": [
-    "static/css/main.260b4a59.css",
-    "static/js/main.76f21f8f.js"
+    "static/css/main.32115a35.css",
+    "static/js/main.8bf0511b.js"
   ]
 }
