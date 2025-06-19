@@ -6,7 +6,7 @@
     padding: 10px;
     gap: 1rem;
     max-width: 400px;
-    & h4 {
+    & h3 {
         font-size: 23px;
         text-align: center;
     }
@@ -104,7 +104,7 @@
 @media (min-width: $phoneScreenSize) {
     .hobbies-bloc-list {
         width: 370px;
-        & h4 {
+        & h3 {
             font-size: 23px;
             text-align: center;
         }

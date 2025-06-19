@@ -28,7 +28,7 @@ function HobbiesCard({
 
     return (
         <div className="hobbies-bloc-list">
-            <h4>{title}</h4>
+            <h3>{title}</h3>
             {
                 logo &&
                 <img src={logo} alt={title} className="hobbie-logo" />

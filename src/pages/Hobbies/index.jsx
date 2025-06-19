@@ -1,14 +1,21 @@
 import React from "react";
 import Event from "../../components/Event";
-import { formatEvents } from "../../components/utils/SortEvents";
-import { bike, castle, cave, climb, food, heritage, hiking, horse, pool, waterway, wineRoad } from "../../components/utils/HobbiesPictures";
 import HobbiesCard from "../../components/HobbiesCard";
 import ModifHead from "../../components/ModifHead";
+import { bike, castle, cave, climb, food, heritage, hiking, horse, pool, waterway, wineRoad } from "../../components/utils/HobbiesPictures";
+import { formatEvents } from "../../components/utils/SortEvents";
+import PartnershipCard from "./PartnershipCard";
 
 function Hobbies({ events }) {
 
     return (
         <main className="hobbies">
+            <section>
+                <h2>
+                    Notre partenaire
+                </h2>
+                <PartnershipCard />
+            </section>
             <ModifHead
                 titlePage='Loisirs'
                 description='Quelques loisirs et évènements en bourgogne non loin de Chalon-Sur-Saône et Mâcon'
@@ -31,7 +38,7 @@ function Hobbies({ events }) {
             <section>
                 <h1>Les activités en Saône et Loire</h1>
                 <article>
-                    <h3>Activités sportives</h3>
+                    <h2>Activités sportives</h2>
                     <div className="hobbies-bloc">
                         <div className="hobbies-card-placement">
                             <HobbiesCard
@@ -119,7 +126,7 @@ function Hobbies({ events }) {
                     </div>
                 </article>
                 <article>
-                    <h3>Patrimoine</h3>
+                    <h2>Patrimoine</h2>
                     <div className="hobbies-bloc">
                         <div className="hobbies-card-placement">
                             <HobbiesCard

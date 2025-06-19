@@ -12,7 +12,7 @@
     background-color: rgba($color-two, .05);
     border: 2px solid rgba($color-two, .1);
     padding: 1rem 0;    
-    & h4 {
+    & h3 {
         font-size: $h3SizesPhone;
         color: $color-two;
         text-align: center;
@@ -65,7 +65,7 @@
             transition: .2s;
             background-color: rgba($color-two, .15);
         }
-        & h4 {
+        & h3 {
             font-size: $h3SizesDesktop;
         }
         & .bloc-img {

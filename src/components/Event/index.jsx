@@ -1,7 +1,7 @@
+import he from "he";
 import SpinnerLoader from "../SpinnerLoader";
 import { choosePicture } from "../utils/ChoosePicture";
 import { formatDate } from "../utils/FormatDate";
-import he from "he";
 
 function Event({ event }) {
     const pictureDesktop = event.coverPictureDesktop;
@@ -29,7 +29,7 @@ function Event({ event }) {
                 }
             </div>
             <div className="card-quote">
-                <h4>{he.decode(title)}</h4>
+                <h3>{he.decode(title)}</h3>
                 <ul>
                     <li>{he.decode(address)}</li>
                     <li>Du {formatDate(startDate)}</li>

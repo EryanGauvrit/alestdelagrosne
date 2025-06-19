@@ -1,0 +1,76 @@
+.partenership-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    & .partenership-card-title {
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        gap: 1rem;
+        & img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+    }
+    & .partenership-card-content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        & img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-width: 300px;
+            width: 100%;
+            height: 100%;
+            max-height: fit-content;
+            object-fit: cover;
+            object-position: center;
+            opacity: 0.4;
+        }
+        & p {
+            position: relative;
+            z-index: 1;
+            padding: 1rem 0.5rem;
+            text-align: center;
+        }
+    }
+    & .partenership-card-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        & a {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+    }
+}
+
+@media (min-width: $phoneScreenSize) {
+    .partenership-card {
+        & .partenership-card-title {
+            & img {
+                width: 70px;
+                height: 70px;
+            }
+        }
+        & .partenership-card-content {
+            max-width: 900px;
+            & p {
+                padding: 5rem 1.5rem;
+            }
+        }
+        & .partenership-card-footer {
+            flex-direction: row;
+            gap: 2rem;
+        }
+    }
+}
