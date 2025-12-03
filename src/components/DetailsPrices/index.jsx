@@ -3,19 +3,19 @@ function DetailsPrices({ initialPrice, capacity }) {
 
     const icon = <i className="fa-solid fa-square"></i>;
 
-    const midSeasonPrice = Math.floor((initialPrice * 1.15) / 5) * 5;
-    const highSeasonPrice = Math.ceil((initialPrice * 1.3) / 15) * 15;    
+    const midSeasonPrice = Math.ceil(initialPrice * 1.133);
+    const highSeasonPrice = Math.ceil(initialPrice * 1.333);    
 
     function calculatePrice(i, price, season) {
         let finalPrice;
         switch (i) {
             case 1: {
                 if(season === 'high') {
-                    finalPrice = Math.floor((price * 2) / 1.25 / 10) * 10;
+                    finalPrice = Math.floor(price * 1.575)
                 } else if(season === 'mid') {
-                    finalPrice = Math.ceil((price * 2) / 1.25 / 15) * 15;
+                    finalPrice = Math.ceil(price * 1.617)
                 } else {
-                    finalPrice = Math.floor((price * 2) / 1.15 / 10) * 10;
+                    finalPrice = Math.floor(price * 1.70);
                 }
             }
                 break;
